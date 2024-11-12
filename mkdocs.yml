@@ -23,7 +23,7 @@ theme:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
-      accent: indigo
+      accent: teal
       toggle:
         icon: material/weather-night
         name: Trocar para tema claro
@@ -32,11 +32,18 @@ theme:
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: teal
-      accent: indigo
+      accent: teal
       toggle:
         icon: material/weather-sunny
         name: Trocar para tema escuro
 
 nav:
   - Home: index.md
-  - Visão do Produto e Projeto: visao.md
+  - Visão do Produto e Projeto:
+      - Cenário Atual do Cliente e Negócio: sections/1-cenarioAtual.md
+      - Solução Proposta: sections/2-solucaoProposta.md
+      - Estratégias de Engenharia de Software: sections/3-estrategia.md
+      - Cronograma e Entregas: sections/4-cronograma.md
+      - Interação entre Equipe e Cliente: sections/5-equipe.md
+      - Lições Aprendidas: sections/6-aprendizados.md
+      - Referências Bibliográficas: sections/7-bibliografia.md
