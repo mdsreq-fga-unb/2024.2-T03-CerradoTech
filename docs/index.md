@@ -46,3 +46,15 @@ Mais informações aqui [Visão do Projeto e Produto](./visao.md).
             </a>
 </table>
 </center>
+
+## Histórico de Revisão
+
+| Data       | Versão | Descrição                                  | Autor            | Revisores        |
+| ---------- | ------ | ------------------------------------------ | ---------------- | ---------------- |
+| 04/11/2024 | 1.0    | Primeiras Implementações e especificações. | Vinicius Castelo | Todos os Membros |
+| 11/11/2024 | 1.1    | Correções de parâmetros para apresentação  | Vinicius Castelo | Todos os Membros |
+
+| Data       | Versão | Descrição                                  | Autor            |
+| ---------- | ------ | ------------------------------------------ | ---------------- |
+| 04/11/2024 | 1.0    | Primeiras Implementações e especificações. | Todos os Membros |
+| 11/11/2024 | 1.1    | Correções de parâmetros para apresentação  | Todos os Membros |
