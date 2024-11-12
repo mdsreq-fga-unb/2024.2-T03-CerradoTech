@@ -30,9 +30,9 @@ _Filgueiras, R., & Oliveira, P. S. (2006). Técnicas de recuperação de áreas 
 
 ### Links Visitados
 
-- Museu do Cerrado - RADIS Cerrado
-- UnB Notícias - Aplicativo auxilia agricultores na restauração do Cerrado
-- CEGAFI UnB - RADIS Cerrado
-- Fundovale - RADIS Cerrado e a restauração do bioma
-- Mata Nativa - RADIS Cerrado
-- Finatec - Desenvolvido por pesquisadores da UnB, app ajuda no rastreio e restauração do Cerrado
+- [Museu do Cerrado - RADIS Cerrado](https://museucerrado.com.br/agrobiodiversidade/restauracao/radis-cerrado/)
+- [UnB Notícias - Aplicativo auxilia agricultores na restauração do Cerrado](https://noticias.unb.br/117-pesquisa/5489-aplicativo-auxilia-agricultores-na-restauracao-do-cerrado)
+- [CEGAFI UnB - RADIS Cerrado](https://www.cegafiunb.com/radis-cerrado/)
+- [Fundovale - RADIS Cerrado e a restauração do bioma](https://www.fundovale.org/espaco-do-conhecimento/ultimas-noticias/radis-cerrado-e-a-restauracao-do-bioma/)
+- [Mata Nativa - RADIS Cerrado](https://matanativa.com.br/radis-cerrado/)
+- [Finatec - Desenvolvido por pesquisadores da UnB, app ajuda no rastreio e restauração do Cerrado](https://www.finatec.org.br/noticia/desenvolvido-por-pesquisadores-da-unb-app-ajuda-no-rastreio-e-restauracao-do-cerrado/)

@@ -22,6 +22,8 @@ O RADIS Cerrado está atualmente fora do ar devido a uma série de problemas té
 
 Esses desafios resultaram na indisponibilidade do aplicativo, impactando diretamente a capacidade do RADIS Cerrado de cumprir sua função de monitoramento ambiental. Contudo, a resolução desses problemas representa uma oportunidade para tornar o aplicativo uma ferramenta robusta e escalável, alinhada às necessidades dos stakeholders e ao objetivo de preservação ambiental do bioma Cerrado.
 
+![Diagrama de Ishikawa](../assets/ishikawa.png)
+
 ### Desafios do Projeto
 
 - _Atualização da tecnologia do front-end_: O aplicativo foi desenvolvido em Ionic 5, uma versão desatualizada que dificulta a implementação de padrões modernos de usabilidade. A atualização dos pacotes e da estrutura do front-end é necessária para proporcionar uma experiência de usuário otimizada e manter o aplicativo alinhado com as melhores práticas atuais.
