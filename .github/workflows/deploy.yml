@@ -1,0 +1,51 @@
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Utiliza a última versão do Ubuntu no runner do GitHub Actions
+    
+    steps:
+      # 1. Checa o código do repositório
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # 2. Configura o Python (necessário para instalar MkDocs)
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10'  # Ajuste para a versão que você deseja
+
+      # 3. Instala as dependências do MkDocs e MkDocs Material
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip  # Atualiza o pip
+          pip --version  # Verifica a versão do pip para garantir que ele está funcionando
+          python --version  # Verifica a versão do Python
+          pip install mkdocs mkdocs-material  # Instala o MkDocs e o tema Material
+
+      # 4. Gera o site com MkDocs
+      - name: Build site with MkDocs
+        run: |
+          mkdocs --version  # Verifica se o MkDocs está instalado corretamente
+          mkdocs build  # Gera o site estático na pasta 'site/'
+
+      # 5. Faz checkout do branch gh-pages
+      - name: Checkout gh-pages branch
+        run: |
+          git fetch --prune --unshallow
+          git checkout gh-pages || git checkout --orphan gh-pages  # Cria o branch gh-pages se não existir
+
+      # 6. Remove o conteúdo antigo no gh-pages
+      - name: Remove old content from gh-pages
+        run: |
+          rm -rf *  # Remove todo o conteúdo da branch gh-pages (exceto os arquivos ocultos)
+      
+      # 7. Copia o conteúdo gerado do MkDocs para o branch gh-pages
+      - name: Copy site to gh-pages branch
+        run: |
+          cp -r site/* ./  # Copia o conteúdo gerado para o diretório atual
+
+      # 8. Faz commit e envia para o branch gh-pages
+      - name: Commit and push changes
+        run: |
+          git add .  # Adiciona os arquivos
+          git commit -m "Deploy updates" || echo "No changes to commit"  # Evita erro se não houver mudanças
+          git push origin gh-pages  # Atualiza o branch gh-pages
