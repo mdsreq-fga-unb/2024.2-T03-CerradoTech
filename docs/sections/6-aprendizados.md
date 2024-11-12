@@ -12,7 +12,7 @@ Em alguns momentos, tivemos dificuldades iniciais para alinhar a compreensão do
 
 Ações de Melhoria:
 
-Manter reuniões rápidas (Daily Scrums) e revisar o backlog de forma colaborativa, garantindo que todos os membros entendam as prioridades e os requisitos a cada ciclo.
+Manter reuniões rápidas para revisar as atividades de forma colaborativa, garantindo que todos os membros entendam as prioridades e os requisitos a cada ciclo.
 No início, alguns membros tiveram dificuldades para balancear o tempo dedicado ao projeto com outras atividades acadêmicas, o que impactou o ritmo de trabalho.
 
 Utilizar ferramentas de gestão visual, como o Trello, para organizar tarefas de forma clara e definir prazos realistas. Estabelecemos também um compromisso de dividir as tarefas conforme as disponibilidades individuais.
