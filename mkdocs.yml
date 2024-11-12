@@ -1,0 +1,42 @@
+site_name: CerraTech
+repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CerradoTech
+
+theme:
+  name: material
+  language: pt-BR
+
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+  palette:
+    #Dark Theme
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Trocar para tema claro
+
+    #light Theme
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Trocar para tema escuro
+
+nav:
+  - Home: index.md
+  - Visão do Produto: visao.md
