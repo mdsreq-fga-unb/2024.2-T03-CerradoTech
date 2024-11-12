@@ -6,7 +6,7 @@
 
 ### Comunicação
 
-Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakeholders alinhados, a comunicação entre a equipe e o cliente será estruturada de acordo com as práticas do Scrum, com uma combinação de reuniões recorrentes, ferramentas de comunicação ágil e documentações compartilhadas.
+Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakeholders alinhados, a comunicação entre a equipe e o cliente será estruturada de acordo com uma combinação de reuniões recorrentes e documentações compartilhadas.
 
 ### Composição da Equipe
 
