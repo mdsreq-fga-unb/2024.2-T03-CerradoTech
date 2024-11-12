@@ -26,7 +26,6 @@ Para alcançar esse objetivo principal, espera-se que o RADIS Cerrado:
 - _Back-end_: Node.js, com banco de dados não-relacional MongoDB.
 - _Front-end_: Ionic 5, que será atualizado para as versões mais recentes.
 - _Armazenamento de Dados_: Integração com serviços de nuvem.
-- _Frameworks de Gestão_: Scrum.
 
 ### Pesquisa de Mercado e Análise Competitiva
 
