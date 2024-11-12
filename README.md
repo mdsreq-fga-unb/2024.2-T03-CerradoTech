@@ -1,4 +1,5 @@
 # 2024.2: CerraTech
+
 **Repositório de projeto da disciplina de REQ-T3.**
 
 <p align="center">
@@ -6,11 +7,13 @@
 </p>
 
 ## Introdução
+
 O Projeto **CerradoTech**, desenvolvido como parte da disciplina de Requisitos de Software da Universidade de Brasília (UnB) no semestre de 2024.2 (T3), tem como objetivo a **melhoria e correção** do sistema **RADIS Cerrado**. O RADIS Cerrado foi criado inicialmente para **monitorar** áreas degradadas do Cerrado, um dos biomas mais importantes e ameaçados do Brasil. No entanto, o sistema apresentava limitações em sua funcionalidade e usabilidade, o que motivou a criação do CerraTech.
 
 Mais informações no page sobre a [Visão do Projeto e Produto]().
 
 ## Equipe
+
 <table style="margin-left: auto; margin-right: auto;">
     <tr>
         <td align="center">
@@ -43,3 +46,13 @@ Mais informações no page sobre a [Visão do Projeto e Produto]().
                 <h5 class="text-center">Vinicius Castelo</h5>
             </a>
 </table>
+
+---
+
+## Vídeo de apresentação
+
+"<iframe width="560" height="315" src="https://www.youtube.com/embed/oXDd_fYzg98" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+| Data       | Versão | Descrição                                      | Autor           |
+| ---------- | ------ | ---------------------------------------------- | --------------- |
+| 12/11/2024 | 1.0    | Adicionando video de apresentação da unidade 1 | Brenno da Silva |
