@@ -1,3 +1,10 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # ou 'master', dependendo do seu branch principal
+
 jobs:
   deploy:
     runs-on: ubuntu-latest  # Utiliza a última versão do Ubuntu no runner do GitHub Actions
