@@ -47,3 +47,5 @@ nav:
       - Interação entre Equipe e Cliente: sections/5-equipe.md
       - Lições Aprendidas: sections/6-aprendizados.md
       - Referências Bibliográficas: sections/7-bibliografia.md
+  - Entregas: 
+      - Unidade 1: sections/entregas.md
