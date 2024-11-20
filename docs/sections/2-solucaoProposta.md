@@ -6,7 +6,7 @@
 
 ### Objetivos do Produto
 
-Reativar o aplicativo RADIS Cerrado de forma robusta, confiável e escalável, solucionando os problemas técnicos e de usabilidade que o deixaram fora do ar, para atender à necessidade crítica de monitoramento ambiental e regularização de propriedades rurais no Cerrado.
+Reativar o aplicativo RADIS Cerrado solucionando os problemas técnicos e de usabilidade que o deixaram fora do ar, para atender à necessidade crítica de monitoramento ambiental e regularização de propriedades rurais no Cerrado.
 
 Para alcançar esse objetivo principal, espera-se que o RADIS Cerrado:
 
