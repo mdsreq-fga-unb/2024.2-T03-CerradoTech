@@ -36,3 +36,10 @@ _Filgueiras, R., & Oliveira, P. S. (2006). Técnicas de recuperação de áreas 
 - [Fundovale - RADIS Cerrado e a restauração do bioma](https://www.fundovale.org/espaco-do-conhecimento/ultimas-noticias/radis-cerrado-e-a-restauracao-do-bioma/)
 - [Mata Nativa - RADIS Cerrado](https://matanativa.com.br/radis-cerrado/)
 - [Finatec - Desenvolvido por pesquisadores da UnB, app ajuda no rastreio e restauração do Cerrado](https://www.finatec.org.br/noticia/desenvolvido-por-pesquisadores-da-unb-app-ajuda-no-rastreio-e-restauracao-do-cerrado/)
+
+
+| **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
+|-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
+| 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
+| 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
+| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Marcus Escobar   | Todos os Membros            |

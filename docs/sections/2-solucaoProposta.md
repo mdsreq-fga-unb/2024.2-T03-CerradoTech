@@ -41,3 +41,10 @@ O RADIS Cerrado se diferencia por sua capacidade de operação offline, um recur
 ### Impacto da Solução
 
 A implementação do RADIS Cerrado promoverá a restauração de áreas degradadas, garantindo monitoramento contínuo e eficiente mesmo em áreas remotas. A solução fortalece a conformidade com a legislação ambiental, auxiliando produtores rurais a promover práticas sustentáveis e contribuindo para uma política de proteção ambiental mais eficaz no Cerrado.
+
+
+| **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
+|-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
+| 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
+| 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
+| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |

@@ -16,3 +16,10 @@ Manter reuniões rápidas para revisar as atividades de forma colaborativa, gara
 No início, alguns membros tiveram dificuldades para balancear o tempo dedicado ao projeto com outras atividades acadêmicas, o que impactou o ritmo de trabalho.
 
 Utilizar ferramentas de gestão visual, como o Trello, para organizar tarefas de forma clara e definir prazos realistas. Estabelecemos também um compromisso de dividir as tarefas conforme as disponibilidades individuais.
+
+
+| **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
+|-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
+| 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
+| 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
+| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |

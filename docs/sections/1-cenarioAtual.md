@@ -38,3 +38,11 @@ Esses desafios resultaram na indisponibilidade do aplicativo, impactando diretam
 - _ONGs_: Utilizam o aplicativo para acompanhar projetos de recuperação ambiental e prestar assistência técnica nas áreas rurais.
 - _Técnicos Ambientais_: Coletam e processam dados de campo, colaborando com as ONGs e outros parceiros para acompanhar projetos ambientais.
 - _Órgãos Reguladores_: O aplicativo fornece uma fonte confiável de dados que permite monitorar e avaliar o cumprimento de exigências ambientais, facilitando o trabalho de fiscalização e promovendo a preservação do Cerrado.
+
+# Histórico de Revisão
+
+| **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
+|-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
+| 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
+| 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
+| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
