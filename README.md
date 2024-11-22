@@ -48,7 +48,3 @@ Mais informações no page sobre a [Visão do Projeto e Produto]().
 </table>
 
 ---
-
-## Vídeo de apresentação
-
-[Entrega 1º unidade](https://www.youtube.com/watch?v=oXDd_fYzg98)

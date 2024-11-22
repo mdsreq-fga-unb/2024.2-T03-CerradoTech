@@ -2,22 +2,23 @@
 
 ## Estratégia Priorizada
 
-A estratégia para o projeto RADIS Cerrado combina a **abordagem Dirigida a Plano (Híbrida)** com o **ciclo de vida Iterativo** e o **processo RAD (Rapid Application Development)**. Essa escolha foi feita com base nas necessidades específicas do projeto, como a urgência na reativação do sistema, a modernização tecnológica e o engajamento contínuo dos usuários.
+A estratégia para o projeto RADIS Cerrado combina a **Híbrida** com o **ciclo de vida Iterativo** e o **processo que combina características e etapas do RAD (Rapid Application Development) e RUP (Rational Unified Process)**. Essa escolha foi feita com base nas necessidades específicas do projeto, como a urgência na reativação do sistema, a modernização tecnológica e o engajamento contínuo dos usuários.
 
-| **Abordagem**              | **Ciclo de Vida**       | **Processo**                     |
-|----------------------------|-------------------------|-----------------------------------|
-| Dirigida a Plano (Híbrida) | Iterativo               | RAD (Rapid Application Development) |
+| **Abordagem** | **Ciclo de Vida** | **Processo** |
+| ------------- | ----------------- | ------------ |
+| Híbrida       | Iterativo         | RAD + RUP    |
 
 ---
 
-### Abordagem: Dirigida a Plano (Híbrida)
+### Abordagem: Híbrida
 
-A abordagem **Dirigida a Plano (Híbrida)** combina planejamento detalhado e estrutura inicial com a flexibilidade de práticas ágeis. Essa combinação é ideal para o RADIS Cerrado, pois permite um controle rigoroso sobre os requisitos e prazos, enquanto incorpora mudanças e feedbacks ao longo do desenvolvimento.
+A abordagem **Híbrida** combina planejamento detalhado e estrutura inicial com a flexibilidade de práticas ágeis. Essa combinação é ideal para o RADIS Cerrado, pois permite um controle rigoroso sobre os requisitos e prazos, enquanto incorpora mudanças e feedbacks ao longo do desenvolvimento.
 
 **Principais Benefícios:**
+
 - **Planejamento Estruturado**: Define metas claras, cronogramas e alocação de recursos, garantindo uma visão detalhada do projeto.
-- **Flexibilidade**: Práticas ágeis, como entregas incrementais e reuniões recorrentes, permitem ajustes rápidos em resposta a novos desafios.
-- **Colaboração Contínua**: Estimula a comunicação frequente entre a equipe de desenvolvimento, stakeholders e usuários finais.
+- **Flexibilidade**: Práticas ágeis, como reuniões recorrentes, permitem ajustes rápidos em resposta a novos desafios.
+- **Colaboração Contínua**: Estimula a comunicação frequente entre a equipe de desenvolvimento e stakeholders.
 
 ---
 
@@ -26,68 +27,101 @@ A abordagem **Dirigida a Plano (Híbrida)** combina planejamento detalhado e est
 O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RADIS Cerrado, onde o aprimoramento contínuo e a incorporação de feedback são essenciais. Cada iteração agrega valor ao sistema, permitindo a entrega gradual de funcionalidades prioritárias.
 
 **Por que escolher o Ciclo Iterativo?**
+
 - **Feedback Contínuo**: Melhorias são feitas com base no retorno dos usuários e stakeholders em cada iteração.
 - **Redução de Riscos**: Problemas são identificados e resolvidos antecipadamente, minimizando impactos futuros.
-- **Entrega Incremental**: Funcionalidades prioritárias são entregues primeiro, permitindo que os usuários comecem a utilizar o sistema antes de sua conclusão total.
 
 ---
 
-### Processo: RAD (Rapid Application Development)
+### Processo: RAD + RUP
 
-O **RAD** enfatiza a agilidade no desenvolvimento, permitindo que o sistema seja reativado rapidamente e adaptado conforme as necessidades dos usuários. Sua ênfase em prototipação e ciclos curtos torna-o ideal para projetos com prazos curtos e requisitos em evolução.
+## Etapas do Projeto RADIS Cerrado
 
-**Características do RAD no RADIS Cerrado:**
-- **Prototipação Rápida**: Protótipos funcionais são criados para validação com os usuários finais, garantindo que as funcionalidades atendam às suas necessidades reais.
-- **Iterações Curtas**: Ciclos de desenvolvimento rápidos permitem ajustes contínuos com base em feedbacks.
-- **Envolvimento Intenso do Usuário**: A interação frequente com os usuários assegura que o sistema seja útil, intuitivo e relevante para seu contexto.
+1.**Concepção (Inception - RUP):**
+
+- Reuniões com stakeholders para revisar e refinar os requisitos.
+- Identificação de funcionalidades prioritárias, como suporte offline e atualização do front-end.
+- Planejamento de entregas iterativas.
+- Criação de protótipos conceituais para alinhar expectativas.
+
+  2.**Prototipagem e Planejamento Inicial (RAD):**
+
+- Desenvolvimento de protótipos rápidos focados em atualização da inteface de usuário
+- Validação de funcionalidades offline.
+- Obtenção de feedback imediato dos usuários para ajustes.
+
+  3.**Elaboração (Elaboration - RUP):**
+
+- Definição e validação da arquitetura modular.
+- Planejamento detalhado de ciclos de desenvolvimento.
+
+  4.**Construção Iterativa (RAD + RUP):**
+
+- Divisão do desenvolvimento em ciclos curtos (RAD).
+- Realização de testes unitários e de integração contínuos (RUP).
+- Ajustes contínuos baseados no feedback dos usuários.
+
+  5.**Teste e Refinamento (RUP):**
+
+- Testes de compatibilidade offline em cenários reais de uso.
+- Validação com stakeholders para garantir que o sistema atende às necessidades.
+
+  6.**Transição e Implantação (Transition - RUP):**
+
+- Implantação controlada com monitoramento em campo.
+- Planejamento de atualizações futuras baseadas em novas demandas.
 
 ---
 
-### Justificativa da Estratégia
+## Tabela Comparativa: RAD x RUP no RADIS Cerrado
 
-A estratégia combinando abordagem híbrida, ciclo iterativo e o processo RAD foi escolhida por:
-
-1. **Urgência na Reativação**: O RADIS Cerrado precisa estar operacional o mais rápido possível para retomar suas funções críticas.
-2. **Flexibilidade para Ajustes**: O RAD permite mudanças frequentes durante o desenvolvimento, essencial para modernização tecnológica e novos requisitos, como o modo offline.
-3. **Engajamento do Usuário**: A colaboração ativa dos stakeholders e usuários é fundamental para validar e aprimorar as funcionalidades do sistema.
-4. **Redução de Riscos**: Ciclos curtos facilitam a identificação e resolução de problemas nas etapas iniciais do desenvolvimento.
-5. **Custo-Benefício**: A economia de tempo e recursos faz do RAD uma escolha prática, especialmente dentro do prazo limitado de 4 meses.
-
----
-
-## Quadro Comparativo
-
-A tabela abaixo apresenta uma comparação entre o **RAD** e o **RUP**, destacando suas características e aplicabilidade no contexto do projeto RADIS Cerrado:
-
-| **Critério**                   | **RAD (Rapid Application Development)**                            | **RUP (Rational Unified Process)**                    |
-|--------------------------------|--------------------------------------------------------------------|-------------------------------------------------------|
-| **Velocidade de Desenvolvimento** | Alta, com foco em entregas rápidas e prototipação contínua.      | Moderada, devido às fases bem definidas e estruturadas. |
-| **Flexibilidade**              | Alta flexibilidade para incorporar mudanças durante o desenvolvimento. | Moderada, mudanças são possíveis, mas podem afetar o cronograma. |
-| **Abordagem Híbrida**          | Combina planejamento estruturado com práticas ágeis.              | Pode ser adaptado, mas é inerentemente mais pesado.    |
-| **Envolvimento do Usuário**    | Intenso, com feedback constante e colaboração próxima.            | Presente, mas menos frequente, estruturado em pontos específicos. |
-| **Complexidade do Projeto**    | Adequado para projetos que requerem rápida entrega e alta interação com o usuário. | Ideal para projetos grandes e complexos com requisitos bem definidos. |
-| **Gestão de Riscos**           | Riscos gerenciados através de iterações curtas e ajustes rápidos.  | Identificação inicial de riscos, menos responsivo a novos riscos. |
-| **Custo e Recursos**           | Mais eficiente em termos de tempo e custos para projetos urgentes. | Pode demandar mais recursos devido à sua estrutura abrangente. |
-| **Documentação**               | Foco na documentação essencial para acelerar o desenvolvimento.   | Extensa, o que aumenta o tempo e os recursos necessários. |
-| **Aplicação para o RADIS Cerrado** | Ideal para reativar rapidamente o sistema e incorporar feedbacks contínuos. | Menos ideal devido à necessidade de rapidez e flexibilidade do projeto. |
+| **Critério**                      | **RAD (Rapid Application Development)**                                        | **RUP (Rational Unified Process)**                                         |
+| --------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| **Velocidade de Desenvolvimento** | Alta: Foco em entregas rápidas por meio de prototipagem contínua.              | Moderada: Requer planejamento detalhado e maior foco em qualidade.         |
+| **Flexibilidade**                 | Alta: Adaptação rápida às mudanças durante o desenvolvimento.                  | Moderada: Mudanças são possíveis, mas podem impactar o cronograma.         |
+| **Documentação**                  | Enxuta: Priorização de documentação essencial para acelerar o desenvolvimento. | Extensa: Documentação abrangente para garantir comunicação e controle.     |
+| **Envolvimento do Usuário**       | Intenso: Feedback constante e validação frequente com usuários finais.         | Estruturado: Validação em marcos importantes, com menor frequência.        |
+| **Gestão de Riscos**              | Iterações curtas permitem ajustes rápidos em resposta a problemas emergentes.  | Identificação de riscos antecipada e abordagem sistemática para mitigação. |
+| **Arquitetura**                   | Simples: Foco em funcionalidade inicial que pode ser aprimorada.               | Robusta: Planejamento e validação de uma arquitetura sólida.               |
+| **Custo e Recursos**              | Baixo custo inicial devido à rapidez nas entregas e menor burocracia.          | Custo maior, mas com foco em qualidade e sustentabilidade do sistema.      |
+| **Aplicação no RADIS Cerrado**    | Ideal para reativar rapidamente o sistema e validar funcionalidades críticas.  | Essencial para garantir qualidade e documentar as soluções de longo prazo. |
 
 ---
 
-### Justificativa da Escolha pelo RAD
+## Justificativa da Estratégia Híbrida
 
-A escolha do **RAD** como processo principal se baseia nos seguintes pontos:
+Para atender às demandas do RADIS Cerrado, como reativação rápida, suporte offline e modernização tecnológica, a estratégia híbrida combina os pontos fortes do RAD e do RUP:
 
-1. **Reativação Urgente**: Entregas rápidas são necessárias para que o RADIS Cerrado retome suas funções críticas de monitoramento ambiental.
-2. **Flexibilidade e Adaptabilidade**: Mudanças frequentes e ajustes contínuos são facilitados pelo RAD, atendendo a um cenário de requisitos variáveis.
-3. **Participação Ativa dos Usuários**: A interação constante com agricultores e técnicos assegura que o sistema será útil e eficiente no campo.
-4. **Gestão Ágil de Riscos**: Iterações curtas permitem que riscos técnicos sejam identificados e mitigados rapidamente.
-5. **Eficiência no Prazo e Recursos**: Dentro do prazo de 4 meses, o RAD otimiza o tempo e os custos sem comprometer a qualidade.
+**Do RAD:**
 
-O RAD oferece a melhor combinação de rapidez, flexibilidade e engajamento para atender às necessidades específicas do projeto RADIS Cerrado.
+- Prototipagem rápida para validar funcionalidades prioritárias como o modo offline.
+- Iterações curtas e foco no feedback imediato dos usuários.
 
+**Do RUP:**
 
-| **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
-|-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
-| 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
-| 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
-| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
+- Planejamento estruturado e validação da arquitetura modular.
+- Garantia de qualidade por meio de testes e gestão de riscos antecipada.
+
+---
+
+## Atividades Selecionadas para o RADIS Cerrado
+
+**Do RAD:**
+
+- Prototipagem Rápida: Criação de protótipos para validação de funcionalidades-chave.
+- Iterações Curtas: Ajustes rápidos e entregas incrementais.
+- Envolvimento Intenso dos Usuários: Garantir alinhamento com as necessidades do campo.
+
+**Do RUP:**
+
+- Definição de Requisitos e Análise: Identificação clara de prioridades e necessidades técnicas.
+- Testes de Integração e Validação: Garante qualidade e funcionalidade offline.
+- Documentação: Afim de melhorar a comunicação entre equipe e o desenvolvimento sustentável.
+
+Essa abordagem híbrida equilibra agilidade e planejamento, permitindo reativar rapidamente o RADIS Cerrado enquanto garante qualidade e sustentabilidade para futuras atualizações.
+
+| **Data**   | **Versão** | **Descrição**                               | **Autor**                 | **Revisores**    |
+| ---------- | ---------- | ------------------------------------------- | ------------------------- | ---------------- |
+| 04/11/2024 | 1.0        | Primeiras Implementações e especificações.  | Vinicius Castelo          | Todos os Membros |
+| 11/11/2024 | 1.1        | Correções de parâmetros para apresentação.  | Vinicius Castelo          | Todos os Membros |
+| 18/11/2024 | 1.2        | Ajustes das Issues e informações adicionais | Patrick Anderson Carvalho | Todos os Membros |
