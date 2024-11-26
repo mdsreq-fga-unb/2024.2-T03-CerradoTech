@@ -21,7 +21,7 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 | **Desenvolvedor Full-Stack**            | Analisa os requisitos técnicos, define critérios de aceitação para o back-end e valida a integração com o front-end. Atua no alinhamento entre requisitos funcionais e não funcionais. | Marcus Vinícius Figueiredo Escobar              |
 | **Desenvolvedor Front-end**             | Colabora na validação dos requisitos do front-end e participa da prototipação. Responsável por implementar mudanças requisitadas diretamente pelos stakeholders. | Brenno da Silva Oliveira                        |
 | **Testador (QA) e Desenvolvedor Front-end** | Revisa os requisitos durante o desenvolvimento, garantindo sua testabilidade. Contribui na definição de cenários de teste para validar se os requisitos foram atendidos. | Vinícius Castelo Ferreira                      |
-
+| **Analista de Requisitos** | Identifica, documenta e gerencia os requisitos do projeto, garantindo que as necessidades do cliente sejam compreendidas e atendidas adequadamente. | Todos os membros da equipe                      |
 ---
 
 ## Ferramentas de Comunicação
