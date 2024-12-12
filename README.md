@@ -1,4 +1,4 @@
-# 2024.2: CerraTech
+# 2024.2: Cerrado Tech
 
 **Repositório de projeto da disciplina de REQ-T3.**
 
