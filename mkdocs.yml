@@ -4,22 +4,19 @@ repo_url: https://github.com/mdsreq-fga-unb/2024.2-T03-CerradoTech
 theme:
   name: material
   language: pt-BR
-
   logo: assets/logo.png
   favicon: assets/logo.png
   features:
-    - navigation.tabs
-    - navigation.sections
-    - toc.integrate
-    - navigation.top
-    - search.suggest
-    - search.highlight
+    - content.code.annotate
     - content.tabs.link
-    - content.code.annotation
-    - content.code.copy
+    - header.autohide
+    - navigation.instant
+    - navigation.top
+    - navigation.tracking
+    - toc.integrate
 
   palette:
-    #Dark Theme
+    # Dark Theme
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: teal
@@ -28,7 +25,7 @@ theme:
         icon: material/weather-night
         name: Trocar para tema claro
 
-    #light Theme
+    # Light Theme
     - media: "(prefers-color-scheme: light)"
       scheme: default
       primary: teal
@@ -45,7 +42,11 @@ nav:
       - Estratégias de Engenharia de Software: sections/3-estrategia.md
       - Cronograma e Entregas: sections/4-cronograma.md
       - Interação entre Equipe e Cliente: sections/5-equipe.md
-      - Lições Aprendidas: sections/6-aprendizados.md
       - Referências Bibliográficas: sections/7-bibliografia.md
-  - Entregas: 
-      - Unidade 1: sections/entregas.md
+  - Backlog: 
+      - Requisitos de Software: sections/requisitos.md
+      - Backlog do Produto: sections/backlog.md
+      - DoR e DoD: sections/dor-dod.md
+  - Entregas e Lições Aprendidas:
+      - Unidade 1: sections/entregaU1.md
+      - Unidade 2: sections/entregaU2.md
