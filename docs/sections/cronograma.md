@@ -1,5 +1,3 @@
-# 4. Cronograma e Entregas
-
 O planejamento temporal do projeto está estruturado em **ciclos iterativos**, garantindo que cada fase do desenvolvimento seja validada antes de avançar. Com base nas diretrizes da Estratégia Raja Gupta e mantendo as datas fornecidas da disciplina, o cronograma de desenvolvimento foi ajustado da seguinte forma:
 
 | **Fase**                      | **Início**   | **Fim**      | **Objetivo do Ciclo**                                   | **Entregas Previstas**                                                            | **Validação com os Stakeholders**                                              |
@@ -19,9 +17,7 @@ O planejamento temporal do projeto está estruturado em **ciclos iterativos**, g
 | **Entrega Final**              | 20/02/2025   | 27/02/2025   | Lançamento do Produto e Publicação                    | 1. Lançamento oficial do sistema atualizado em domínio público.                   | Aprovação do cliente e feedbacks pós-lançamento.                               |
 |                                |              |              |                                                        | 2. Documentação completa e manual do usuário.                                     |                                                                                 |
 
----
-
-### Ajustes e Observações
+## Ajustes e Observações
 
 - **Planejamento Híbrido:** A abordagem combina práticas estruturadas de levantamento de requisitos e planejamento detalhado com ciclos iterativos que garantem flexibilidade e adaptação contínua às necessidades do cliente.
 - **Validação Contínua:** Cada entrega é validada diretamente com os stakeholders, permitindo ajustes rápidos e garantindo que o sistema atenda às expectativas.
@@ -30,8 +26,11 @@ O planejamento temporal do projeto está estruturado em **ciclos iterativos**, g
 Esse cronograma inicial será atualizado conforme necessário ao longo do projeto para garantir que o desenvolvimento permaneça alinhado com os objetivos de modularidade, funcionalidade offline e modernização do aplicativo.
 
 
+## Histórico de Versão
+
 | **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
 |-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
+| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |

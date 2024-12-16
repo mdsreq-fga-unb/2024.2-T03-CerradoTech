@@ -1,11 +1,3 @@
-# Visão do Produto e Projeto
-
----
-
-## 7. Referências Bibliográficas
-
-### Referências Bibliográficas
-
 1. Wiegers, K. E., & Beatty, J. (2013). *Software Requirements* (3rd ed.). Microsoft Press.  
 2. Sommerville, I. (2018). *Software Engineering* (10th ed.). Pearson.  
 3. Pressman, R. S., & Maxim, B. R. (2014). *Engenharia de Software: Uma Abordagem Profissional* (8ª ed.). McGraw-Hill.  
@@ -18,7 +10,7 @@
 10. Mathiassen, L., Munk-Madsen, A., Nielsen, P. A., & Stage, J. (2000). *Object-Oriented Analysis & Design*.  
 11. Briand, L. C., & Wüst, J. (2002). Empirical Studies of Quality Models in Object-Oriented Systems. *Advances in Computers, 56*, 111–143.  
 
-### Links Visitados
+## Links Visitados
 
 - [Museu do Cerrado - RADIS Cerrado](https://museucerrado.com.br/agrobiodiversidade/restauracao/radis-cerrado/)
 - [UnB Notícias - Aplicativo auxilia agricultores na restauração do Cerrado](https://noticias.unb.br/117-pesquisa/5489-aplicativo-auxilia-agricultores-na-restauracao-do-cerrado)
@@ -28,8 +20,11 @@
 - [Finatec - Desenvolvido por pesquisadores da UnB, app ajuda no rastreio e restauração do Cerrado](https://www.finatec.org.br/noticia/desenvolvido-por-pesquisadores-da-unb-app-ajuda-no-rastreio-e-restauracao-do-cerrado/)
 
 
+## Histórico de Versão
+
 | **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
 |-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Marcus Escobar   | Todos os Membros            |
+| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |

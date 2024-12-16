@@ -1,5 +1,3 @@
-# 3. Estratégias de Engenharia de Software
-
 ## Estratégia Priorizada
 
 A estratégia para o projeto RADIS Cerrado combina a **Híbrida** com o **ciclo de vida Iterativo** e o **processo que combina características e etapas do RAD (Rapid Application Development) e RUP (Rational Unified Process)**. Essa escolha foi feita com base nas necessidades específicas do projeto, como a urgência na reativação do sistema, a modernização tecnológica e o engajamento contínuo dos usuários.
@@ -8,9 +6,8 @@ A estratégia para o projeto RADIS Cerrado combina a **Híbrida** com o **ciclo 
 | ------------- | ----------------- | ------------ |
 | Híbrida       | Iterativo         | RAD + RUP    |
 
----
 
-### Abordagem: Híbrida
+## Abordagem: Híbrida
 
 A abordagem **Híbrida** combina planejamento detalhado e estrutura inicial com a flexibilidade de práticas ágeis. Essa combinação é ideal para o RADIS Cerrado, pois permite um controle rigoroso sobre os requisitos e prazos, enquanto incorpora mudanças e feedbacks ao longo do desenvolvimento.
 
@@ -20,9 +17,7 @@ A abordagem **Híbrida** combina planejamento detalhado e estrutura inicial com 
 - **Flexibilidade**: Práticas ágeis, como reuniões recorrentes, permitem ajustes rápidos em resposta a novos desafios.
 - **Colaboração Contínua**: Estimula a comunicação frequente entre a equipe de desenvolvimento e stakeholders.
 
----
-
-### Ciclo de Vida: Iterativo
+## Ciclo de Vida: Iterativo
 
 O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RADIS Cerrado, onde o aprimoramento contínuo e a incorporação de feedback são essenciais. Cada iteração agrega valor ao sistema, permitindo a entrega gradual de funcionalidades prioritárias.
 
@@ -31,11 +26,9 @@ O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RAD
 - **Feedback Contínuo**: Melhorias são feitas com base no retorno dos usuários e stakeholders em cada iteração.
 - **Redução de Riscos**: Problemas são identificados e resolvidos antecipadamente, minimizando impactos futuros.
 
----
+## Processo: RAD + RUP
 
-### Processo: RAD + RUP
-
-## Etapas do Projeto RADIS Cerrado
+### Etapas do Projeto RADIS Cerrado
 
 1.**Concepção (Inception - RUP):**
 
@@ -71,7 +64,6 @@ O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RAD
 - Implantação controlada com monitoramento em campo.
 - Planejamento de atualizações futuras baseadas em novas demandas.
 
----
 
 ## Tabela Comparativa: RAD x RUP no RADIS Cerrado
 
@@ -86,7 +78,6 @@ O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RAD
 | **Custo e Recursos**              | Baixo custo inicial devido à rapidez nas entregas e menor burocracia.          | Custo maior, mas com foco em qualidade e sustentabilidade do sistema.      |
 | **Aplicação no RADIS Cerrado**    | Ideal para reativar rapidamente o sistema e validar funcionalidades críticas.  | Essencial para garantir qualidade e documentar as soluções de longo prazo. |
 
----
 
 ## Justificativa da Estratégia Híbrida
 
@@ -102,7 +93,6 @@ Para atender às demandas do RADIS Cerrado, como reativação rápida, suporte o
 - Planejamento estruturado e validação da arquitetura modular.
 - Garantia de qualidade por meio de testes e gestão de riscos antecipada.
 
----
 
 ## Atividades Selecionadas para o RADIS Cerrado
 
@@ -120,8 +110,13 @@ Para atender às demandas do RADIS Cerrado, como reativação rápida, suporte o
 
 Essa abordagem híbrida equilibra agilidade e planejamento, permitindo reativar rapidamente o RADIS Cerrado enquanto garante qualidade e sustentabilidade para futuras atualizações.
 
+
+
+## Histórico de Versão
+
 | **Data**   | **Versão** | **Descrição**                               | **Autor**                 | **Revisores**    |
 | ---------- | ---------- | ------------------------------------------- | ------------------------- | ---------------- |
 | 04/11/2024 | 1.0        | Primeiras Implementações e especificações.  | Vinicius Castelo          | Todos os Membros |
 | 11/11/2024 | 1.1        | Correções de parâmetros para apresentação.  | Vinicius Castelo          | Todos os Membros |
 | 18/11/2024 | 1.2        | Ajustes das Issues e informações adicionais | Patrick Anderson Carvalho | Todos os Membros |
+| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |

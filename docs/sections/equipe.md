@@ -1,16 +1,6 @@
-# Visão do Produto e Projeto
-
----
-
-# 5. Equipe e Cliente
-
----
-
 ## Comunicação
 
 Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakeholders alinhados, a comunicação entre a equipe e o cliente será estruturada de acordo com uma combinação de reuniões recorrentes e documentações compartilhadas.
-
----
 
 ## Composição da Equipe
 
@@ -22,7 +12,7 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 | **Desenvolvedor Front-end**             | Colabora na validação dos requisitos do front-end e participa da prototipação. Responsável por implementar mudanças requisitadas diretamente pelos stakeholders. | Brenno da Silva Oliveira                        |
 | **Testador (QA) e Desenvolvedor Front-end** | Revisa os requisitos durante o desenvolvimento, garantindo sua testabilidade. Contribui na definição de cenários de teste para validar se os requisitos foram atendidos. | Vinícius Castelo Ferreira                      |
 | **Analista de Requisitos** | Identifica, documenta e gerencia os requisitos do projeto, garantindo que as necessidades do cliente sejam compreendidas e atendidas adequadamente. | Todos os membros da equipe                      |
----
+
 
 ## Ferramentas de Comunicação
 
@@ -34,7 +24,6 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 
 - **_Google Drive_**: Plataforma para centralizar documentos, relatórios e outros materiais relevantes. Essa será a referência para o cliente acessar documentos de projeto e relatórios de reuniões.
 
----
 
 ## Frequência das Reuniões e Interações
 
@@ -46,7 +35,6 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 
 - **_Feedbacks Informais_**: A equipe está aberta a feedbacks contínuos do cliente por meio do Google Meet ou GitHub, permitindo ajustes rápidos e melhor adaptação às necessidades do cliente.
 
----
 
 ## Processo de Validação
 
@@ -60,13 +48,15 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
    - **_Testes de Usabilidade:_** Será realizada uma revisão da experiência do usuário, considerando o público-alvo (pequenos agricultores e técnicos) para garantir que a interface seja intuitiva e prática.
    - **_Feedback Conclusivo:_** O cliente poderá testar a versão final e fornecer feedback sobre o desempenho, completude e conformidade com os requisitos iniciais. Ajustes finais poderão ser realizados para garantir que o produto esteja pronto para o uso prático no campo.
 
----
 
 Esse processo de validação contínua e final visa garantir que o RADIS Cerrado atenda às expectativas do cliente e cumpra plenamente seus objetivos de monitoramento ambiental e suporte ao usuário, promovendo uma entrega de alta qualidade e alinhada com as necessidades reais.
 
+
+## Histórico de Versão
 
 | **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
 |-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
+| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |

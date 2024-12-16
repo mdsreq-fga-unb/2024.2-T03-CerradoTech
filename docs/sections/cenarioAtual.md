@@ -1,16 +1,12 @@
-# Visão do Produto e Projeto
 
----
 
-## 1. Cenário Atual do Cliente e do Negócio
-
-### Introdução ao Negócio e Contexto
+## Introdução ao Negócio e Contexto
 
 O Centro de Gestão e Inovação da Agricultura Familiar (Cegafi), vinculado à Universidade de Brasília (UnB), é uma entidade de pesquisa dedicada ao desenvolvimento de soluções inovadoras para o setor agrícola familiar. Com um foco particular nas áreas de sustentabilidade e inclusão social, o Cegafi busca melhorar as condições de vida das populações rurais vulneráveis por meio de projetos que incentivam a preservação ambiental e promovem a segurança jurídica das propriedades. A instituição trabalha diretamente com pequenos proprietários e assentamentos, promovendo a recuperação de áreas que sofreram desmatamento para atividades agrícolas e assegurando que essas ações estejam em conformidade com a legislação ambiental brasileira.
 
 Como parte desse compromisso, o aplicativo RADIS Cerrado foi desenvolvido para monitorar áreas degradadas do Cerrado, um dos biomas mais biodiversos e ameaçados do Brasil. Essa ferramenta oferece suporte técnico e científico, promovendo práticas de uso sustentável da terra que contribuem para a conservação do bioma e para a segurança alimentar das comunidades locais.
 
-### Identificação da Oportunidade ou Problema
+## Identificação da Oportunidade ou Problema
 
 O RADIS Cerrado está atualmente fora do ar devido a uma série de problemas técnicos e operacionais que comprometem sua funcionalidade e expansão. As principais causas identificadas incluem:
 
@@ -24,14 +20,14 @@ Esses desafios resultaram na indisponibilidade do aplicativo, impactando diretam
 
 ![Diagrama de Ishikawa](../assets/ishikawa.png)
 
-### Desafios do Projeto
+## Desafios do Projeto
 
 - _Atualização da tecnologia do front-end_: O aplicativo foi desenvolvido em Ionic 5, uma versão desatualizada que dificulta a implementação de padrões modernos de usabilidade. A atualização dos pacotes e da estrutura do front-end é necessária para proporcionar uma experiência de usuário otimizada e manter o aplicativo alinhado com as melhores práticas atuais.
 - _Garantia de funcionamento offline_: Para os usuários em áreas rurais e remotas do Cerrado, onde o acesso à internet é limitado ou inexistente, o suporte offline é essencial. Implementar essa funcionalidade é um desafio crítico para garantir que o aplicativo cumpra seu objetivo de monitoramento ambiental, independentemente das condições de conectividade.
 - _Implementação de uma arquitetura modular_: A criação de uma arquitetura modular permitirá que o aplicativo seja facilmente expandido para atender a demandas futuras da ONG parceira e dos técnicos de campo. Essa abordagem trará maior flexibilidade ao projeto, tornando possível a adição de novos módulos sem a necessidade de uma reformulação completa.
 - _Documentação abrangente do projeto_: A ausência de documentação técnica adequada tem sido uma barreira significativa para a manutenção e evolução do aplicativo. Desenvolver uma documentação clara e acessível é fundamental para facilitar futuras atualizações e corrigir problemas, especialmente considerando o histórico de insatisfação com o suporte e desenvolvimento anteriores.
 
-### Segmentação de Clientes
+## Segmentação de Clientes
 
 - _Pequenos Agricultores_: Usam o aplicativo para monitorar a vegetação local e registrar dados de restauração de áreas degradadas, frequentemente em regiões com conectividade limitada.
 - _Comunidades Rurais_: Similar aos pequenos agricultores, essas comunidades dependem do uso offline para coletar dados e garantir práticas sustentáveis.
@@ -39,10 +35,11 @@ Esses desafios resultaram na indisponibilidade do aplicativo, impactando diretam
 - _Técnicos Ambientais_: Coletam e processam dados de campo, colaborando com as ONGs e outros parceiros para acompanhar projetos ambientais.
 - _Órgãos Reguladores_: O aplicativo fornece uma fonte confiável de dados que permite monitorar e avaliar o cumprimento de exigências ambientais, facilitando o trabalho de fiscalização e promovendo a preservação do Cerrado.
 
-# Histórico de Revisão
+## Histórico de Revisão
 
 | **Data**       | **Versão** | **Descrição**                                | **Autor**                    | **Revisores**               |
 |-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
+| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
