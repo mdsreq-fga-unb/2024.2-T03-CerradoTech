@@ -20,7 +20,7 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 
 - **_GitHub_**: Repositório central para armazenar o código e documentações do projeto, com integração para gerenciar issues, relatórios de progresso e discussões técnicas. O GitHub servirá como principal referência de status do projeto, permitindo ao cliente acompanhar as entregas.
 
-- **_Trello_**: Utilizado para gerenciar as atividades da semana e visualizar o progresso das tarefas em um quadro Kanban. Cada tarefa estará ligada aos requisitos e funcionalidades priorizadas, permitindo que o cliente e os membros da equipe acompanhem o status de cada item de forma visual e organizada.
+- **_Whatsapp_**: Utilizado para comunicação rápida entre os membros da equipe para tomada de decisões e alinhamento de ideias e tirar duvidas com o cliente de forma mais direta e rápida.
 
 - **_Google Drive_**: Plataforma para centralizar documentos, relatórios e outros materiais relevantes. Essa será a referência para o cliente acessar documentos de projeto e relatórios de reuniões.
 
@@ -60,3 +60,4 @@ Esse processo de validação contínua e final visa garantir que o RADIS Cerrado
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
 | 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
+| 16/12/2024   | 1.4        | Atualização das ferramentas de comunicação    | Brenno da Silva                       | Todos os Membros            |
