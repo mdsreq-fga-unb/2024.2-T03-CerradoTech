@@ -40,6 +40,7 @@ nav:
       - Cenário Atual do Cliente e Negócio: sections/cenarioAtual.md
       - Solução Proposta: sections/solucaoProposta.md
       - Estratégias de Engenharia de Software: sections/estrategia.md
+      - Engenharia de Requisitos: sections/engenharia.md
       - Cronograma e Entregas: sections/cronograma.md
       - Interação entre Equipe e Cliente: sections/equipe.md
       - Referências Bibliográficas: sections/bibliografia.md
