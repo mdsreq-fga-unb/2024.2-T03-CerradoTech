@@ -72,7 +72,7 @@ O backlog do produto é uma lista organizada por prioridade, contendo funcionali
 | USNF3                   | Média (2)     | Média (2)            | Não (0)              | (2+0)/2 = 1.0           | 1             | Baixa          |
 | USNF4                   | Alta (3)      | Média (2)            | Não (0)              | (3+0)/2 = 1.5           | 1.5           | Média          |
 
-## MVP
+## Mínimo Produto Viável (MVP)
 
 ### Requisitos Funcionais
 
