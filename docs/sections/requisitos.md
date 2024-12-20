@@ -22,14 +22,19 @@ Requisitos funcionais são especificações que descrevem o que o sistema deve f
 ## Lista de Requisitos Não Funcionais (RNF)
 Requisitos não funcionais, por outro lado, são características que descrevem como o sistema deve operar, em termos de desempenho, confiabilidade, segurança, usabilidade, entre outros. Eles não estão diretamente ligados a funcionalidades específicas, mas sim às qualidades do sistema.
 
-| **ID** | **FUNCIONALIDADE**                                      | **ATOR**                           | **OBJETIVO**                                                                                   | **PAPEL**                                                 |
-|------------|----------------------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| **RNF1**   | Compatibilidade com Android                              | Usuário do aplicativo              | Garantir o uso em dispositivos Android.                                                         | Acessibilidade para diferentes públicos, garantindo que o aplicativo funcione de forma eficaz em uma ampla gama de dispositivos Android. |
-| **RNF2**   | Funcionamento Offline                                    | Sistema e usuário                  | Permitir a utilização do aplicativo mesmo sem conexão com a internet, com sincronização posterior. | Essencial para o RADIS CERRADO, garantindo que os usuários possam continuar usando o aplicativo em áreas sem cobertura de rede e sincronizar dados quando a conexão for restaurada. |
-| **RNF3**   | Desempenho                                               | Usuário                            | Oferecer uma experiência fluida e rápida em dispositivos de diferentes capacidades.             | Garantir a usabilidade e a satisfação do usuário, proporcionando desempenho eficiente sem lentidão ou falhas, mesmo em dispositivos com diferentes capacidades de hardware. |
-| **RNF4**   | Atualização de pacotes de dados e linguagens (visual e back-end) | Equipe de desenvolvimento          | Manter a plataforma atualizada com as melhores práticas e tecnologias.                          | Garantir a sustentabilidade tecnológica e evolução contínua da plataforma, permitindo que ela acompanhe as novas tendências e inovações no desenvolvimento de software. |
-| **RNF5**   | Segurança                                                | Equipe de desenvolvimento          | O aplicativo deve garantir a proteção dos dados dos usuários, utilizando criptografia e autenticação segura. | Garantir a proteção dos dados dos usuários, prevenindo acessos não autorizados e promovendo confiança no sistema. |
-| **RNF6**   | Disponibilidade                                           | Equipe de desenvolvimento          | O aplicativo deve estar disponível para uso a maior parte do tempo, com mínima possibilidade de falhas ou interrupções. | Assegurar alta confiabilidade e disponibilidade do sistema, minimizando interrupções e garantindo uma experiência contínua e sem falhas para o usuário. |
+| **Categoria URPS+**          | **ID**                               | **Descrição**                                                                                                                                           |
+|------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Usabilidade**   | **RNF1**: Compatibilidade com Android | Garantir o uso em dispositivos Android, assegurando que o aplicativo funcione de forma eficaz em uma ampla gama de dispositivos Android, atendendo a diferentes públicos. |
+| **Desempenho**  | **RNF2**: Funcionamento Offline      | Permitir a utilização do aplicativo mesmo sem conexão com a internet, com sincronização posterior. Essencial para a continuidade do trabalho em áreas sem cobertura de rede. |
+| **Desempenho**  | **RNF3**: Desempenho                 | Oferecer uma experiência fluida e rápida, sem falhas ou lentidão, em dispositivos de diferentes capacidades.                                           |
+| **Suportabilidade** | **RNF4**: Atualização de pacotes de dados e linguagens | Manter a plataforma atualizada com as melhores práticas e tecnologias, permitindo que ela evolua e acompanhe novas inovações no desenvolvimento de software. |
+| **Confiabilidade** | **RNF5**: Segurança                  | O aplicativo deve garantir a proteção dos dados dos usuários, utilizando criptografia e autenticação segura, promovendo confiança no sistema.              |
+| **Confiabilidade** | **RNF6**: Disponibilidade            | O aplicativo deve estar disponível para uso a maior parte do tempo, com mínima possibilidade de falhas ou interrupções, garantindo uma experiência contínua e confiável. |
+
+
+
+
+
 
 
 ## Funcionalidades de Manutenção e Melhoria (FM)
