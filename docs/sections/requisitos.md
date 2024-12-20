@@ -1,20 +1,21 @@
 ## Lista de Requisitos Funcionais (RF)
 Requisitos funcionais são especificações que descrevem o que o sistema deve fazer. Eles definem as funções, comportamentos e processos que o software precisa executar para atender às necessidades do usuário ou do negócio. 
 
-| **ID** | **FUNCIONALIDADE**                                      | **ATOR**                           | **OBJETIVO**                                                                                   | **PAPEL**                                                 |
-|------------|----------------------------------------------------------|------------------------------------|------------------------------------------------------------------------------------------------|-----------------------------------------------------------|
-| **RF1**    | Visualizar Propriedades no Mapa                          | Usuário do sistema (técnico ou agricultor) | Visualizar no mapa os limites das propriedades previamente cadastradas.                        | Exibir limites visíveis e informações básicas ao interagir. |
-| **RF2**    | Editar Limites de Propriedades no Mapa                   | Usuário do sistema (técnico ou agricultor) | Editar os limites das propriedades no mapa para corrigir ou atualizar informações.            | Salvar alterações confirmadas pelo usuário.               |
-| **RF3**    | Excluir Limites de Propriedades no Mapa                  | Usuário do sistema (técnico ou agricultor) | Excluir os limites das propriedades cadastradas no mapa.                                       | Confirmar e concluir exclusão de limites.                 |
-| **RF4**    | Inserir Anotações no Mapa                                | Usuário do sistema (técnico ou agricultor) | Adicionar anotações ou descrições nas propriedades mapeadas.                                    | Vincular anotações às propriedades no mapa.               |
-| **RF5**    | Monitorar Vegetação                                      | Usuário do sistema (técnico ou agricultor) | Analisar imagens de satélite para acompanhar o crescimento da vegetação.                       | Exibir índices de vegetação com dados de satélite.        |
-| **RF6**    | Acompanhar Informações das Plantas                       | Usuário do sistema (técnico ou agricultor) | Visualizar densidade e altura das plantas para acompanhar a saúde da vegetação.                | Exibir dados de densidade e altura das plantas.           |
-| **RF7**    | Listar Parcelas                                          | Usuário do sistema (técnico ou agricultor) | Visualizar uma lista de parcelas para diferenciar tipos de vegetação dentro de um polígono.     | Exibir lista filtrável e ordenável com informações resumidas. |
-| **RF8**    | Visualizar Detalhes de Parcelas                          | Usuário do sistema (técnico ou agricultor) | Ver detalhes de uma parcela específica para monitorar áreas menores.                           | Exibir detalhes e histórico editáveis.                    |
-| **RF9**    | Monitorar Parcelas dos Polígonos                         | Usuário e Sistema                  | Detectar alterações ambientais para monitorar o impacto ambiental.                              | Alertar sobre mudanças e registrar eventos.              |
-| **RF10**   | Receber Notificações                                     | Sistema                            | Receber alertas sobre eventos críticos para agir rapidamente e mitigar danos.                   | Enviar notificações com preferências configuráveis.       |
-| **RF11**   | Gerar Relatórios                                         | Usuário e Sistema                  | Criar relatórios detalhados sobre propriedades, vegetação e eventos monitorados.                | Documentação para análise e tomada de decisões.           |
-| **RF12**   | Cadastrar Monitoramento                                  | Usuário e Sistema                  | Cadastrar um período de tempo para receber notificações lembrando de realizar o monitoramento.  | Emitir lembretes e integrar com calendário.               |
+
+| **ID**   | **Ação**               | **Resultado**                                   | **Objeto**                                  |
+|----------|------------------------|-----------------------------------------------|-------------------------------------------|
+| RF1      | Visualizar            | os limites e informações básicas               | das propriedades no mapa                      |
+| RF2      | Editar                | os limites e salvar alterações confirmadas      | das propriedades no mapa                      |
+| RF3      | Excluir               | os limites e concluir a exclusão               | das propriedades no mapa                      |
+| RF4      | Inserir               | anotações vinculadas                           | das propriedades no mapa                      |
+| RF5      | Monitorar             | índices de vegetação com dados de satélite     | do crescimento da vegetação                  |
+| RF6      | Acompanhar            | densidade e altura exibidas                    | das plantas                                   |
+| RF7      | Listar                | parcelas filtráveis e ordenáveis               | dos tipos de vegetação dentro de um polígono |
+| RF8      | Visualizar            | detalhes e histórico editáveis                 | das parcelas específicas                      |
+| RF9      | Monitorar             | alterações ambientais e registrar eventos      |das parcelas dos polígonos                    |
+| RF10     | Receber               | notificações configuráveis                     | dos eventos críticos                          |
+| RF11     | Gerar                 | relatórios detalhados                          | das propriedades, da vegetação e dos eventos         |
+| RF12     | Cadastrar             | lembretes integrados                           | do monitoramento de períodos                 |
 
 
 
