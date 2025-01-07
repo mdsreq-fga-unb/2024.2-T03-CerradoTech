@@ -55,5 +55,5 @@ A funcionalidade de manutenção e melhoria refere-se às ações que realizarem
 
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
-| 16/12/2024   | 1.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
-| 20/12/2024   | 2.0        | Atualizando a lista das FMs                | Brenno da Silva                       | Todos os Membros            |
+| 16/12/2024   | 2.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
+| 20/12/2024   | 2.1        | Atualizando a lista das FMs                | Brenno da Silva                       | Todos os Membros            |

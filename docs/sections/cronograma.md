@@ -36,6 +36,6 @@ O cronograma será revisto e ajustado conforme necessário ao longo do ciclo de 
 |-----------------|------------|----------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
-| 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
-| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
-| 06/01/2025     | 1.4        | Alinhado o planejamento de entregas com o processo estabelecido.  | Vinicius Castelo             | Todos os Membros            |
+| 18/11/2024     | 2.0        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
+| 16/12/2024   | 2.1        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
+| 06/01/2025     | 2.2        | Alinhado o planejamento de entregas com o processo estabelecido.  | Vinicius Castelo             | Todos os Membros            |

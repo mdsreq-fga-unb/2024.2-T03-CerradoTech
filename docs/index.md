@@ -8,8 +8,6 @@
 
 O Projeto CerradoTech, desenvolvido como parte da disciplina de Requisitos de Software da Universidade de Brasília (UnB) no semestre de 2024.2, tem como objetivo a melhoria e correção do sistema RADIS Cerrado. O RADIS Cerrado foi criado inicialmente para monitorar áreas degradadas do Cerrado, um dos biomas mais importantes e ameaçados do Brasil. No entanto, o sistema apresentava limitações em sua funcionalidade e usabilidade, o que motivou a criação do CerradoTech.
 
-Mais informações aqui [Visão do Projeto e Produto](./visao.md).
-
 ## Equipe
 
 <center>
@@ -52,4 +50,5 @@ Mais informações aqui [Visão do Projeto e Produto](./visao.md).
 | Data       | Versão | Descrição                                  | Autor            | Revisores        |
 | ---------- | ------ | ------------------------------------------ | ---------------- | ---------------- |
 | 04/11/2024 | 1.0    | Primeiras Implementações e especificações. | Vinicius Castelo | Todos os Membros |
-| 11/11/2024 | 1.1    | Correções de parâmetros para apresentação  | Vinicius Castelo | Todos os Membros |
+| 11/11/2024 | 1.1    | Correções de parâmetros para apresentação.  | Vinicius Castelo | Todos os Membros |
+| 07/01/2025 | 2.1    | Alterações gerais.                         | Vinicius Castelo | Todos os Membros |

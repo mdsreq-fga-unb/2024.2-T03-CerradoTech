@@ -1,122 +1,121 @@
-## Estratégia Priorizada
+# Estratégia Priorizada
 
-A estratégia para o projeto RADIS Cerrado combina a **Híbrida** com o **ciclo de vida Iterativo** e o **processo que combina características e etapas do RAD (Rapid Application Development) e RUP (Rational Unified Process)**. Essa escolha foi feita com base nas necessidades específicas do projeto, como a urgência na reativação do sistema, a modernização tecnológica e o engajamento contínuo dos usuários.
+A estratégia para o projeto **RADIS Cerrado** adota o **Open UP (Open Unified Process)** como processo de desenvolvimento, seguindo uma **abordagem Ágil** e um **ciclo de vida Iterativo Incremental**. Essa escolha visa alinhar o projeto às práticas modernas de desenvolvimento ágil, promovendo flexibilidade, colaboração e entregas frequentes com alto valor agregado.
 
-| **Abordagem** | **Ciclo de Vida** | **Processo** |
-| ------------- | ----------------- | ------------ |
-| Híbrida       | Iterativo         | RAD + RUP    |
+| **Abordagem** | **Ciclo de Vida**     | **Processo** |
+|---------------|-----------------------|--------------|
+| Ágil          | Iterativo Incremental | Open UP      |
 
+---
 
-## Abordagem: Híbrida
+## Abordagem: Ágil
 
-A abordagem **Híbrida** combina planejamento detalhado e estrutura inicial com a flexibilidade de práticas ágeis. Essa combinação é ideal para o RADIS Cerrado, pois permite um controle rigoroso sobre os requisitos e prazos, enquanto incorpora mudanças e feedbacks ao longo do desenvolvimento.
+A abordagem **Ágil** promove entregas incrementais e a colaboração contínua entre equipes e stakeholders, garantindo que o projeto evolua com base em feedbacks constantes. É ideal para o RADIS Cerrado devido à necessidade de adaptação rápida às demandas de usuários em campo.
 
 **Principais Benefícios:**
 
-- **Planejamento Estruturado**: Define metas claras, cronogramas e alocação de recursos, garantindo uma visão detalhada do projeto.
-- **Flexibilidade**: Práticas ágeis, como reuniões recorrentes, permitem ajustes rápidos em resposta a novos desafios.
-- **Colaboração Contínua**: Estimula a comunicação frequente entre a equipe de desenvolvimento e stakeholders.
+- **Entregas Incrementais:** Fornece valor ao usuário em cada iteração, permitindo que funcionalidades sejam disponibilizadas rapidamente.
+- **Foco no Usuário:** A prioridade é atender às necessidades reais dos usuários e adaptar o sistema com base em seu feedback.
+- **Flexibilidade:** Permite ajustar o escopo e os requisitos de acordo com mudanças no contexto ou no entendimento do problema.
 
-## Ciclo de Vida: Iterativo
+---
 
-O **Ciclo de Vida Iterativo** é especialmente adequado para projetos como o RADIS Cerrado, onde o aprimoramento contínuo e a incorporação de feedback são essenciais. Cada iteração agrega valor ao sistema, permitindo a entrega gradual de funcionalidades prioritárias.
+## Ciclo de Vida: Iterativo Incremental
 
-**Por que escolher o Ciclo Iterativo?**
+O ciclo de vida **Iterativo Incremental** organiza o desenvolvimento em pequenos ciclos (iterações), onde cada iteração entrega incrementos funcionais do sistema. Isso garante que partes utilizáveis do produto estejam prontas desde o início, enquanto o restante é ajustado e expandido ao longo do tempo.
 
-- **Feedback Contínuo**: Melhorias são feitas com base no retorno dos usuários e stakeholders em cada iteração.
-- **Redução de Riscos**: Problemas são identificados e resolvidos antecipadamente, minimizando impactos futuros.
+**Por que escolher Iterativo Incremental?**
 
-## Processo: RAD + RUP
+- **Mitigação de Riscos:** Possibilita a identificação e correção de problemas em etapas iniciais do projeto.
+- **Feedback Contínuo:** Promove o aprimoramento constante do produto com base no retorno dos usuários.
+- **Evolução Contínua:** Cada incremento adiciona valor ao sistema, evoluindo gradualmente para atender ao escopo completo.
 
-### Etapas do Projeto RADIS Cerrado
+---
 
-1.**Concepção (Inception - RUP):**
+## Processo: Open UP
 
-- Reuniões com stakeholders para revisar e refinar os requisitos.
-- Identificação de funcionalidades prioritárias, como suporte offline e atualização do front-end.
-- Planejamento de entregas iterativas.
-- Criação de protótipos conceituais para alinhar expectativas.
+O **Open UP** é um processo ágil baseado no Rational Unified Process (RUP), com foco em simplificação e práticas de desenvolvimento iterativo e incremental. Ele é projetado para ser leve, flexível e centrado no usuário, características ideais para o projeto RADIS Cerrado.
 
-  2.**Prototipagem e Planejamento Inicial (RAD):**
+# Etapas do Open UP para o RADIS Cerrado
 
-- Desenvolvimento de protótipos rápidos focados em atualização da inteface de usuário
-- Validação de funcionalidades offline.
-- Obtenção de feedback imediato dos usuários para ajustes.
+## 1. Iniciação
+- **Objetivo:** Estabelecer o escopo inicial e identificar os principais riscos.
+- **Atividades:**
+  1. Definir visão do projeto e metas de alto nível.
+  2. Identificar stakeholders e principais necessidades.
+  3. Elaborar backlog inicial com base nos requisitos levantados.
 
-  3.**Elaboração (Elaboration - RUP):**
+## 2. Elaboração
+- **Objetivo:** Planejar as iterações e validar a arquitetura do sistema.
+- **Atividades:**
+  1. Refinar os requisitos e priorizá-los.
+  2. Validar protótipos das principais funcionalidades (ex.: mapeamento e notificações).
+  3. Planejar as primeiras iterações e definir entregas incrementais.
 
-- Definição e validação da arquitetura modular.
-- Planejamento detalhado de ciclos de desenvolvimento.
+## 3. Construção
+- **Objetivo:** Desenvolver os incrementos planejados com foco em funcionalidades prioritárias.
+- **Atividades:**
+  1. Implementar funcionalidades essenciais, como mapeamento offline e notificações.
+  2. Realizar testes contínuos (unitários, integração e aceitação).
+  3. Incorporar feedback de usuários em campo.
 
-  4.**Construção Iterativa (RAD + RUP):**
+## 4. Transição
+- **Objetivo:** Preparar o sistema para implantação e validação com usuários reais.
+- **Atividades:**
+  1. Implantação gradual em campo.
+  2. Capacitação de usuários e suporte inicial.
+  3. Monitoramento do uso e coleta de feedback.
 
-- Divisão do desenvolvimento em ciclos curtos (RAD).
-- Realização de testes unitários e de integração contínuos (RUP).
-- Ajustes contínuos baseados no feedback dos usuários.
+---
 
-  5.**Teste e Refinamento (RUP):**
+## Tabela Comparativa: Open UP x Unified Process (RUP)
 
-- Testes de compatibilidade offline em cenários reais de uso.
-- Validação com stakeholders para garantir que o sistema atende às necessidades.
+| **Critério**                      | **Open UP (Open Unified Process)**                          | **Unified Process (RUP)**                                |
+|-----------------------------------|------------------------------------------------------------|---------------------------------------------------------|
+| **Foco**                          | Leve e ágil, priorizando entregas frequentes e feedback.   | Estruturado e robusto, com foco em planejamento.        |
+| **Documentação**                  | Enxuta: apenas o necessário para garantir comunicação.     | Extensa: documentação detalhada e rigorosa.            |
+| **Flexibilidade**                 | Alta: adapta-se facilmente às mudanças no escopo.          | Moderada: adaptações podem impactar prazos e custos.    |
+| **Escopo de Uso**                 | Projetos pequenos e médios, com equipes ágeis.             | Projetos grandes, com múltiplas equipes.               |
+| **Ciclo de Vida**                 | Iterativo e incremental, com iterações curtas e frequentes. | Iterativo, mas com ciclos mais longos e complexos.      |
+| **Colaboração**                   | Centrado no usuário, com forte envolvimento dos stakeholders. | Estruturado, com validação em pontos específicos.      |
+| **Custo e Recursos**              | Baixo custo inicial e manutenção simplificada.             | Alto custo inicial, mas robusto para projetos complexos.|
+| **Aplicação no RADIS Cerrado**    | Ideal para adaptar rapidamente o sistema e validar MVPs.   | Muito detalhado e rígido para o contexto do RADIS.     |
 
-  6.**Transição e Implantação (Transition - RUP):**
+---
 
-- Implantação controlada com monitoramento em campo.
-- Planejamento de atualizações futuras baseadas em novas demandas.
+## Justificativa da Estratégia Open UP
 
+O **Open UP** foi escolhido para o RADIS Cerrado por sua abordagem leve e ágil, garantindo que o sistema seja adaptável às necessidades reais dos usuários. Ele combina:
 
-## Tabela Comparativa: RAD x RUP no RADIS Cerrado
+- **Flexibilidade do Ágil:** Entregas incrementais e adaptação contínua.
+- **Estrutura do RUP:** Planejamento inicial e validação de arquitetura sólida.
 
-| **Critério**                      | **RAD (Rapid Application Development)**                                        | **RUP (Rational Unified Process)**                                         |
-| --------------------------------- | ------------------------------------------------------------------------------ | -------------------------------------------------------------------------- |
-| **Velocidade de Desenvolvimento** | Alta: Foco em entregas rápidas por meio de prototipagem contínua.              | Moderada: Requer planejamento detalhado e maior foco em qualidade.         |
-| **Flexibilidade**                 | Alta: Adaptação rápida às mudanças durante o desenvolvimento.                  | Moderada: Mudanças são possíveis, mas podem impactar o cronograma.         |
-| **Documentação**                  | Enxuta: Priorização de documentação essencial para acelerar o desenvolvimento. | Extensa: Documentação abrangente para garantir comunicação e controle.     |
-| **Envolvimento do Usuário**       | Intenso: Feedback constante e validação frequente com usuários finais.         | Estruturado: Validação em marcos importantes, com menor frequência.        |
-| **Gestão de Riscos**              | Iterações curtas permitem ajustes rápidos em resposta a problemas emergentes.  | Identificação de riscos antecipada e abordagem sistemática para mitigação. |
-| **Arquitetura**                   | Simples: Foco em funcionalidade inicial que pode ser aprimorada.               | Robusta: Planejamento e validação de uma arquitetura sólida.               |
-| **Custo e Recursos**              | Baixo custo inicial devido à rapidez nas entregas e menor burocracia.          | Custo maior, mas com foco em qualidade e sustentabilidade do sistema.      |
-| **Aplicação no RADIS Cerrado**    | Ideal para reativar rapidamente o sistema e validar funcionalidades críticas.  | Essencial para garantir qualidade e documentar as soluções de longo prazo. |
+### Atividades Selecionadas no Open UP
 
+1. **Criação do Backlog:** Identificar e priorizar funcionalidades essenciais, como mapeamento de propriedades e notificações.
+2. **Desenvolvimento Incremental:** Iterações curtas focadas em funcionalidades de maior impacto.
+3. **Testes e Validação:** Feedback constante com base em uso real pelos usuários.
+4. **Documentação Ágil:** Garantir o registro mínimo necessário para comunicação e continuidade.
 
-## Justificativa da Estratégia Híbrida
-
-Para atender às demandas do RADIS Cerrado, como reativação rápida, suporte offline e modernização tecnológica, a estratégia híbrida combina os pontos fortes do RAD e do RUP:
-
-**Do RAD:**
-
-- Prototipagem rápida para validar funcionalidades prioritárias como o modo offline.
-- Iterações curtas e foco no feedback imediato dos usuários.
-
-**Do RUP:**
-
-- Planejamento estruturado e validação da arquitetura modular.
-- Garantia de qualidade por meio de testes e gestão de riscos antecipada.
-
-
-## Atividades Selecionadas para o RADIS Cerrado
-
-**Do RAD:**
-
-- Prototipagem Rápida: Criação de protótipos para validação de funcionalidades-chave.
-- Iterações Curtas: Ajustes rápidos e entregas incrementais.
-- Envolvimento Intenso dos Usuários: Garantir alinhamento com as necessidades do campo.
-
-**Do RUP:**
-
-- Definição de Requisitos e Análise: Identificação clara de prioridades e necessidades técnicas.
-- Testes de Integração e Validação: Garante qualidade e funcionalidade offline.
-- Documentação: Afim de melhorar a comunicação entre equipe e o desenvolvimento sustentável.
-
-Essa abordagem híbrida equilibra agilidade e planejamento, permitindo reativar rapidamente o RADIS Cerrado enquanto garante qualidade e sustentabilidade para futuras atualizações.
-
-
+---
 
 ## Histórico de Versão
+
+# Histórico de Versão
 
 | **Data**   | **Versão** | **Descrição**                               | **Autor**                 | **Revisores**    |
 | ---------- | ---------- | ------------------------------------------- | ------------------------- | ---------------- |
 | 04/11/2024 | 1.0        | Primeiras Implementações e especificações.  | Vinicius Castelo          | Todos os Membros |
 | 11/11/2024 | 1.1        | Correções de parâmetros para apresentação.  | Vinicius Castelo          | Todos os Membros |
 | 18/11/2024 | 1.2        | Ajustes das Issues e informações adicionais | Patrick Anderson Carvalho | Todos os Membros |
-| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
+| 16/12/2024 | 2.0        | Nova organização e ajustes finais para U2   | Camila Careli             | Todos os Membros |
+| 07/01/2025 | 2.1        | Ajustes dos Processos para implementação de Nova Estratégia | Patrick Anderson Carvalho | Todos os Membros |
+---
+
+## Referências
+
+1. [Documentação Oficial do Open UP (Eclipse)](https://www.eclipse.org/epf/)
+2. [RUP e Open UP: Diferenças e Similaridades](https://www.devmedia.com.br/openup-guia-para-projetos/26489)
+3. [Introdução ao Desenvolvimento Ágil](https://www.alura.com.br/artigos/desenvolvimento-agil)
+4. [O que é o Ciclo Iterativo Incremental?](https://blog.geekhunter.com.br/ciclo-iterativo-incremental/)
+5. [Processo Unificado Explicado](https://pt.wikipedia.org/wiki/Processo_Unificado)

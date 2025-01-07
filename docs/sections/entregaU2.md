@@ -27,5 +27,5 @@ O gerenciamento de tempo é um dos maiores desafios no desenvolvimento de projet
 
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
-| 16/12/2024   | 1.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
-| 16/12/2024   | 2.0        | Adição das informações de lições aprendidas e ações de melhoria  | Brenno da Silva | Todos os Membros            |
+| 16/12/2024   | 2.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
+| 16/12/2024   | 2.1        | Adição das informações de lições aprendidas e ações de melhoria  | Brenno da Silva | Todos os Membros            |

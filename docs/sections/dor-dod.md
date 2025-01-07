@@ -42,4 +42,4 @@ DoD (Definition of Done) são os critérios que uma tarefa ou história deve cum
 
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
-| 16/12/2024   | 1.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
+| 16/12/2024   | 2.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |

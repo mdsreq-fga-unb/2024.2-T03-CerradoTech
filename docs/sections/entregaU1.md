@@ -24,6 +24,6 @@ Utilizar ferramentas de gestão visual, como o Trello, para organizar tarefas de
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
 | 04/11/2024   | 1.0        | Primeiras Implementações e especificações.          | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024   | 1.1        | Correções de parâmetros para apresentação.          | Vinicius Castelo             | Todos os Membros            |
-| 12/11/2024   | 1.0        | Adicionando vídeo de apresentação da unidade 1      | Brenno da Silva              |                             |
-| 18/11/2024   | 1.2        | Ajustes das Issues e informações adicionais         | Patrick Anderson     | Todos os Membros            |
-| 16/12/2024   | 1.3        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
+| 12/11/2024   | 1.2       | Adicionando vídeo de apresentação da unidade 1      | Brenno da Silva              |                             |
+| 18/11/2024   | 2.0        | Ajustes das Issues e informações adicionais         | Patrick Anderson     | Todos os Membros            |
+| 16/12/2024   | 2.1        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
