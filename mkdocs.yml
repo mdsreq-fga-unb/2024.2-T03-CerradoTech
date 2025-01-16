@@ -51,3 +51,7 @@ nav:
   - Entregas e Lições Aprendidas:
       - Unidade 1: sections/entregaU1.md
       - Unidade 2: sections/entregaU2.md
+  - Estudos de Caso:
+      - PBB: sections/PBB.md
+      - USM: sections/USM.md
+      
