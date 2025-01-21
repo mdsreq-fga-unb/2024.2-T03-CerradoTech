@@ -13,11 +13,10 @@ O projeto adota a metodologia OpenUP, que permite um desenvolvimento ágil e fle
 |                                | 02/01/2025   | 10/01/2025   |                                                        | 2. Ajustes com base no feedback recebido.                                         |                                                                                 |
 | **Construção (Construction) Iteração 2**    | 10/01/2025   | 06/02/2025   | Desenvolvimento e implementação de funcionalidades adicionais | 1. Implementação das funcionalidades adicionais e módulos completos.            | Revisão das funcionalidades e módulos com os stakeholders.                    |
 |                                |              |              |                                                        | 2. Expansão e testes das funcionalidades implementadas.                           |                                                                                 |
-| **Testes e Validação 2**      | 06/02/2025   | 20/02/2025   | Avaliação das funcionalidades e ajustes finais          | 1. Feedback sobre a integração e os testes finais de funcionalidades.            | Homologação do sistema e validação de qualidade com os stakeholders.          |
+| **Testes e Validação 2**      | 06/02/2025   | 15/02/2025   | Avaliação das funcionalidades e ajustes finais          | 1. Feedback sobre a integração e os testes finais de funcionalidades.            | Homologação do sistema e validação de qualidade com os stakeholders.          |
 |                                |              |              |                                                        | 2. Ajustes finais e validação de segurança, performance e usabilidade.           |                                                                                 |
-| **Transição (Transition) e Entrega Final** | 20/02/2025   | 27/02/2025   | Lançamento do sistema e documentação final              | 1. Lançamento do sistema em produção.                                             | Aprovação final do cliente e feedback pós-lançamento.                         |
+| **Transição (Transition) e Entrega Final** | 15/02/2025   | 20/02/2025   | Lançamento do sistema e documentação final              | 1. Lançamento do sistema em produção.                                             | Aprovação final do cliente e feedback pós-lançamento.                         |
 |                                |              |              |                                                        | 2. Documentação completa e manual do usuário.                                      |                                                                                 |
-
 
 
 ## Ajustes e Observações
