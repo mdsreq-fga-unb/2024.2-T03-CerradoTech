@@ -17,3 +17,4 @@ Manter uma comunicação clara e eficaz entre os membros da equipe e o cliente �
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
 | 20/01/2025   | 1.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
+| 20/01/2025   | 1.0        | Ações e lições      | Camila Careli                       | Todos os Membros            |
