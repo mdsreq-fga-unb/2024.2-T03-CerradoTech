@@ -127,155 +127,164 @@ momento atual, um valor de negócio baixo.
 
 ## Histórias de usuário com Critérios de Aceitação e BDD's: 5
 
-### **US-01:  Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**
+### **US-01:   Como atendente, quero verificar a disponibilidade dos técnicos em tempo real para otimizar os agendamentos e evitar conflitos**
 
-**Critério de aceitação:**  O sistema deve exibir o status atual de cada solicitação de manutenção (pendente, em andamento, concluída)
+**Critério de aceitação para o BDD:**  A disponibilidade dos técnicos deve estar integrada ao sistema de agendamentos, permitindo que o atendente veja os serviços marcados e os horários disponíveis de forma clara e precisa.
 
-*Cenário 1:* O sistema deve exibir o status atual de cada solicitação de manutenção. Dado que o cliente acessa o sistema de acompanhamento de manutençãoE existe uma solicitação de manutenção com status incorretamente registrado no banco de dadosQuando o cliente visualiza a lista de solicitaçõesEntão o sistema exibe uma mensagem de erro "Erro ao carregar o status da solicitação" e sugere que o cliente entre em contato com o suporte técnico.  
+*Cenário 1:* 
 
-*Cenário 2:* O sistema deve exibir o status atual de cada solicitação de manutenção.Dado que o cliente acessa o sistema de acompanhamento de manutenção E existe uma solicitação de manutenção com status "em andamento"Quando o cliente visualiza a lista de solicitaçõesEntão o sistema exibe o status "em andamento" corretamente ao lado da solicitação.  
+*Cenário 2:* 
 
-### **US-02:   Como atendente, quero verificar a disponibilidade dos técnicos em tempo real para otimizar os agendamentos e evitar conflitos**
+### **US-02:    Como técnico, quero que os serviços sejam atualizados em tempo real, para  maior agilidade nas manutenções**
 
-**Critério de Aceitação:**  sistema deve exibir a agenda atualizada de cada técnico em tempo real 
+**Critério de aceitação para o BDD:**  O sistema deve notificar o técnico sobre novos serviços atribuídos, serviços finalizados com o respectivo feedback e a mudança do status do serviço, mantendo-o informado sobre suas tarefas em tempo real.
 
-*Cenário 1:* O sistema deve exibir a agenda atualizada de cada técnico em tempo real.Dado que o atendente acessa o sistema e seleciona o técnico Maria SouzaE o sistema está fora do ar devido a uma falha de conexãoQuando o atendente tenta verificar a agenda de Maria SouzaEntão o sistema exibe a mensagem "Agenda indisponível no momento. Tente novamente mais tarde".  
+*Cenário 1:*  
 
-*Cenário 2:* O sistema deve exibir a agenda atualizada de cada técnico em tempo real.Dado que o atendente acessa o sistema e seleciona o técnico João Silva e a agenda do técnico está atualizada no sistemaQuando o atendente verifica a agenda do dia 15/01/2025Então o sistema exibe as informações: "9h - Cliente A, 11h - Cliente B, 14h - Cliente C".  
+*Cenário 2:*
 
-### **US-03:    Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
+### **US-03:     Como técnico, quero registrar o status dos serviços em tempo real, para maior agilidade nas manutenções**
 
-**Critério de Aceitação:**   O sistema deve exibir o status atual de cada solicitação (pendente, em andamento, concluída)
+**Critério de aceitação para o BDD:** O sistema deve permitir que o técnico registre o status de cada serviço em tempo real: "em andamento", "concluído", "aguardando peças" e "solicitação aberta" para atualização imediata.
 
-*Cenário 1:*O sistema deve exibir o status atual de cada solicitação. Dado que o atendente acessa o sistema e pesquisa a solicitação #5678 E o sistema está indisponível devido a uma falha internaQuando o atendente tenta visualizar os detalhes da solicitaçãoEntão o sistema exibe a mensagem "Status indisponível no momento. Tente novamente mais tarde".   
+*Cenário 1:*   
 
-*Cenário 2:* O sistema deve exibir o status atual de cada solicitação.Dado que o atendente acessa o sistema e pesquisa a solicitação #1234 E o status da solicitação está atualizado no sistemaQuando o atendente visualiza os detalhes da solicitaçãoEntão o sistema exibe o status atual como "Em andamento".  
+*Cenário 2:*  
 
-### **US-04:    Como técnico, quero que os serviços sejam atualizados em tempo real, para  maior agilidade nas manutenções**
+### **US-04:  Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**
 
-**Critério de Aceitação:**    As atualizações feitas por qualquer usuário devem refletir imediatamente no sistema
+**Critério de aceitação para o BDD:**  O sistema deve exibir, na página principal do portal de acompanhamento, uma lista com todas as solicitações do cliente, incluindo o status atualizado ("Solictação aberta", "Em andamento", "Concluído"), a data e hora de criação e o técnico designado.
 
-*Cenário 1:* As atualizações feitas por qualquer usuário devem refletir imediatamente no sistema.   Dado que o técnico João Silva atualiza o status do serviço #7890 para "Concluído" às 16:00 e o cliente acessa o portal para verificar o status às 16:10Quando o cliente visualiza as informações no sistema Então o status exibido ainda é "Em andamento", e o sistema exibe a mensagem "Atualização pendente. Tente novamente mais tarde".   
+*Cenário 1:* 
 
-*Cenário 2:* As atualizações feitas por qualquer usuário devem refletir imediatamente no sistema.   Dado que o técnico Maria Souza atualiza o status do serviço #5678 para "Em andamento" às 15:00 e o gerente operacional consulta o status do mesmo serviço às 15:01 Quando ele visualiza as informações no sistemaEntão o status exibido é "Em andamento", atualizado às "15:00 por Maria Souza".    
+*Cenário 2:* 
 
-### **US-05:     Como técnico, quero registrar o status dos serviços em tempo real, para maior agilidade nas manutenções**
+### **US-16:    Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
 
-**Critério de Aceitação:**   O status de cada serviço deve ser atualizado automaticamente no sistema após qualquer alteração 
+**Critério de aceitação para o BDD:**   A atendente deve acessar detalhes da solicitação: nome do cliente, tipo de serviço solicitado e histórico de interações.
 
-*Cenário 1:*  O status de cada serviço deve ser atualizado automaticamente no sistema após qualquer alteração.   Dado que o técnico Maria Souza tenta alterar o status do serviço #5678 para "Concluído"E ocorre uma falha de conexão com o sistemaQuando ela confirma a alteraçãoEntão o sistema exibe a mensagem "Atualização não realizada. Verifique sua conexão e tente novamente"E o status do serviço permanece inalterado.  
+*Cenário 1:*   
 
-*Cenário 2:* O status de cada serviço deve ser atualizado automaticamente no sistema após qualquer alteração.  Dado que o técnico João Silva está logado no sistema e altera o status do serviço #1234 para "Em andamento" às 14:30Quando ele confirma a atualizaçãoEntão o sistema atualiza automaticamente o status do serviço para "Em andamento" e exibe a data e hora da última alteração como "10/01/2025 às 14:30".  
+*Cenário 2:* 
+ 
 
 ---
 
 ## Histórias de usuário com Critérios de Aceitação: 13
 
-###**US-06:      Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**###
+###**US-04:      Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**###
 
-**Critérios de Aceitação:**    O tempo estimado de conclusão de cada solicitação deve ser exibido ao lado do status
+**Critérios de Aceitação:** 
 
-###**US-07:       Como cliente, quero dar feedback sobre os serviços para melhorar a eficiência dos serviços**
+- O sistema deve exibir, na página principal do portal de acompanhamento, uma lista com todas as solicitações do cliente, incluindo o status atualizado ("Solictação aberta", "Em andamento", "Concluído"), a data e hora de criação e o técnico designado.
+- O cliente deve receber uma notificação em tempo real via push notification, e-mail ou SMS, conforme configurado, sempre que o status de uma solicitação for atualizado no sistema.
 
-**Critérios de Aceitação:**  
-
-- O sistema deve conter um questionário para passar o feedback
-- A notificação deve ser enviada no máximo 5 minutos após a alteração de status do serviço
-
-###**US-08:  Como cliente, quero acessar um chat com os atendentes para maior compreensão situacional dos atendimentos**
+###**US-05:       Como cliente, quero dar feedback sobre os serviços para melhorar a eficiência dos serviços**
 
 **Critérios de Aceitação:**  
 
--  Como cliente, quero acessar um chat com os atendentes para maior compreensão situacional dos atendimentos
--  O chat deve suportar envio de texto, imagens e documentos para facilitar a comunicação
+- Após a conclusão de um serviço, o cliente deve conseguir acessar um formulário de feedback no sistema, vinculado à solicitação encerrada.
+- Ao abrir o formulário de feedback, o cliente deve encontrar um campo de avaliação numérica (como 1 a 5 estrelas), perguntas sobre qualidade do atendimento, pontualidade e resolução do problema, além de um campo opcional para comentários adicionais.
+- Após o cliente preencher o formulário de feedback e clicar em "Enviar", o sistema deve exibir uma mensagem de agradecimento, confirmando que o feedback foi registrado corretamente.
 
-###**US-09:   Como cliente, quero ser notificado automaticamente quando as peças necessárias para o serviço estiverem disponíveis para ter transparência na solicitação**
-
-**Critérios de Aceitação:** O sistema deve enviar uma notificação automática assim que as peças necessárias para o serviço estiverem disponíveis no estoque 
-
-###**US-10:    Como atendente, quero visualizar um calendário com os serviços agendados para ter menos erros de agendamento e retrabalho na agenda**
+###**US-06:  Como cliente, quero acessar um chat com os atendentes para maior compreensão situacional dos atendimentos**
 
 **Critérios de Aceitação:**  
 
-- O calendário deve exibir os serviços agendados, incluindo cliente, local e horário 
--  Conflitos de agendamento devem ser destacados com alertas visuais
+- O sistema deve permitir que o cliente inicie um chat com um atendente disponível ao acessar a área de atendimento do sistema.
+-  O sistema deve notificar o cliente quando um atendente estiver pronto para iniciar o atendimento via chat.
 
+###**US-07:   Como cliente, quero ser notificado automaticamente quando as peças necessárias para o serviço estiverem disponíveis para ter transparência na solicitação**
 
-###**US-11:     Como atendente, quero pesquisar informações de solicitações específicas para localizar dados rapidamente e ter um atendimento mais assertivo e ágil**
+**Critérios de Aceitação:** 
 
-**Critérios de Aceitação:**  
+- Se as peças necessárias para o serviço sofrerem atraso, o sistema deve notificar o cliente imediatamente, fornecendo uma nova estimativa de disponibilidade.
+- A notificação deve incluir o(os) nome(s) da(s) peças disponíveis.
 
--  O sistema deve exibir os detalhes da solicitação, como técnico responsável e prazo estimado
--   Deve ser possível buscar solicitações por número, nome do cliente ou data
-
-
-###**US-12:      Como diretora de operações, quero supervisionar as atividades diárias da empresa em tempo real para monitorar o desempenho e corrigir problemas rapidamente**
+###**US-08:    Como atendente, quero visualizar um calendário com os serviços agendados para ter menos erros de agendamento e retrabalho na agenda**
 
 **Critérios de Aceitação:**  
 
--   O sistema deve exibir um painel consolidado com as atividades diárias em tempo real 
--    As informações no painel devem incluir status, responsável e tempo estimado de conclusão de cada atividade
+- Ao selecionar um serviço no calendário, a atendente deve poder visualizar detalhes como o nome do cliente, tipo de serviço, data, hora e status do serviço agendado.
+-  O sistema deve alertar a atendente quando ocorrerem dois serviços marcados para o mesmo horário.
 
 
-###**US-13:       Como diretora de operações, quero consultar dados de produtividade, satisfação do cliente e eficiência operacional para ter clientes satisfeitos e empresa com boa reputação**
-
-**Critérios de Aceitação:**  
-
--    Deve ser possível filtrar dados por período, equipe ou setor 
--     O sistema deve exibir métricas consolidadas de produtividade, satisfação e eficiência em um painel único   
-
-###**US-14:        Como diretora de operações, quero consultar um relatório diário de atividades realizadas para tomar decisões estratégicas embasadas em dados confiáveis**
+###**US-09:     Como atendente, quero pesquisar informações de solicitações específicas para localizar dados rapidamente e ter um atendimento mais assertivo e ágil**
 
 **Critérios de Aceitação:**  
 
--     O sistema deve gerar relatórios diários automaticamente com informações sobre atividades concluídas, atrasadas e em andamento
--      O relatório deve incluir gráficos e métricas como taxa de conclusão, média de tempo por tarefa e responsáveis
+-  A pesquisa deve ser realizada em tempo real, com resultados atualizados à medida que o atendente digita os termos de busca na barra de pesquisa.
+-  O sistema deve exibir informações sobre o cliente, histórico de interações, status atual e qualquer comentário relevante.
 
-###**US-15:       Como diretora de operações, quero visualizar dados coletados dos feedbacks dos clientes para identificar pontos fortes e áreas que precisam de melhorias**
 
-**Critérios de Aceitação:**  
-
--     O sistema deve gerar relatórios diários automaticamente com informações sobre atividades concluídas, atrasadas e em andamento
--       Deve ser possível filtrar os feedbacks por data, tipo de serviço ou região
-
-###**US-16:        Como técnico, quero acessar um diagnóstico automatizado   Diagnósticos mais rápidos e precisos**
+###**US-10:      Como diretora de operações, quero supervisionar as atividades diárias da empresa em tempo real para monitorar o desempenho e corrigir problemas rapidamente**
 
 **Critérios de Aceitação:**  
 
--     O sistema deve gerar um relatório automatizado baseado nos sintomas informados
--       Devem ser sugeridas possíveis causas e soluções para o problema identificado
+- O sistema deve permitir que a diretora de operações tome ações rápidas, com a redistribuição de tarefas e serviços, diretamente a partir da painel de supervisão.
+- O painel deve exibir os indicadores de desempenho: número de serviços concluídos, tempo de resposta médio, taxa de satisfação do cliente e alertas sobre problemas (caso tenha).
 
-###**US-17:         Como técnico, quero consultar o histórico completo de equipamentos, para  diagnósticos mais rápidos e precisos**
+###**US-11:       Como diretora de operações, quero consultar dados de produtividade, satisfação do cliente e eficiência operacional para ter clientes satisfeitos e empresa com boa reputação**
 
 **Critérios de Aceitação:**  
 
--      O histórico deve exibir registros de manutenções anteriores, peças substituídas e serviços realizados
--        Deve ser possível buscar registros por número de série, cliente ou data
+-   O sistema deve fornecer acesso a dados sobre a satisfação do cliente dos questionários de feedback preenchidos pelos clientes.
+-   O sistema deve permitir a comparação do desempenho atual com os períodos anteriores para avaliar a evolução da produtividade, satisfação e eficiência.
+
+###**US-12:        Como diretora de operações, quero consultar um relatório diário de atividades realizadas para tomar decisões estratégicas embasadas em dados confiáveis**
+
+**Critérios de Aceitação:**  
+
+- O sistema de gerar um relatório que inclui indicadores-chave de performance (KPIs), como produtividade, taxa de conclusão no prazo, e satisfação do cliente, para ajudar na análise do desempenho diário.
+- O relatório deve apresentar um resumo executivo destacando os principais pontos de desempenho e quaisquer alertas ou problemas críticos encontrados nas atividades realizadas.
+
+###**US-13:       Como diretora de operações, quero visualizar dados coletados dos feedbacks dos clientes para identificar pontos fortes e áreas que precisam de melhorias**
+
+**Critérios de Aceitação:**  
+
+-  O sistema deve fornecer uma análise dos pontos fortes: qualidade do atendimento e eficiência do serviços, e áreas que precisam de melhorias: pontualidade e resolução de problemas, com base nos feedbacks recebidos.
+-  O sistema deve permitir que os feedbacks sejam agrupados pelas categorias: atendimento, qualidade do serviço e experiência geral para facilitar a análise detalhada.
+
+###**US-14:        Como técnico, quero acessar um diagnóstico automatizado para solucções mais rápidas e precisas**
+
+**Critérios de Aceitação:**  
+
+- Após o diagnóstico, o sistema deve apresentar sugestões de soluções baseadas nos resultados, como etapas de reparo ou peças necessárias.
+- O diagnóstico deverá ter check-box dos problemas do cliente atual
+
+###**US-15:         Como técnico, quero consultar o histórico completo de equipamentos, para  diagnósticos mais rápidos e precisos**
+
+**Critérios de Aceitação:**  
+
+- O sistema deve permitir que o técnico consulte o histórico completo de qualquer equipamento, incluindo manutenções anteriores, falhas reportadas e reparos realizados.
+- O sistema deve permitir que o técnico filtre o histórico por tipo de serviço, data e tipo de problema, para facilitar a busca pelas informações mais relevantes.
 
 
-###**US-18:          Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
+###**US-16:          Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
 
-**Critérios de Aceitação:**   O status deve estar disponível com filtro por cliente ou número da solicitação
+**Critérios de Aceitação:** 
 
+- A atendente deve acessar detalhes da solicitação: nome do cliente, tipo de serviço solicitado e histórico de interações.
+- O sistema deve notificar o atendente por push notification sobre quaisquer mudanças no status de uma solicitação: atualização de data, peças disponíveis ou indisponíveis e técnicos agendados.
 
 ---
 ## Histórias de usuário: 8
 
-**US-19:    Como cliente, quero receber notificações sobre o andamento das solicitações feitas para notificar em tempo real**
+**US-17:    Como cliente, quero receber notificações sobre o andamento das solicitações feitas para notificar em tempo real**
 
-**US-20:     Como cliente, quero receber alertas automáticos sobre o tempo de execução do serviço para ter um atendimento mais rápido**
+**US-18:     Como cliente, quero receber alertas automáticos sobre o tempo de execução do serviço para ter um atendimento mais rápido**
 
-**US-21:      Como atendente, quero receber notificações automáticas sobre o serviço agendado para manter o cliente e o técnico atualizados**
+**US-19:      Como atendente, quero receber notificações automáticas sobre o serviço agendado para manter o cliente e o técnico atualizados**
 
-**US-22:       Como atendente, quero receber notificações automáticas de mudanças no status das solicitações para informar os clientes e  aumentar da satisfação dos clientes**
+**US-20:       Como atendente, quero receber notificações automáticas de mudanças no status das solicitações para informar os clientes e  aumentar da satisfação dos clientes**
 
-**US-23:        Como atendente, quero visualizar informações como o número de solicitações resolvidas e prazos cumpridos para ter um atendimento mais assertivo e ágil**
+**US-21:        Como atendente, quero visualizar informações como o número de solicitações resolvidas e prazos cumpridos para ter um atendimento mais assertivo e ágil**
 
-**US-24:         Como técnico, quero gerar relatórios automáticos sobre serviços realizados, para  diagnósticos mais rápidos e precisos**
+**US-22:         Como técnico, quero gerar relatórios automáticos sobre serviços realizados, para  diagnósticos mais rápidos e precisos**
 
-**US-25:         Como diretora de operações, quero filtrar categorias das atividades diárias por tipo, status e responsável para gerenciar a equipe de técnicos de forma mais eficiente**
+**US-23:         Como diretora de operações, quero filtrar categorias das atividades diárias por tipo, status e responsável para gerenciar a equipe de técnicos de forma mais eficiente**
 
-**US-26:         Como diretora de operações, quero receber relatórios de custos operacionais e oportunidades de economia para otimizar os recursos da empresa e reduzir despesas**
+**US-24:         Como diretora de operações, quero receber relatórios de custos operacionais e oportunidades de economia para otimizar os recursos da empresa e reduzir despesas**
 
 
 
@@ -288,4 +297,5 @@ momento atual, um valor de negócio baixo.
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
 | 16/01/2025   | 1.0        | Adição da tabela contendo os cenários do BDD        | Brenno da Silva              | Todos os Membros            |
-| 20/01/2025   | 1.0        | Adição do template e suas informações        | Camila Careli              | Todos os Membros            |
+| 20/01/2025   | 1.1        | Adição do template e suas informações        | Camila Careli              | Todos os Membros            |
+| 25/01/2025   | 2.0        | Melhoria dos critérios de aceitação        | Camila Careli              | Todos os Membros            |
