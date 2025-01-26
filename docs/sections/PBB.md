@@ -131,41 +131,61 @@ momento atual, um valor de negócio baixo.
 
 **Critério de aceitação para o BDD:**  A disponibilidade dos técnicos deve estar integrada ao sistema de agendamentos, permitindo que o atendente veja os serviços marcados e os horários disponíveis de forma clara e precisa.
 
-*Cenário 1:* 
+*Cenário 1:* Dado que o atendente acessa o sistema de agendamentos,
+Quando ele consulta a disponibilidade de técnicos para um novo agendamento,
+Então o sistema deve exibir os técnicos disponíveis, com seus horários livres claramente indicados.
 
-*Cenário 2:* 
+*Cenário 2:* Dado que o atendente tenta agendar um novo serviço em um horário já ocupado,
+Quando ele visualiza as opções de horários,
+Então o sistema deve exibir uma mensagem indicando que o horário está indisponível e sugerir horários alternativos.
 
 ### **US-02:    Como técnico, quero que os serviços sejam atualizados em tempo real, para  maior agilidade nas manutenções**
 
 **Critério de aceitação para o BDD:**  O sistema deve notificar o técnico sobre novos serviços atribuídos, serviços finalizados com o respectivo feedback e a mudança do status do serviço, mantendo-o informado sobre suas tarefas em tempo real.
 
-*Cenário 1:*  
+*Cenário 1:* Dado que um serviço foi atribuído a um técnico,
+Quando o serviço for atribuído no sistema,
+Então o técnico deve receber uma notificação em tempo real sobre a atribuição do serviço.
 
-*Cenário 2:*
+*Cenário 2:* Dado que um serviço foi finalizado,
+Quando o status do serviço for alterado para "Concluído",
+Então o técnico deve receber uma notificação informando sobre a mudança de status e a necessidade de fornecer feedback.
 
 ### **US-03:     Como técnico, quero registrar o status dos serviços em tempo real, para maior agilidade nas manutenções**
 
 **Critério de aceitação para o BDD:** O sistema deve permitir que o técnico registre o status de cada serviço em tempo real: "em andamento", "concluído", "aguardando peças" e "solicitação aberta" para atualização imediata.
 
-*Cenário 1:*   
+*Cenário 1:* Dado que o técnico está realizando um serviço,
+Quando ele alterar o status para "Em andamento",
+Então o sistema deve atualizar o status do serviço imediatamente para "Em andamento" e exibir essa atualização para o atendente e o cliente.
 
-*Cenário 2:*  
+*Cenário 2:* Dado que o técnico completou um serviço,
+Quando ele marcar o status como "Concluído",
+Então o sistema deve atualizar o status para "Concluído" e registrar a conclusão de forma visível para todas as partes envolvidas.
 
 ### **US-04:  Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**
 
 **Critério de aceitação para o BDD:**  O sistema deve exibir, na página principal do portal de acompanhamento, uma lista com todas as solicitações do cliente, incluindo o status atualizado ("Solictação aberta", "Em andamento", "Concluído"), a data e hora de criação e o técnico designado.
 
-*Cenário 1:* 
+*Cenário 1:* Dado que o cliente acessa a página de acompanhamento de suas solicitações,
+Quando ele visualizar a lista de solicitações,
+Então o sistema deve exibir o status atual de cada solicitação, a data de criação e o nome do técnico responsável.
 
-*Cenário 2:* 
+*Cenário 2:* Dado que o cliente visualiza uma solicitação com o status "Em andamento",
+Quando o status da solicitação for alterado para "Concluído",
+Então o sistema deve atualizar automaticamente o status na página de acompanhamento.
 
 ### **US-16:    Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
 
 **Critério de aceitação para o BDD:**   A atendente deve acessar detalhes da solicitação: nome do cliente, tipo de serviço solicitado e histórico de interações.
 
-*Cenário 1:*   
+*Cenário 1:* Dado que o atendente acessa o sistema e pesquisa a solicitação #5678,
+Quando o atendente visualizar os detalhes da solicitação,
+Então o sistema deve exibir o status atual da solicitação, o nome do cliente, tipo de serviço solicitado e o histórico de interações.
 
-*Cenário 2:* 
+*Cenário 2:* Dado que o atendente acessa o sistema e pesquisa a solicitação #1234,
+Quando o status da solicitação foi atualizado para "Em andamento",
+Então o sistema deve exibir o status atual como "Em andamento" e as informações relevantes da solicitação.
  
 
 ---
