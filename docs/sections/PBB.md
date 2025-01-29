@@ -131,60 +131,80 @@ momento atual, um valor de negócio baixo.
 
 **Critério de aceitação para o BDD:**  A disponibilidade dos técnicos deve estar integrada ao sistema de agendamentos, permitindo que o atendente veja os serviços marcados e os horários disponíveis de forma clara e precisa.
 
-*Cenário 1:* Dado que o atendente acessa o sistema de agendamentos,
-Quando ele consulta a disponibilidade de técnicos para um novo agendamento,
-Então o sistema deve exibir os técnicos disponíveis, com seus horários livres claramente indicados.
+*Cenário 1:* Consultar disponibilidade de técnicos
 
-*Cenário 2:* Dado que o atendente tenta agendar um novo serviço em um horário já ocupado,
-Quando ele visualiza as opções de horários,
-Então o sistema deve exibir uma mensagem indicando que o horário está indisponível e sugerir horários alternativos.
+Dado que o atendente acessa o sistema com login "atendente1" e senha "senha123",
+Quando ele consulta a disponibilidade de técnicos para um novo agendamento no dia "2025-01-26",
+Então o sistema exibe a lista de técnicos disponíveis, com seus horários livres claramente indicados, e o número da solicitação é gerado automaticamente como #12345.
+
+*Cenário 2:* Tentativa de agendamento em horário indisponível
+
+Dado que o atendente acessa o sistema com login "atendente1" e senha "senha123", tenta agendar um novo serviço no dia "2025-01-26" no horário "14:00", e o técnico "Técnico B" já tem um serviço agendado no mesmo horário (Serviço #56789),
+Quando o atendente visualiza as opções de horários disponíveis,
+Então o sistema exibe uma mensagem informando que o horário está "Indisponível" e sugere automaticamente outros horários disponíveis, como "14:30" ou "15:00".
 
 ### **US-02:    Como técnico, quero que os serviços sejam atualizados em tempo real, para  maior agilidade nas manutenções**
 
 **Critério de aceitação para o BDD:**  O sistema deve notificar o técnico sobre novos serviços atribuídos, serviços finalizados com o respectivo feedback e a mudança do status do serviço, mantendo-o informado sobre suas tarefas em tempo real.
 
-*Cenário 1:* Dado que um serviço foi atribuído a um técnico,
-Quando o serviço for atribuído no sistema,
-Então o técnico deve receber uma notificação em tempo real sobre a atribuição do serviço.
+*Cenário 1:* Notificação de serviço atribuído
 
-*Cenário 2:* Dado que um serviço foi finalizado,
-Quando o status do serviço for alterado para "Concluído",
-Então o técnico deve receber uma notificação informando sobre a mudança de status e a necessidade de fornecer feedback.
+Dado que o serviço #10001 foi atribuído ao técnico "Técnico A",
+Quando o serviço for atribuído no sistema,
+Então o técnico deve receber uma notificação em tempo real sobre a atribuição do serviço, incluindo os detalhes: nome do cliente: "Cliente X", tipo de serviço: "Instalação de Equipamento".
+
+*Cenário 2:* Notificação de serviço finalizado
+
+Dado que o serviço #10001 foi finalizado,
+Quando o status do serviço for alterado de "Em andamento" para "Concluído",
+Então o técnico deve receber uma notificação informando sobre a mudança de status para "Concluído" e a necessidade de fornecer feedback.
 
 ### **US-03:     Como técnico, quero registrar o status dos serviços em tempo real, para maior agilidade nas manutenções**
 
 **Critério de aceitação para o BDD:** O sistema deve permitir que o técnico registre o status de cada serviço em tempo real: "em andamento", "concluído", "aguardando peças" e "solicitação aberta" para atualização imediata.
 
-*Cenário 1:* Dado que o técnico está realizando um serviço,
-Quando ele alterar o status para "Em andamento",
-Então o sistema deve atualizar o status do serviço imediatamente para "Em andamento" e exibir essa atualização para o atendente e o cliente.
+*Cenário 1:* Alteração do status para "Em andamento"
 
-*Cenário 2:* Dado que o técnico completou um serviço,
+Dado que o técnico está realizando o serviço #10001, com status "Aguardando peças",
+Quando ele alterar o status para "Em andamento",
+Então o sistema deve atualizar o status do serviço imediatamente de "Aguardando peças" para "Em andamento" e exibir essa atualização para o atendente e o cliente.
+
+*Cenário 2:* Alteração do status para "Concluído"
+
+Dado que o técnico completou o serviço #10001, com status "Em andamento",
 Quando ele marcar o status como "Concluído",
-Então o sistema deve atualizar o status para "Concluído" e registrar a conclusão de forma visível para todas as partes envolvidas.
+Então o sistema deve atualizar o status de "Em andamento" para "Concluído" e registrar a conclusão de forma visível para todas as partes envolvidas.
 
 ### **US-04:  Como cliente, quero acompanhar solicitações de manutenção para notificar em tempo real**
 
 **Critério de aceitação para o BDD:**  O sistema deve exibir, na página principal do portal de acompanhamento, uma lista com todas as solicitações do cliente, incluindo o status atualizado ("Solictação aberta", "Em andamento", "Concluído"), a data e hora de criação e o técnico designado.
 
-*Cenário 1:* Dado que o cliente acessa a página de acompanhamento de suas solicitações,
+*Cenário 1:* Visualização da lista de solicitações
+
+Dado que o cliente "Cliente Y" acessa a página de acompanhamento de suas solicitações,
 Quando ele visualizar a lista de solicitações,
 Então o sistema deve exibir o status atual de cada solicitação, a data de criação e o nome do técnico responsável.
 
-*Cenário 2:* Dado que o cliente visualiza uma solicitação com o status "Em andamento",
-Quando o status da solicitação for alterado para "Concluído",
+*Cenário 2:* Alteração do status para "Concluído"
+
+Dado que o cliente "Cliente Y" visualiza uma solicitação com o status "Em andamento",
+Quando o status da solicitação for alterado de "Em andamento" para "Concluído",
 Então o sistema deve atualizar automaticamente o status na página de acompanhamento.
 
 ### **US-16:    Como atendente, quero visualizar em tempo real o status das solicitações para fornecer informações transparentes aos clientes**
 
 **Critério de aceitação para o BDD:**   A atendente deve acessar detalhes da solicitação: nome do cliente, tipo de serviço solicitado e histórico de interações.
 
-*Cenário 1:* Dado que o atendente acessa o sistema e pesquisa a solicitação #5678,
-Quando o atendente visualizar os detalhes da solicitação,
-Então o sistema deve exibir o status atual da solicitação, o nome do cliente, tipo de serviço solicitado e o histórico de interações.
+*Cenário 1:* Visualização do status da solicitação
 
-*Cenário 2:* Dado que o atendente acessa o sistema e pesquisa a solicitação #1234,
-Quando o status da solicitação foi atualizado para "Em andamento",
+Dado que o atendente "atendente1" acessa o sistema e pesquisa a solicitação #5678,
+Quando o atendente visualizar os detalhes da solicitação,
+Então o sistema deve exibir o status atual da solicitação, o nome do cliente, o tipo de serviço solicitado e o histórico de interações.
+
+*Cenário 2:* Alteração do status para "Em andamento"
+
+Dado que o atendente "atendente1" acessa o sistema e pesquisa a solicitação #1234,
+Quando o status da solicitação for alterado de "Solicitação aberta" para "Em andamento",
 Então o sistema deve exibir o status atual como "Em andamento" e as informações relevantes da solicitação.
  
 
@@ -319,3 +339,4 @@ Então o sistema deve exibir o status atual como "Em andamento" e as informaçõ
 | 16/01/2025   | 1.0        | Adição da tabela contendo os cenários do BDD        | Brenno da Silva              | Todos os Membros            |
 | 20/01/2025   | 1.1        | Adição do template e suas informações        | Camila Careli              | Todos os Membros            |
 | 25/01/2025   | 2.0        | Melhoria dos critérios de aceitação        | Camila Careli              | Todos os Membros            |
+| 25/01/2025   | 3.0        | Correção cenários do BDD        | Vinicius Castelo              | Todos os Membros            |
