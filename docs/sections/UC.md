@@ -5,7 +5,7 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 
 ## Diagrama
 
-![Diagrama](../assets/diagrama.jpeg)
+![Diagrama](../assets/Diagrama%20HopeBridge.svg)
 
 **Ator: REFUGIADO**
 
