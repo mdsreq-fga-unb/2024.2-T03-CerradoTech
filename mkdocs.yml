@@ -51,9 +51,11 @@ nav:
   - Estudos de Caso:
     - PBB e BDD: sections/PBB.md
     - USM: sections/USM.md
+    - Casos de Uso: sections/UC.md
   - Entregas e Lições Aprendidas:
       - Unidade 1: sections/entregaU1.md
       - Unidade 2: sections/entregaU2.md
       - Unidade 3: sections/entregaU3.md
+      - Unidade 4: sections/entregaU4.md
 
       
