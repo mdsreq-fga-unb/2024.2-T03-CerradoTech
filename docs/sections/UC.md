@@ -5,7 +5,7 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 
 ## Diagrama
 
-![Diagrama](../assets/diagrama.JPEG)
+![Diagrama](../assets/diagrama.jpeg)
 
 **Ator: REFUGIADO**
 
@@ -42,7 +42,7 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 
 | Requisitos            | Casos de Uso            | Resultado Observável                                                      |
 |---------------------------|---------------------------|------------------------------------------------------------------------|
-| Criar perfil              | Criar perfil              | Perfil criado com sucesso e visível no sistema                        |
+| Criar perfil              | Criar perfil              | Perfil criado com sucesso                       |
 | Anunciar vagas            | Anunciar vagas            | Vagas anunciadas com sucesso                                          |
 | Gerenciar candidaturas    | Gerenciar candidaturas    | Candidaturas recebidas e organizadas no sistema com feedback dos entrevistados |
 
@@ -62,3 +62,4 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 | **Data**     | **Versão** | **Descrição**                                       | **Autor**                    | **Revisores**               |
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
 | 03/02/2025   | 1.0        | Adição dos atores e seus casos de uso        | Camila Careli              | Todos os Membros            |
+| 03/02/2025   | 1.1        | Corrigindo erro da imagem do diagrama       | Brenno da Silva             | Todos os Membros            |
