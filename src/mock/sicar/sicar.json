@@ -1,0 +1,119 @@
+{
+    "sicar_1":{
+        "usuario":{
+            "id": "6123baf435ed4841bac07a74",
+            "registro": "DF-5300108-81F3FB878C024F249D16BC566377289F",
+            "data_cadastro": "2016-05-21T10:45:00.000Z",
+            "ultima_verificacao": ""
+        },
+        "imovel":{
+            "area_imovel": "117,8214",
+            "modulos_fiscais": "23,56",
+            "coordenadas_centroide":"",
+            "latitude":-15.793633,
+            "longitude":-47.994575,
+            "municipio":"Brasília",
+            "unidade_federacao":"DF",
+            "condicao":"Aguardando Análise",
+            "data_analise_car":"",
+            "situacao":"Ativo",
+            "programa_regularizacao_ambiental":"Sim",
+            "condicao_pra":""
+        },
+        "cobertura_solo":{
+            "vegetacao_nativa":"0,0000",
+            "uso_consolidado":"0,0000",
+            "servidao_administrativa":"0,0000"
+        },
+        "reserva_legal":{
+            "situacao":"Não Analisada",
+            "averbada_vetorizada":"0,0000",
+            "aprovada_nao_averbada_vetorizada":"0,0000",
+            "proposta_vetorizada":"0,0000",
+            "declarada_proprietario":"0,0000"
+        },
+        "area_preservacao_permanente":{
+            "area":"0,0000"
+        },
+        "areas_uso_restrito":{
+            "area":"0,0000"
+        },
+        "restricoes_ir":[{
+                "origem":"Unidade de Conservação",
+                "descricao":"Área de Proteção Ambiental-ÁREA DE PROTEÇÃO AMBIENTAL DO PLANALTO CENTRAL",
+                "processamento":"2016-05-21T10:45:00.000Z",
+                "area_conflito":"4,2414",
+                "percentual":"3,6"
+            }]
+    },
+    "sicar_2":{
+        "usuario":{
+            "id": "6123baf435ed4841bac07a74",
+            "registro": "DF-5300108-9211A4F78201448CB58EFE984DBE04D4",
+            "data_cadastro": "2020-12-16T16:39:00.000Z",
+            "ultima_verificacao": ""
+        },
+        "imovel":{
+            "area_imovel": "43,1083",
+            "modulos_fiscais": "8,62",
+            "coordenadas_centroide":"",
+            "latitude":-15.598228,
+            "longitude":-48.143267,
+            "municipio":"Brasília",
+            "unidade_federacao":"DF",
+            "condicao":"Aguardando Análise",
+            "data_analise_car":"",
+            "situacao":"Ativo",
+            "programa_regularizacao_ambiental":"Sim",
+            "condicao_pra":""
+        },
+        "cobertura_solo":{
+            "vegetacao_nativa":"8,2371",
+            "uso_consolidado":"34,8714",
+            "servidao_administrativa":"0,0000"
+        },
+        "reserva_legal":{
+            "situacao":"Não Analisada",
+            "averbada_vetorizada":"0,0000",
+            "aprovada_nao_averbada_vetorizada":"0,0000",
+            "proposta_vetorizada":"8,2371",
+            "declarada_proprietario":"8,2371"
+        },
+        "area_preservacao_permanente":{
+            "area":"0,0000"
+        },
+        "areas_uso_restrito":{
+            "area":"0,0000"
+        },
+        "restricoes_ir":[
+            {
+                "origem":"Unidade de Conservação",
+                "descricao":"Parque-PARQUE NACIONAL DE BRASÍLIA",
+                "processamento":"2020-12-16T16:39:00.000Z",
+                "area_conflito":"20,3263",
+                "percentual":"47,15"
+            },
+            {
+                "origem":"Unidade de Conservação",
+                "descricao":"Área de Proteção Ambiental-APA DE CAFURINGA",
+                "processamento":"2020-12-16T16:39:00.000Z",
+                "area_conflito":"43,1083",
+                "percentual":"100"
+            },
+            {
+                "origem":"Unidade de Conservação",
+                "descricao":"Área de Proteção Ambiental-ÁREA DE PROTEÇÃO AMBIENTAL DO PLANALTO CENTRAL",
+                "processamento":"2020-12-16T16:39:00.000Z",
+                "area_conflito":"43,1083",
+                "percentual":"100"
+            },
+            {
+                "origem":"Unidade de Conservação",
+                "descricao":"Área de Proteção Ambiental-ÁREA DE PROTEÇÃO AMBIENTAL DA BACIA DO RIO DESCOBERTO",
+                "processamento":"2020-12-16T16:39:00.000Z",
+                "area_conflito":"0,0197",
+                "percentual":"0,05"
+            }
+        ]
+    }
+}

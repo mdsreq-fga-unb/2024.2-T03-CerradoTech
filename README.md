@@ -1,50 +1,34 @@
-# 2024.2: Cerrado Tech
+Instalar pacotes:
+yarn install
 
-**Repositório de projeto da disciplina de REQ-T3.**
+Run dev:
+yarn dev
 
-<p align="center">
-  <img src="docs/assets/logo.png" alt="Logo do Projeto" />
-</p>
+Porta node: 3058
 
-## Introdução
+Nome da base de dados no mongo: 
+    radisCerradoDev (Para ambiente de desenvolvimento)
+    (definido no arquivo app.ts)
 
-O Projeto **Cerrado Tech**, desenvolvido como parte da disciplina de Requisitos de Software da Universidade de Brasília (UnB) no semestre de 2024.2 (T3), tem como objetivo a **melhoria e correção** do sistema **RADIS Cerrado**. O RADIS Cerrado foi criado inicialmente para **monitorar** áreas degradadas do Cerrado, um dos biomas mais importantes e ameaçados do Brasil. No entanto, o sistema apresentava limitações em sua funcionalidade e usabilidade, o que motivou a criação do CerraTech.
+Para rotas que necessitem de autenticação do usuário criamos a Middleware de autenticação (auth.ts) para validar o token enviado pela requisitação, o server deve receber a requisição no formato Bearer ${token} e com isso poderá ser acessado dentro do método o campo req.user que irá conter o nome do usuário autenticado que realizou a requisição.
+Para isso precisar alterar manualmente o arquivo:
 
-Mais informações no page sobre a [Visão do Projeto e Produto]().
+                    node_modules/@types/express/index.d.ts
 
-## Equipe
+E incluir a declaração a seguir depois dos imports:
+declare global{
+    namespace Express {
+        interface Request {
+            user: string,
+            token: string
+        }
+    }
+}
 
-<table style="margin-left: auto; margin-right: auto;">
-    <tr>
-        <td align="center">
-            <a href="https://github.com/patrickacs">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/72047955?v=4" width="150px;"/>
-                <h5 class="text-center">Patrick Anderson </h5>
-            </a>
-        </td>
-        <td align="center">
-            <a href="https://github.com/camilascareli">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/168359967?v=4" width="150px;"/>
-                <h5 class="text-center">Camila Careli </h5>
-            </a>
-        </td>
-        <td align="center">
-            <a href="https://github.com/MarcusEscobar">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/121982996?v=4" width="150px;"/>
-                <h5 class="text-center">Marcus Escobar </h5>
-            </a>
-        </td>
-        <td align="center">
-            <a href="https://github.com/Brenno-Silva01">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/117456300?v=4" width="150px;"/>
-                <h5 class="text-center">Brenno da Silva Oliveira</h5>
-            </a>
-        </td>
-          <td align="center">
-            <a href="https://github.com/Vini47">
-                <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/79549264?v=4" width="150px;"/>
-                <h5 class="text-center">Vinicius Castelo</h5>
-            </a>
-</table>
+Na posta Mock encontra-se o exemplo de como está sendo salvo os esquemas dos imóveis e dos usuários.
+Última atualização dos mocks:
 
----
+Imovel: 02/08/21
+User: 02/08/21
+
+Link para dicionário de dados: 

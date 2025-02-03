@@ -1,0 +1,27 @@
+{
+    "_id": {
+        "$oid": "60e8a86a02938868f4534784"
+    },
+    "imoveis": [],
+    "permissao": {
+        "id": "Usuário",
+        "level": 1
+    },
+    "nome": "raphael resende",
+    "usuario": "raphael",
+    "dataNascimento": "2021-07-09T16:46:51.162-03:00",
+    "cpf": "112.189.416-00",
+    "email": "raphael.arthurbr@gmail.com",
+    "telefone": "(61) 98107-8804",
+    "uf": "MG",
+    "org": "Teste",
+    "password": "$2a$10$NFRCKM3mE6LBpVanqhKe4.21p7HgA.HTpsqMI9dGs47tS7YIOq0WO",
+    "createAt": {
+        "$date": "2021-07-09T19:50:02.279Z"
+    },
+    "__v": 0,
+    "passwordResetExpires": {
+        "$date": "2021-07-30T19:50:17.987Z"
+    },
+    "passwordResetToken": "a39298f47dc6dc1d3cd8b3e2c099479d1839195b"
+}

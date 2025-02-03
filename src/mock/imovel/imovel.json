@@ -1,0 +1,215 @@
+{
+    "_id": "610439bea9a5bdce0795c38a",
+    "versao": "1.0",
+    "tipoImovel": {
+        "id": 2,
+        "tipo": "Território de Povos e Comunidades Tradicionais"
+    },
+    "uf": "DF",
+    "municipio": {
+        "nome": "BRASÍLIA",
+        "codigo": "5300108"
+    },
+    "municipioOutro": "",
+    "assentamento": "",
+    "assentamentoOutro": "",
+    "numeroLote": null,
+    "nomeTerritorio": "teste",
+    "area": "7,0000",
+    "moduloFiscal": 5,
+    "gpsOuMapa": "gps",
+    "latitude": -16.3507173,
+    "longitude": -46.8931462,
+    "enviado": [
+        "2021-07-30T17:41:23.915Z"
+    ],
+    "criado": "raphael",
+    "editado": [],
+    "statusEnvio": {
+        "id": 1,
+        "nome": "ENVIADO"
+    },
+    "_rev": "2-1f5e4421e5fef14c41ba5bcb7344fa87",
+    "createdAt": {
+        "$date": "2021-07-30T17:41:23.959Z"
+    },
+    "updatedAt": {
+        "$date": "2021-07-30T17:41:23.959Z"
+    },
+    "entrevista":{},
+    "prada":{},
+    "poligono":{
+        "2020-10-28T20:23:16.061Z":{
+            "_id": "2020-10-28T20:23:16.061Z",
+            "versao": "1.0",
+            "nomeCod": "Teste poligono tipo 1",
+            "dataEntrevista": "2020-10-19",
+            "formacaoVegetal": {
+              "id": 1,
+              "label": "Florestal"
+            },
+            "fitofisionomia": {
+              "id": 9,
+              "label": "Mata ciliar"
+            },
+            "tipoArea": {
+              "id": 1,
+              "label": "Um único polígono"
+            },
+            "classificacaoArea": {
+              "id": 1,
+              "label": "Área de Preservação Permanente (APP)"
+            },
+            "utilizacaoAnterior": {
+              "id": 1,
+              "label": "Pastagem"
+            },
+            "utilizacaoAnteriorOutro": "",
+            "coberturaAtual": {
+              "id": 2,
+              "label": "Mineração"
+            },
+            "coberturaAtualOutro": "",
+            "suspensaoImediata": {
+              "id": 2,
+              "label": "Não"
+            },
+            "necessarioCercar": {
+              "id": 1,
+              "label": "Sim"
+            },
+            "possivelCercar": {
+              "id": 2,
+              "label": "Não"
+            },
+            "gpsOuMapa": "mapa",
+            "desenhoOuCar": "desenho",
+            "latitude": -17.232843,
+            "longitude": -46.882868,
+            "areaValor": 5.246494507030646,
+            "areaPontos": "{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Polygon\",\"coordinates\":[[[-46.88613,-17.234042],[-46.884156,-17.233878],[-46.883383,-17.238305],[-46.88613,-17.234042]]]}}]}",
+            "grade":{},
+            "funcaoRecomposicao": [{
+              "id": 2,
+              "label": "Pagamento de serviços ambientais (incluindo crédito de carebono)"
+            }],
+            "tipo": 1,
+            "funcaoRecomposicaoOutro": "",
+            "quantidadeParticipantes": "5",
+            "quantidadeParcelas": 10,
+            "criado": "raphael",
+            "enviado": [],
+            "editado": [],
+            "statusEnvio": {
+              "id": 1,
+              "nome": "ENVIADO"
+            },
+            "parcelas":{
+                "2020-10-28T20:41:14.884Z":{
+                    "_id": "2020-10-28T20:41:14.884Z",
+                    "versao": "1.0",
+                    "numeroParcela": "Parcela 1",
+                    "anoMonitoramento": "0",
+                    "latitude":-16.3507173,
+                    "longitude":-46.882868,
+                    "especial": false,
+                    "coberturaVegetacao": [
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      },
+                      {
+                        "tipo": [{ "id": 0, "nome": "Ausente" }]
+                      },
+                      {
+                        "tipo": [{ "id": 1, "nome": "'Exótica perene ou ciclo longo'" }, { "id": 3, "nome": "Gramínea exótica" }]
+                      }
+                    ],
+                    "densidadeEspecies": [
+                      {
+                        "especie": "Pé de manga",
+                        "regenerante": "não"
+                      },
+                      {
+                        "especie": "Eucalipto",
+                        "regenerante": "sim"
+                      }
+                    ],
+                    "status": {"id": 2, "nome": "Finalizada"},
+                    "fotoLocal":"",
+                    "fotoRemoto":"",
+                    "observacoes":""
+                  }
+            }
+          }
+    },
+    "__v": 0
+}
