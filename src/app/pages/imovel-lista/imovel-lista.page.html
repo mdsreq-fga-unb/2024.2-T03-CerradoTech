@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Meus imóveis</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="imovelList.length === 0">
+    <ion-card class="card-vazio">
+      <ion-card-content>
+        <img src="./assets/imgs/alert.svg">
+        <div class="msg-vazia">Você não possui nenhum imóvel cadastrado! <br><br>Comece cadastrando um novo imóvel ou
+          faça o download caso você já tenha preenchido anteriormente.</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="imovelList.length > 0">
+    <div class="alinhamento-msg">
+      <span class="titulo-pag" *ngIf="origin === 'socioprodutivo'">
+        Sobre qual imóvel deseja responder o questionário de diagnóstico?
+      </span>
+
+      <span class="titulo-pag" *ngIf="origin === 'monitoramento'">
+        Qual imóvel deseja monitorar?
+      </span>
+    </div>
+
+
+    <div *ngFor="let imovel of imovelList; let i = index">
+      <ion-card class="card-imovel" (click)="navigateTo(imovel._id)">
+        <ion-card-content>
+          <img  *ngIf="imovel.tipoImovel.id === 1" src="./assets/imgs/assentamento-novo.svg">
+          <img *ngIf="imovel.tipoImovel.id === 2" src="./assets/imgs/povos-tradicionais-novo.svg">
+          <img *ngIf="imovel.tipoImovel.id === 3" src="./assets/imgs/fazenda-novo.svg">
+          <img *ngIf="imovel.tipoImovel.id === 4" src="./assets/imgs/uc-novo.svg">
+          <div class="titulo" *ngIf="imovel.tipoImovel.id === 1"> {{imovel.assentamento}} Lote {{imovel.numeroLote}}</div>
+          <div class="titulo" *ngIf="imovel.tipoImovel.id !== 1"> {{imovel.nomeTerritorio}}</div>
+          <ion-grid no-padding>
+            <ion-row class="label">
+              <ion-col>{{imovel.municipio.nome}}-{{imovel.uf}}</ion-col>
+            </ion-row>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col size="4" class="lista-horizontal-align">
+                <ion-row class="lista-data">{{associateData[i]?.entrevista}}</ion-row>
+                <ion-row class="lista-label">Entrevista<span *ngIf="associateData[i]?.entrevista > 1">s</span>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4" class="lista-horizontal-align">
+                <ion-row class="lista-data">{{associateData[i]?.poligono}}</ion-row>
+                <ion-row class="lista-label">Polígono<span *ngIf="associateData[i]?.poligono > 1">s</span>
+                </ion-row>
+              </ion-col>
+              <ion-col size="4" class="lista-horizontal-align">
+                <ion-row
+                  [ngClass]="(imovel.statusEnvio.id !== 1) ? 'nao-enviado' : 'enviado'">
+                  <span *ngIf="imovel.statusEnvio.id === 1; else naoEnviado">SIM</span>
+                  <ng-template #naoEnviado>NÃO</ng-template>
+                </ion-row>
+                <ion-row class="lista-label">Enviado?</ion-row>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary" (click)="downloadRemoteForms()"><ion-icon name="cloud-download-outline"></ion-icon></ion-fab-button>
+    <br>
+    <ion-fab-button color="success" [routerLink]="['/imovel-formulario']"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

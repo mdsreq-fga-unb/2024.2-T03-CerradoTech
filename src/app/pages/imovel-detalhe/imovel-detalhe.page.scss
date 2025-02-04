@@ -1,0 +1,127 @@
+ion-content {
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+    // --background: var(--ion-color-secondary);
+    --background: linear-gradient(to bottom, #71b280, #479a80, #24817b, #106770, #134e5e);
+}
+
+.card-imovel{
+    background: var(--ion-color-light);
+    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    border-radius: 3.0vw;
+    margin-bottom: 5.0vw;
+}
+
+.card-imovel img{
+    max-height: 18vw;
+    max-width: auto;
+    display:block;
+    margin:auto;
+}
+  
+.card-imovel .titulo{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.6vw;
+    line-height: 6.0vw;
+    text-align: center;
+    
+    color: #151522;
+    margin-top: 5.0vw;
+    margin-bottom: 3.2vw !important;
+}
+  
+.card-imovel .subtitulo{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.7vw;
+    line-height: 4.6vw;
+    text-align: center;
+    color: #666666;
+    margin-top: -1.5vw;
+}
+  
+.card-imovel .label{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 4.0vw;
+    line-height: 4.2vw;
+    text-align: left;
+    color: #666666;
+    margin-bottom: 3.2vw !important;
+}
+  
+.card-imovel .linha{
+    border: 1px solid rgba(228, 228, 228, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3.2vw !important;
+    margin-top: 3.2vw !important;
+}
+
+.card-imovel .aviso-msg{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5vw;
+    line-height: 7vw;    
+    text-align: center;
+    
+    color: #151522;
+    margin-top: 5.0vw;
+    margin-bottom: 5.0vw;
+}
+  
+.card-imovel .aviso-titulo{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5.0vw;
+    line-height: 5.4vw;
+    text-align: center;
+    color: #151522;
+    margin-top: 5.0vw;
+    margin-bottom: 5.0vw;
+}
+
+.card-imovel .pergunta{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.4vw;
+    line-height: 5.8vw;
+    margin-bottom: 5%;
+    text-align: center;
+    color: #4E4E4E;
+}
+
+.alinhamentoBotao{
+    text-align: center;
+    // padding-top: 2%;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.customButton{
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    border-radius: 1.0rem;
+    width: 15em;
+    height: 2.5em;
+    align-self: center;
+    font-size: 1.5em;
+    ion-icon{
+        font-size: 1.5em;
+        padding-right: 5%;
+    }
+    margin-bottom: 3%;
+}
+
+

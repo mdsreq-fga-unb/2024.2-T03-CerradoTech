@@ -1,0 +1,147 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title class="title">Cadastro</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+    <br>
+    <div class="title">Informações pessoais</div>
+    <form (ngSubmit)="signup()" [formGroup]="register" class="ion-padding">
+        <div class="">
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="person-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="string" placeholder="Nome completo" formControlName="nome"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.nome?.dirty || f.nome?.touched) && f.nome?.errors" class="errors">
+                <span *ngIf="f.nome.errors?.required">O nome é obrigatório<br></span>
+                <span *ngIf="f.nome.errors?.minlength">Seu nome precisa ter no mínimo
+                    {{f.nome.errors.minlength.requiredLength}} caracteres.<br></span>
+                <span *ngIf="f.nome.errors?.maxlength">Seu nome pode ter no máximo
+                    {{f.name.errors.maxlength.requiredLength}} caracteres.<br></span>
+                <span *ngIf="f.nome.errors?.pattern">Seu nome não pode conter números e caracteres especiais.<br></span>
+                <span *ngIf="f.nome.errors?.nome">Nome inválido</span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="person-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="string" placeholder="Usuário" formControlName="usuario"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.usuario?.dirty || f.usuario?.touched) && f.usuario?.errors" class="errors">
+                <span *ngIf="f.usuario.errors?.required">O nome de usuário é obrigatório.<br></span>
+                <span *ngIf="f.usuario.errors?.minlength">Seu usuário precisa ter no mínimo
+                    {{f.usuario.errors.minlength.requiredLength}} caracteres.<br></span>
+                <span *ngIf="f.usuario.errors?.maxlength">Seu usuário pode ter no máximo
+                    {{f.usuario.errors.maxlength.requiredLength}} caracteres.<br></span>
+                <span *ngIf="f.usuario.errors?.pattern">Seu usuário não pode caracteres especiais.<br></span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="today-outline"></ion-icon>
+                </ion-label>
+                <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de nascimento"
+                    formControlName="dataNascimento" doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+            </ion-item>
+            <div *ngIf="(f.dataNascimento?.dirty || f.dataNascimento?.touched) && f.dataNascimento?.errors"
+                class="errors">
+                <span *ngIf="f.dataNascimento.errors?.required">Data de nascimento é obrigatória</span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="create-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="CPF" formControlName="cpf"
+                    [brmasker]="{form: register.get('cpf'), mask: '999.999.999-99'}" maxlength="14"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.cpf?.dirty || f.cpf?.touched) && f.cpf?.errors" class="errors">
+                <span *ngIf="f.cpf.errors?.required">O CPF é obrigatório</span>
+                <span *ngIf="f.cpf.errors?.minlength">CPF inválido</span>
+
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="at-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="email" placeholder="Email" formControlName="email"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.email?.dirty || f.email?.touched) && f.email?.errors" class="errors">
+                <span *ngIf="f.email.errors?.required">O email é obrigatório</span>
+                <span *ngIf="f.email.errors?.pattern">Email inválido</span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="at-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="email" placeholder="Repita o email" formControlName="confirmEmail"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.confirmEmail?.dirty || f.confirmEmail?.touched) && (f.confirmEmail?.errors || register.errors?.emailConfere)"
+                class="errors">
+                <span *ngIf="f.confirmEmail.errors?.required">O email é obrigatório<br></span>
+                <span *ngIf="register.errors?.emailConfere === true">
+                    Os endereços de email fornecidos não coincidem.
+                </span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="phone-portrait-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="Telefone" formControlName="telefone" [brmasker]="{phone: true}">
+                </ion-input>
+            </ion-item>
+            <div *ngIf="(f.telefone?.dirty || f.telefone?.touched) && f.telefone?.errors" class="errors">
+                <span *ngIf="f.telefone.errors?.required">O telefone é obrigatório<br></span>
+                <span *ngIf="f.telefone.errors?.minlength || f.telefone.errors?.maxlength">Telefone inválido.<br></span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="location-outline"> UF</ion-icon>
+                </ion-label>
+                <ion-select formControlName="uf" okText="Confirmar" cancelText="Cancelar" placeholder="UF">
+                    <ion-select-option *ngFor="let uf of ufList" [value]="uf">{{uf}}
+                    </ion-select-option>
+                </ion-select>
+            </ion-item>
+            <div *ngIf="(f.uf?.dirty || f.uf?.touched) && f.uf?.errors" class="errors">
+                <span *ngIf="f.uf.errors?.required">A UF é obrigatória</span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="briefcase-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="text" placeholder="Organização" formControlName="org">
+                </ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="key-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.password?.dirty || f.password?.touched) && f.password?.errors" class="errors">
+                <span *ngIf="f.password.errors?.required">A senha é obrigatória</span>
+                <span *ngIf="f.password.errors?.minlength">A senha precisa ter pelo menos 6 caracteres.</span>
+            </div>
+            <ion-item>
+                <ion-label>
+                    <ion-icon name="key-outline"></ion-icon>
+                </ion-label>
+                <ion-input type="password" placeholder="Repita sua senha" formControlName="confirmPassword"></ion-input>
+            </ion-item>
+            <div *ngIf="(f.confirmPassword?.dirty || f.confirmPassword?.touched) && (f.confirmPassword?.errors || register.errors?.senhaConfere)"
+                class="errors">
+                <span *ngIf="f.confirmPassword.errors?.required">A senha é obrigatória.<br></span>
+                <span *ngIf="f.confirmPassword.errors?.minlength">A senha precisa ter pelo menos 6
+                    caracteres.<br></span>
+                <span *ngIf="register.errors?.senhaConfere === true">
+                    As senhas não coincidem
+                </span>
+            </div>
+        </div>
+        <ion-button type="submit" expand="block" [disabled]="!register.valid">Cadastrar
+        </ion-button>
+    </form>
+
+</ion-content>

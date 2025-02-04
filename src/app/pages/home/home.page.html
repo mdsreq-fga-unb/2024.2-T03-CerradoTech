@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()" style="margin-right: 5%;">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-left">RADIS Cerrado</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item class="custom-item" [routerLink]="['/imovel-lista']" [queryParams]="{param:'meus-imoveis'}"
+          lines="full" detail>
+          <ion-label>
+            Meus imóveis
+          </ion-label>
+          <ion-icon name="compass-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+        <ion-item class="custom-item" [routerLink]="['/imovel-lista']" [queryParams]="{param:'monitoramento'}"
+          lines="full" detail>
+          <ion-label>
+            Monitoramento
+          </ion-label>
+          <ion-icon name="locate-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+        <ion-item lines="full" detail class="custom-item" [routerLink]="['/imovel-lista']" [queryParams]="{param:'socioprodutivo'}">
+          <ion-label>
+            Diagnóstico
+          </ion-label>
+          <ion-icon name="shapes-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+        <ion-item lines="full" detail class="custom-item" [routerLink]="['/catalogo-especies']">
+          <ion-label>
+            Catálogo de espécies
+          </ion-label>
+          <ion-icon name="leaf-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+        <ion-item lines="full" detail class="custom-item" [routerLink]="['/minhas-localizacoes']">
+          <ion-label>
+            Localidades salvas
+          </ion-label>
+          <ion-icon name="map-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+        <ion-item lines="full" detail class="custom-item" [routerLink]="['/minha-conta']">
+          <ion-label>
+            Minha conta
+          </ion-label>
+          <ion-icon name="person-outline" slot="start" class="circle-icon"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+    <ion-item lines="full" (click)="logout()" class="last-item">
+      <ion-label>
+        Sair
+      </ion-label>
+      <ion-icon name="log-out-outline" slot="start" class="circle-icon"></ion-icon>
+    </ion-item>
+  </ion-card>
+  
+
+</ion-content>

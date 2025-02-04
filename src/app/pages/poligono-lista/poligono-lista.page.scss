@@ -1,0 +1,227 @@
+ion-content {
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+    // --background: var(--ion-color-secondary);
+    --background: linear-gradient(to bottom, #71b280, #479a80, #24817b, #106770, #134e5e);
+}
+
+%texto{
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.0vh;
+}
+
+.card-vazio{
+    background: var(--ion-color-secondary);
+    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    border-radius: 10px;
+    padding: 5%;
+    ion-icon{
+      color: var(--ion-color-dark);
+      font-size: 4.0vw;
+    }
+  }
+  
+  .card-vazio img{
+    max-height: 18vw;
+    max-width: auto;
+    display:block;
+    margin:auto;
+
+    
+  }
+  
+  .card-vazio .card-content-md .msg-vazia{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.0vh;
+    line-height: 4.0vh;  
+    text-align: center;
+    
+    color: var(--ion-color-light) !important; 
+    margin-top: 5.0vw;
+    margin-bottom: 12.0vw;
+  }
+
+  .card-imovel{
+    background: #FFFFFF;
+    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
+    border-radius: 3.0vw;
+    margin-bottom: 5.0vw;
+  }
+
+.mensagem{
+    @extend %texto;
+    text-align: center;
+    font-size: 2.5vh;
+    color: var(--ion-color-light); 
+    font-weight: bold;
+    padding: 2% 5%;
+    margin-bottom: 5%;
+    border-top: 1px solid var(--ion-color-light); 
+    border-bottom: 1px solid var(--ion-color-light); 
+}
+
+.box-enviado{
+    ion-icon{
+        font-size: 4em;
+    }
+}
+
+.box-nao-enviado{
+    ion-icon{
+        font-size: 4em;
+    }
+}
+
+.card-imovel img{
+  max-height: 18vw;
+  max-width: auto;
+  display:block;
+  margin:auto;
+  margin-top: 5.0vw;
+}
+
+.card-imovel .titulo{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.6vw;
+  line-height: 7.5vw;
+  
+  color: #151522;
+  margin-top: 5.0vw;
+  margin-bottom: 5% !important;
+  text-align: center;
+  word-break: break-word;
+}
+
+.card-imovel .subtitulo{
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.7vw;
+  line-height: 5.6vw;
+  text-align: center;
+  color: #666666;
+  margin-top: -1.5vw;
+}
+
+.card-imovel .label{
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vw;
+  line-height: 4.2vw;
+  text-align: center;
+  color: #666666;
+  margin-bottom: 3.2vw !important;
+}
+
+.card-imovel .linha{
+  border: 1px solid rgba(228, 228, 228, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.2vw !important;
+  margin-top: 3.2vw !important;
+}
+
+.card-imovel .lista-horizontal-align{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-imovel .lista-data{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.5vw;
+  line-height: 6.0vw;
+  color: #151522;
+  margin-bottom: 2.2vw !important;
+}
+
+.card-imovel .lista-label{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 3.5vw;
+  line-height: 4.2vw;
+  text-align: center;
+  color: #666666;
+  // margin-bottom: 5.0vw !important;
+}
+
+.card-imovel .enviado{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.0vw;
+  line-height: 5.5vw;
+  color: #079E59;
+  margin-bottom: 2.2vw !important;
+}
+
+.card-imovel .nao-enviado{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.0vw;
+  line-height: 5.5vw;
+  color: #FC0000;
+  margin-bottom: 2.2vw !important;
+}
+
+.card-imovel .pergunta{
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.4vw;
+  line-height: 5.8vw;
+  margin-bottom: 5%;
+  text-align: center;
+  color: #4E4E4E;
+}
+
+.card-imovel .mini-botao{
+  border-radius: 1.0vw;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 3.0vw;
+  line-height: 4.6vw;
+  text-align: center;
+  height: 5.7vh;
+  width: 33.0vw;
+  margin-bottom: 10%;
+
+  ion-icon{
+    margin-right: 4%;
+  }
+}
+
+.alinhamentoBotao{
+  text-align: center;
+  // padding-top: 2%;
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.msg{
+  font-family: 'Itim';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 5.0vw;
+  line-height: 5.8vw;
+  margin-bottom: 5%;
+  text-align: center;
+  color: var(--ion-color-light);
+}

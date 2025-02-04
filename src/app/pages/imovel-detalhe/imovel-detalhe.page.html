@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Detalhes do imóvel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card class="card-imovel">
+    <ion-card-content>
+      <img *ngIf="imovel?.tipoImovel?.id === 1" src="./assets/imgs/assentamento-novo.svg">
+      <img *ngIf="imovel?.tipoImovel?.id === 2" src="./assets/imgs/povos-tradicionais-novo.svg">
+      <img *ngIf="imovel?.tipoImovel?.id === 3" src="./assets/imgs/fazenda-novo.svg">
+      <img *ngIf="imovel?.tipoImovel?.id === 4" src="./assets/imgs/uc-novo.svg">
+      <div class="titulo" *ngIf="imovel?.tipoImovel?.id === 1">{{imovel?.assentamento}} Lote {{imovel?.numeroLote}}
+      </div>
+      <div class="titulo" *ngIf="imovel?.tipoImovel?.id !== 1">{{imovel?.nomeTerritorio}}</div>
+      <ion-grid no-padding>
+        <ion-row class="subtitulo">
+          <ion-col>{{imovel?.municipio?.nome}}-{{imovel?.uf}}</ion-col>
+        </ion-row>
+        <ion-row><br></ion-row>
+        <ion-row class="label">
+          <ion-col>{{imovel?.tipoImovel.tipo}}</ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+        <ion-row class="label">
+          <ion-col>Tamanho do imóvel: {{imovel?.area}} ha</ion-col>
+        </ion-row>
+        <ion-row class="label">
+          <ion-col>Módulo fiscal do município: {{imovel?.moduloFiscal}}</ion-col>
+        </ion-row>
+        <ion-row class="label">
+          <ion-col>Área do imóvel em módulos fiscais: {{areaModulo}}</ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+      </ion-grid>
+      <span *ngIf="imovel?.latitude !== 0 && imovel?.longitude !== 0; else semLoc">
+        <div class="label" style="padding-left: 3%;">Latitude: {{imovel?.latitude}}</div>
+        <div class="label" style="padding-left: 3%;">Longitude:{{imovel?.longitude}}</div>
+      </span>
+      <ng-template #semLoc>
+        <div class="aviso-titulo">Localização do imóvel</div>
+        <img src="./assets/imgs/alert.svg">
+        <div class="aviso-msg">Você não informou a localização de seu imóvel.</div>
+      </ng-template>
+      <div *ngIf="imovel?.statusEnvio.id !== 1">
+        <ion-row class="linha"></ion-row>
+        <div class="aviso-titulo">Atenção</div>
+        <img src="./assets/imgs/alert.svg">
+        <div class="aviso-msg" *ngIf="imovel?.statusEnvio.id === 0">Você ainda não enviou este imóvel.</div>
+        <div class="aviso-msg" *ngIf="imovel?.statusEnvio.id === 2">Existem alterações em seu imóvel que ainda não
+          foram enviadas.</div>
+        <div class="aviso-msg" *ngIf="imovel?.statusEnvio.id === 3">Houve um erro ao enviar seu imóvel, por favor tente novamente.</div>
+      </div>
+      <ion-row class="linha"></ion-row>
+      <div class="pergunta">O que deseja fazer?</div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: {{color.verde}}" [routerLink]="['/poligono-lista', imovel?._id]">
+          <ion-icon name="locate-outline"></ion-icon> MONITORAR
+        </ion-button>
+      </div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: {{color.verdeEscuro}}" (click)="verNoMapa()"
+          [disabled]="imovel?.latitude === 0 && imovel?.longitude === 0">
+          <ion-icon name="location-outline"></ion-icon> VER NO MAPA
+        </ion-button>
+      </div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: {{color.azulClaro}}" [routerLink]="['/imovel-formulario', imovel?._id]">
+          <ion-icon name="create-outline"></ion-icon> EDITAR
+        </ion-button>
+      </div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: {{color.ciano}}" [routerLink]="['/socioprodutivo-lista', imovel?._id]">
+          <ion-icon name="shapes-outline"></ion-icon>DIAGNÓSTICO
+        </ion-button>
+      </div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: {{color.verdeClaro}}"
+          [disabled]="imovel?.statusEnvio.id === 1" (click)="uploadImovel()">
+          <ion-icon name="cloud-upload-outline"></ion-icon>ENVIAR
+        </ion-button>
+      </div>
+      <div class="alinhamentoBotao"><ion-button class="customButton" (click)="deleteForm()" color="danger" fill="clear">
+          <ion-icon name="trash-outline"></ion-icon> Excluir
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

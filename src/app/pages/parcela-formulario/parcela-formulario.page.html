@@ -1,0 +1,326 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" style="margin-right: 5%;" (click)="fazerObservacao()">
+      <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="margin-left: 5%;">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <form (ngSubmit)="submit()" [formGroup]="form">
+    <ion-slides [options]="slideOpts">
+      <ion-slide *ngIf="!flagEspecial">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                <ion-icon name="create-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Dados gerais
+              </div>
+            </ion-col>
+          </ion-row>
+          <!-- ONLINE -->
+          <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 0">
+            <ion-col>
+              <ion-list lines="none">
+                <ion-list-header class="checkbox-question">Informe a localização da parcela</ion-list-header>
+                <ion-radio-group formControlName="gpsOuMapa">
+                  <ion-item class="item-no-border">
+                    <ion-label>Coletar ponto (GPS)</ion-label>
+                    <ion-radio slot="start" value="gps"></ion-radio>
+                  </ion-item>
+
+                  <ion-item class="item-no-border">
+                    <ion-label>Localizar no mapa</ion-label>
+                    <ion-radio slot="start" value="mapa"></ion-radio>
+                  </ion-item>
+                </ion-radio-group>
+              </ion-list>
+              <div *ngIf="f.gpsOuMapa.value === 'gps'">
+                <ion-item>
+                  <ion-label position="floating">Latitude</ion-label>
+                  <ion-input type="string" formControlName="latitude"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Longitude</ion-label>
+                  <ion-input type="string" formControlName="longitude"></ion-input>
+                </ion-item>
+                <div class="help" *ngIf="poligono?.tipo !== 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da parcela para efetuar a
+                  marcação
+                </div>
+                <div class="help" *ngIf="poligono?.tipo === 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da linha para efetuar a
+                  marcação
+                </div>
+                <ion-button (click)="getGeolocation()" class="custom-button" color="dark">Coletar localização
+                </ion-button>
+                <br>
+              </div>
+              <span *ngIf="f.gpsOuMapa.value === 'mapa'">
+                <ion-item>
+                  <ion-label position="floating">Latitude</ion-label>
+                  <ion-input type="string" formControlName="latitude"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Longitude</ion-label>
+                  <ion-input type="string" formControlName="longitude"></ion-input>
+                </ion-item>
+                <div class="help" *ngIf="poligono?.tipo !== 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da parcela para efetuar a
+                  marcação
+                </div>
+                <div class="help" *ngIf="poligono?.tipo === 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da linha para efetuar a
+                  marcação
+                </div>
+                <ion-button (click)="presentModal('')" class="custom-button" color="dark">Abrir
+                  mapa</ion-button>
+                <br><br><br>
+              </span>
+
+            </ion-col>
+          </ion-row>
+          <!-- OFFLINE -->
+          <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 1">
+            <ion-col>
+              <span>
+                <ion-list-header class="checkbox-question">Informe a localização do polígono</ion-list-header>
+                <ion-item>
+                  <ion-label position="floating">Latitude</ion-label>
+                  <ion-input type="string" formControlName="latitude"></ion-input>
+                </ion-item>
+
+                <ion-item>
+                  <ion-label position="floating">Longitude</ion-label>
+                  <ion-input type="string" formControlName="longitude"></ion-input>
+                </ion-item>
+                <br>
+                <div class="help" *ngIf="poligono?.tipo !== 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da parcela para efetuar a
+                  marcação
+                </div>
+                <div class="help" *ngIf="poligono?.tipo === 3">
+                  <ion-icon name="alert-circle-outline"></ion-icon> Vá até o ponto inicial da linha para efetuar a
+                  marcação
+                </div>
+                <br>
+                <ion-button (click)="presentModal('offline')" class="custom-button" color="dark">
+                  Abrir mapa</ion-button>
+                <br><br><br>
+              </span>
+
+
+            </ion-col>
+          </ion-row>
+          <br>
+          <ion-row>
+            <ion-col>
+              <ion-item>
+                <ion-label>A parcela é permanente?</ion-label>
+                <ion-toggle formControlName="parcelaPermanente" color="primary"></ion-toggle>
+              </ion-item>
+            </ion-col>
+          </ion-row>        
+          <ion-row>
+            <ion-col size="4">
+              <!-- <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button> -->
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>1/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+          <br><br><br><Br>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide *ngIf="!flagEspecial" class="schrollVertically">
+        <ion-grid style="height: 100vh;">
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                <span *ngIf="poligono?.formacaoVegetal?.label === 'Florestal'">
+                  <ion-icon name="leaf-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon> Cobertura de
+                  copa
+                </span>
+                <span *ngIf="poligono?.formacaoVegetal?.label !== 'Florestal'">
+                  <ion-icon name="leaf-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon> Cobertura de
+                  vegetação<br>(cobertura do solo)
+                </span>
+              </div>
+              <div *ngFor="let metro of form.value.coberturaVegetacao; let i = index">
+                <div *ngIf="i === contadorCobertura && contadorCobertura < 26">
+                  <div class="box-cobertura">
+                    <ion-list-header class="checkbox-question">Informe o tipo de cobertura do ponto em que você se
+                      encontra:</ion-list-header>
+                    <ion-row *ngFor="let opt of coberturaVegetacao" class="laranja-cobertura"
+                      [ngStyle]="{'opacity':(checarCobertura(metro.tipo, opt)) || metro.tipo.length === 0 ? '1' : '0.5'}"
+                      (click)="marcarCobertura(opt)">
+                      <ion-col size="2" style="text-align: center;" class="ion-align-self-center">
+                        <ion-icon name="checkmark-circle-sharp" color="light" *ngIf="checarCobertura(metro.tipo, opt)">
+                        </ion-icon>
+                      </ion-col>
+                      <ion-col size="10" style="text-align: left;">
+                        {{opt.nome}}
+                      </ion-col>
+                    </ion-row>
+                    <br>
+                    <ion-row>
+                      <ion-col>
+                        <div class="alinhamentoBotao">
+                          <ion-button fill="outline" class="botao" (click)="proximoMetro()">Próximo ponto</ion-button>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <br>
+                    <ion-row>
+                      <ion-col size="3" (click)="metroAnterior()">
+                        <ion-icon name="caret-back-outline" *ngIf="contadorCobertura > 0" style="font-size: 2.0vh;"></ion-icon>
+                      </ion-col>
+                      <ion-col size="6" class="metro-texto">{{contadorCobertura + 1}}º ponto de 26</ion-col>
+                      <ion-col size="3" (click)="proximoMetro()">
+                        <ion-icon name="caret-forward-outline" *ngIf="contadorCobertura < 25" style="font-size: 2.0vh;"></ion-icon>
+                      </ion-col>
+                    </ion-row>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center" *ngIf="maxPage === 2">
+            <ion-button type="submit" expand="block">Salvar</ion-button>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>2/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()" *ngIf="maxPage === 3">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide *ngIf="poligono?.formacaoVegetal?.label !== 'Campestre' && (flagEspecial || maxPage === 3)">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                <ion-icon name="leaf-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon> Espécies e
+                densidade de regenerantes nativos
+              </div>
+              <ion-card *ngFor="let individuo of form.value.densidadeEspecies; let j = index">
+                <ion-card-title>
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center">
+                      <ion-col size="2" *ngIf="j === 0 && flagEspecial"></ion-col>
+                      <ion-col size="2" *ngIf="j > 0" (click)="removerIndividuo(j)">
+                        <ion-icon name="close-circle-outline"></ion-icon>
+                      </ion-col>
+                      <ion-col>
+                        <div class="tituloCobertura">Indivíduo {{j+1}}: {{form.value.densidadeEspecies[j].especie}}
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-title>
+                <ion-card-content>
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col>
+                        <div class="alinhamentoBotao">
+                          <ion-button class="botao" (click)="consultarCatalogo(j)">Consultar catálogo</ion-button>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        <div class="tituloCobertura">ou</div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col>
+                        <ion-item class="ion-text-wrap">
+                          <ion-input placeholder="Insira o nome da espécie" type="text"
+                            (ionChange)="writeEspecie($event, j)"></ion-input>
+                        </ion-item>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row class="alinhamentoBotao">
+                      <ion-col>
+                        <ion-button class="botao" (click)="adicionarEspecie(j)" fill="outline">Adicionar ao catálogo
+                        </ion-button>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row class="ion-align-items-center">
+                      <ion-col>
+                        <div class="tituloCobertura">Regenerante?<span style="color:red">*</span></div>
+                      </ion-col>
+                    </ion-row>
+                    <ion-row>
+                      <ion-col class="verde" (click)="marcarDensidade('sim', j)"
+                        [ngStyle]="{'opacity':individuo.regenerante === 'sim' || individuo.regenerante === '' ? '1' : '0.5'}">
+                        <ion-row class="ion-justify-content-center">
+                          <img src="./assets/custom-icons/regenerante.svg">
+                        </ion-row>
+                        <ion-row class="ion-justify-content-center">Sim</ion-row>
+                      </ion-col>
+                      <ion-col class="amarelo-dourado" (click)="marcarDensidade('nao', j)"
+                        [ngStyle]="{'opacity':individuo.regenerante === 'nao' || individuo.regenerante === '' ? '1' : '0.5'}">
+                        <ion-row class="ion-justify-content-center">
+                          <img src="./assets/custom-icons/nao-regenerante.svg">
+                        </ion-row>
+                        <ion-row class="ion-justify-content-center">Não</ion-row>
+                      </ion-col>
+                    </ion-row>
+                    <br>
+                    <ion-row class="ion-align-items-center">
+                      <ion-col size="5" ></ion-col>
+                      <ion-col size="5" class="metro-texto">Indivíduo {{j+1}}</ion-col>
+                      <ion-col size="2" class="box-add" (click)="addIndividuos(j)">
+                        <ion-icon name="add-circle-outline" style="font-size: 4.0vh;"></ion-icon>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-content>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+          <ion-row class="ion-justify-content-center">
+            <ion-button type="submit" expand="block">Salvar</ion-button>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button *ngIf="!flagEspecial" shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>{{maxPage}}/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+  </form>
+</ion-content>

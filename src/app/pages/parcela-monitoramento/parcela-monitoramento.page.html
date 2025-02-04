@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Ano do monitoramento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="listaMonitoramento?.length === 0">
+    <ion-card class="card-vazio">
+      <ion-card-content>
+        <img src="./assets/imgs/alert.svg">
+        <div class="msg-vazia">Você ainda não iniciou o monitoramento neste polígono.</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="listaMonitoramento?.length > 0">
+    <div class="msg" *ngIf="listaMonitoramento?.length > 0">
+      Escolha o ano que deseja monitorar:
+    </div>
+    <div *ngFor="let monitoramento of listaMonitoramento">
+      <ion-card class="card-imovel">
+        <ion-card-content>
+          <div class="lista-horizontal-align">
+            <div class="circulo">{{monitoramento?.ano}}</div>
+          </div>
+          <div class="titulo"> Ano</div>
+          <ion-grid no-padding no-margin>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row class="lista-data">
+                  {{qtdParcelas}}
+                </ion-row>
+                <ion-row class="lista-label" *ngIf="poligono?.tipoPoligono !== 3">Parcelas<br>sugeridas</ion-row>
+                <ion-row class="lista-label" *ngIf="poligono?.tipoPoligono === 3">Linhas<br>sugeridas</ion-row>
+              </ion-col>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row class="lista-data">{{monitoramento?.qtdParcelas}}</ion-row>
+                <ion-row class="lista-label" *ngIf="poligono?.tipoPoligono !== 3">Parcelas<br>cadastradas</ion-row>
+                <ion-row class="lista-label" *ngIf="poligono?.tipoPoligono === 3">Linhas<br>cadastradas</ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="pergunta">O que deseja fazer?</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #00904C"  [routerLink]="['/parcela-lista', idImovel, idPoligono, monitoramento.ano]">
+                    <ion-icon name="locate-outline"></ion-icon> MONITORAR
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" color="danger" fill="clear" (click)="deletarMsg(monitoramento.ano)">
+                    <ion-icon name="trash-outline"></ion-icon> DELETAR
+                  </ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="novoMonitoramento()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

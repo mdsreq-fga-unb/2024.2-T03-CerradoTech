@@ -1,0 +1,23 @@
+#mapId {
+    width: 100%; 
+    height: 100%; 
+    z-index: 1;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5vw;
+    color: #f7f7f7;
+    text-align: center;
+
+    ion-title{
+        font-size: 4.9vw !important;
+    }
+
+}

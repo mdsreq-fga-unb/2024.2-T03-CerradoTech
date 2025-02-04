@@ -1,0 +1,14 @@
+{
+	"appId": "com.cegafi.radisCerrado",
+	"appName": "Radis Cerrado",
+	"webDir": "www",
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+		  "androidScaleType": "CENTER_CROP",
+		  "splashFullScreen": true,
+		  "launchShowDuration": 3000,
+      	  "launchAutoHide": true
+		}
+	  }
+}

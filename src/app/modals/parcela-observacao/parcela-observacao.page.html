@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="fechar()">
+      <ion-icon slot="icon-only" name="close"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Observações sobre a parcela</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-textarea placeholder="Insira aqui as observações" [(ngModel)]="texto" [disabled]="!edit"></ion-textarea>
+  </ion-item>
+
+  <ion-fab-button style="position: absolute; top: 85%; left: 78%; z-index: 1000;" *ngIf="edit"><ion-icon name="checkmark-outline" (click)="confirmar()"></ion-icon></ion-fab-button>
+</ion-content>

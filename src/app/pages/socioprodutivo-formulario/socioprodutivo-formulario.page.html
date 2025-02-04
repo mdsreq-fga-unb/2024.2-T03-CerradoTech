@@ -1,0 +1,795 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Questionário</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submit()" [formGroup]="form">
+    <!-- <ion-slides [options]="slideOpts" (ionSlideDidChange)="scrollToTop()"> -->
+      <div *ngIf="pagina === 1">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Identificação
+              </div>
+              <br>
+              <ion-item class="custom-input">
+                <ion-label position="floating">Data da entrevista<span style="color:red">*</span></ion-label>
+                <ion-datetime formControlName="dataEntrevista" displayFormat="DD/MM/YYYY" 
+                  min="2020" cancelText="Cancelar" doneText="Ok"></ion-datetime>
+              </ion-item>
+
+              <ion-item class="custom-input">
+                <ion-label position="floating">Nome do entrevistado<span style="color:red">*</span></ion-label>
+                <ion-input formControlName="nomeEntrevistado" type="text"></ion-input>
+              </ion-item>
+              <br>
+              <div class="subtitulo">Dados do responsável</div>
+              <br>
+              <div formArrayName="responsavel">
+                <section [formGroupName]="i" *ngFor="let membros of f.responsavel['controls']; let i = index">
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Nome do(a) responsável pelo imóvel</ion-label>
+                    <ion-input formControlName="nome" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">CPF do(a) responsável pelo imóvel</ion-label>
+                    <ion-input formControlName="cpf" type="text"
+                      [brmasker]="{mask: '999.999.999-99', type:'num'}" maxlength="14">
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">NIS/Cad Único do(a) responsável pelo imóvel</ion-label>
+                    <ion-input formControlName="nisCad" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Celular do(a) responsável pelo imóvel</ion-label>
+                    <ion-input formControlName="celular" type="text" [brmasker]="{phone: true}"></ion-input>
+                  </ion-item>
+                </section>
+              </div>
+              <br>
+              <div class="subtitulo">Dados do cônjuge</div>
+              <br>
+              <div formArrayName="conjuge">
+                <section [formGroupName]="i" *ngFor="let membros of f.conjuge['controls']; let i = index">
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Nome do cônjuge</ion-label>
+                    <ion-input formControlName="nome" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">CPF do cônjuge</ion-label>
+                    <ion-input formControlName="cpf" type="text"
+                      [brmasker]="{mask: '999.999.999-99', type:'num'}" maxlength="14">
+                    </ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">NIS/Cad Único do cônjuge</ion-label>
+                    <ion-input formControlName="nisCad" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Celular do cônjuge para contato</ion-label>
+                    <ion-input formControlName="celular" type="text" [brmasker]="{phone: true}"></ion-input>
+                  </ion-item>
+                </section>
+              </div>
+              <br>
+              <div class="subtitulo">Outras informações</div>
+              <br>
+
+              <ion-list>
+                <ion-list-header class="checkbox-question">Atividades Produtivas de importância comercial
+                </ion-list-header>
+                <ion-item *ngFor="let opt of atividadesProdutivas" class="item-no-border">
+                  <ion-checkbox color="primary" slot="start" value="{{opt.value}}" checked="{{opt.isChecked}}"
+                    (ionChange)="onCheckChange($event, 'principaisAtividadesProdutivas')"></ion-checkbox>
+                  <ion-label class="ion-text-wrap">{{opt.value}}</ion-label>
+                </ion-item>
+              </ion-list>
+
+              <div
+                *ngIf="f.principaisAtividadesProdutivas.value.includes('Outras atividades (agrícolas e não agrícolas)')">
+                <ion-item class="custom-input">
+                  <ion-label position="floating">Qual?</ion-label>
+                  <ion-input formControlName="principaisAtividadesProdutivasOutros" type="text"></ion-input>
+                </ion-item>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <!-- <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button> -->
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>1/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 2">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Caracterização dos membros da família e demais moradores
+              </div>
+              <br>
+              <div formArrayName="membrosMoradores">
+                <section [formGroupName]="i" *ngFor="let membros of fMembrosMoradores['controls']; let i = index">
+                  <span float-right ion-button icon-left clear color="light" *ngIf="fMembrosMoradores['length'] > 1"
+                    (click)="removeElementFormArray(formArrayNames.MEMBROS_MORADORES, i)">
+                    <div class="close-button">
+                      <ion-icon name="close"></ion-icon>
+                    </div>
+                  </span>
+
+                  <div class="linhaBranca"></div>
+                  <br>
+                  <div class="subtitulo"> #{{i+1}}: {{fMembrosMoradores.value[i].grauParentesco.label}}
+                    - {{fMembrosMoradores.value[i].nome}} </div>
+                  <br>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Primeiro nome</ion-label>
+                    <ion-input formControlName="nome" type="text"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Idade</ion-label>
+                    <ion-input formControlName="idade" type="number"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Grau de parentesco com o responsável pelo imóvel</ion-label>
+                    <ion-select formControlName="grauParentesco" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                      <ion-select-option *ngFor="let id of suporte.grauParentesco" value="{{id}}">{{id}}</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <!-- <h4 class="question">Grau de parentesco com o responsável pelo imóvel</h4>
+                  <ion-list>
+                    <ion-radio-group formControlName="grauParentesco">
+                      <ion-item class="item-no-border" *ngFor="let item of grauParentesco">
+                        <ion-label>{{item.label}}</ion-label>
+                        <ion-radio slot="start" [value]="item"></ion-radio>
+                      </ion-item>
+                    </ion-radio-group>
+                  </ion-list> -->
+
+                  <div *ngIf="f.membrosMoradores.value[i].grauParentesco === 'Outro'">
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Qual?</ion-label>
+                      <ion-input formControlName="grauOutro" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Escolaridade</ion-label>
+                    <ion-select formControlName="escolaridade" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                      <ion-select-option *ngFor="let id of suporte.escolaridade" value="{{id}}">{{id}}</ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <!-- <h4 class="question">Escolaridade</h4>
+                  <ion-list>
+                    <ion-radio-group formControlName="escolaridade">
+                      <ion-item class="item-no-border" *ngFor="let item of escolaridade">
+                        <ion-label>{{item.label}}</ion-label>
+                        <ion-radio slot="start" [value]="item"></ion-radio>
+                      </ion-item>
+                    </ion-radio-group>
+                  </ion-list> -->
+
+                  <span>
+                    <ion-fab-button (click)="addElementFormArray(formArrayNames.MEMBROS_MORADORES)"
+                      style="position: relative; left: 78%; width: 10vw; height: 10vw;">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </ion-fab-button>
+                  </span>
+                  <br>
+                </section>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>2/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 3">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Produção animal
+              </div>
+              <div formArrayName="producaoAnimal">
+                <section [formGroupName]="i" *ngFor="let prod of fProducaoAnimal['controls']; let i = index">
+                  <span float-right ion-button icon-left clear color="light" *ngIf="fProducaoAnimal['length'] > 1"
+                    (click)="removeElementFormArray(formArrayNames.PRODUCAO_ANIMAL, i)">
+                    <div class="close-button">
+                      <ion-icon name="close"></ion-icon>
+                    </div>
+                  </span>
+                  <div class="linhaBranca"></div>
+                  <br>
+                  <div class="subtitulo">#{{i+1}}: {{fProducaoAnimal.value[i].tipo.tipo}}
+                  </div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Tipo de criação</ion-label>
+                    <ion-select formControlName="tipo" [compareWith]="compareCodigo" okText="Confirmar"
+                      cancelText="Cancelar">
+                      <ion-select-option *ngFor="let item of suporte.producaoAnimal" [value]="item">{{item.tipo}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <div *ngIf="fProducaoAnimal.value[i].tipo.tipo === 'Outros animais'">
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Qual?</ion-label>
+                      <ion-input formControlName="tipoOutro" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Unidade de medida</ion-label>
+                    <ion-select formControlName="unidadeMedida" okText="Confirmar" cancelText="Cancelar">
+                      <ion-select-option *ngFor="let unidade of fProducaoAnimal.value[i].tipo.unidade"
+                        [value]="unidade">{{unidade}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <div class="subtitulo">Efetivo</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Número de animais em 31/12/20</ion-label>
+                    <ion-input formControlName="nAnimais" type="number"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Valor total dos animais em 31/12/20 (R$)</ion-label>
+                    <ion-input formControlName="valorTotalAnimais" type="text" [brmasker]="{money: true, decimal: 2}">
+                    </ion-input>
+                  </ion-item>
+                  <div class="subtitulo">Vendas anuais</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Produção vendida</ion-label>
+                    <ion-input formControlName="producaoVendida" type="number"></ion-input>
+                  </ion-item>
+
+                  <div *ngIf="fProducaoAnimal.value[i].producaoVendida > 0">
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Parcela da produção destinada ao PAA, PNAE</ion-label>
+                      <ion-input formControlName="paaPnae" type="number"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Parcela da produção destinada a mercados locais no mesmo estado
+                      </ion-label>
+                      <ion-input formControlName="mercadosEstado" type="number"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Parcela da produção destinada a outros estados</ion-label>
+                      <ion-input formControlName="mercadosOutrosEstados" type="number"></ion-input>
+                    </ion-item>
+
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Valor total das vendas (R$)</ion-label>
+                      <ion-input formControlName="valorTotalVendas" type="text" [brmasker]="{money: true, decimal: 2}">
+                      </ion-input>
+                    </ion-item>
+                  </div>
+
+                  <div class="subtitulo">Consumo</div>
+                  <br>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Parcela da produção destinada ao consumo familiar</ion-label>
+                    <ion-input formControlName="parcelaConsumoFamiliar" type="number"></ion-input>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Valor do consumo expresso em R$</ion-label>
+                    <ion-input formControlName="valorConsumo" type="text" [brmasker]="{money: true, decimal: 2}">
+                    </ion-input>
+                  </ion-item>
+
+                  <span>
+                    <ion-fab-button (click)="addElementFormArray(formArrayNames.PRODUCAO_ANIMAL)"
+                      style="position: relative; left: 78%; width: 10vw; height: 10vw;">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </ion-fab-button>
+                  </span>
+                  <br>
+                </section>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>3/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 4">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Produção vegetal e extrativismo
+              </div>
+              <br>
+              <div formArrayName="producaoVegetalExtrativismo">
+                <section [formGroupName]="i"
+                  *ngFor="let prod_veg of fProducaoVegetalExtrativismo['controls']; let i = index">
+                  <span float-right ion-button icon-left clear color="light"
+                    *ngIf="fProducaoVegetalExtrativismo['length'] > 1"
+                    (click)="removeElementFormArray(formArrayNames.PRODUCAO_VEGETAL, i)">
+                    <div class="close-button">
+                      <ion-icon name="close"></ion-icon>
+                    </div>
+                  </span>
+                  <div class="linhaBranca"></div>
+                  <br>
+                  <div class="subtitulo">#{{i+1}}:
+                    {{fProducaoVegetalExtrativismo.value[i].tipo.tipo}} </div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Selecione a categoria do Produto</ion-label>
+                    <ion-select formControlName="categoria" okText="Confirmar" cancelText="Cancelar">
+                      <ion-select-option *ngFor="let item of suporte.categoriaProducaoVegetal" [value]="item">{{item}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Tipo de produto</ion-label>
+                    <ion-select formControlName="tipo" [compareWith]="compareCodigo" okText="Confirmar"
+                      cancelText="Cancelar">
+                      <ion-select-option
+                        *ngFor="let item of suporte.producaoVegetalExtrativismo[fProducaoVegetalExtrativismo.value[i].categoria]"
+                        [value]="item">{{item.tipo}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <div *ngIf="fProducaoVegetalExtrativismo.value[i].tipo.tipo === 'Outros produtos'">
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Qual?</ion-label>
+                      <ion-input formControlName="tipoOutro" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Unidade de medida</ion-label>
+                    <ion-select formControlName="unidadeMedida" okText="Confirmar" cancelText="Cancelar">
+                      <ion-select-option *ngFor="let unidade of fProducaoVegetalExtrativismo.value[i].tipo.unidade"
+                        [value]="unidade">{{unidade}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade</ion-label>
+                    <ion-input formControlName="quantidade" type="number"></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Área colhida</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Área colhida produção pura (ha)</ion-label>
+                    <ion-input formControlName="pura" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 4}"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Área colhida produção consorciada (ha)</ion-label>
+                    <ion-input formControlName="consorciada" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 4}"></ion-input>
+                  </ion-item>
+
+                  <br>
+                  <div class="subtitulo">Preço</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Preço unitário (R$)</ion-label>
+                    <ion-input formControlName="unitario" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 2}" (ionChange)="setValorTotal(formArrayNames.PRODUCAO_VEGETAL, i)"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade vendida</ion-label>
+                    <ion-input formControlName="quantidadeVendida" type="number" (ionChange)="setValorTotal(formArrayNames.PRODUCAO_VEGETAL, i)"
+                    ></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Vendas anuais</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada ao PAA, PNAE</ion-label>
+                    <ion-input formControlName="paaPnae" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada a mercados locais no mesmo estado
+                    </ion-label>
+                    <ion-input formControlName="mercadosEstado" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada a outros estados</ion-label>
+                    <ion-input formControlName="mercadosOutrosEstados" type="number"></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Consumo</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada ao consumo familiar</ion-label>
+                    <ion-input formControlName="familiar" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Valor do consumo expresso em R$</ion-label>
+                    <ion-input formControlName="valor" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 2}"></ion-input>
+                  </ion-item>
+                  <span>
+                    <ion-fab-button (click)="addElementFormArray(formArrayNames.PRODUCAO_VEGETAL)"
+                      style="position: relative; left: 78%; width: 10vw; height: 10vw;">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </ion-fab-button>
+                  </span>
+                </section>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>4/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 5">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Outros produtos da produção animal
+              </div>
+              <div formArrayName="produtosProducaoAnimal">
+                <section [formGroupName]="i"
+                  *ngFor="let prod_prod_animal of fProdutosProducaoAnimal['controls']; let i = index">
+                  <span float-right ion-button icon-left clear color="light"
+                    *ngIf="fProdutosProducaoAnimal['length'] > 1"
+                    (click)="removeElementFormArray(formArrayNames.PRODUTO_PRODUCAO_ANIMAL, i)">
+                    <div class="close-button">
+                      <ion-icon name="close"></ion-icon>
+                    </div>
+                  </span>
+                  <div class="linhaBranca"></div>
+                  <br>
+                  <div class="subtitulo">#{{i+1}}:
+                    {{fProdutosProducaoAnimal.value[i].tipo.tipo}} </div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Tipo de produto</ion-label>
+                    <ion-select formControlName="tipo" [compareWith]="compareCodigo" okText="Confirmar"
+                      cancelText="Cancelar">
+                      <ion-select-option *ngFor="let tipo of suporte.produtosProducaoAnimal" [value]="tipo">
+                        {{tipo.tipo}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                  <div *ngIf="fProdutosProducaoAnimal.value[i].tipo.tipo === 'Outros produtos'">
+                    <ion-item class="custom-input">
+                      <ion-label position="floating">Qual?</ion-label>
+                      <ion-input formControlName="tipoOutro" type="text"></ion-input>
+                    </ion-item>
+                  </div>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Unidade de medida</ion-label>
+                    <ion-select formControlName="unidadeMedida" okText="Confirmar" cancelText="Cancelar">
+                      <ion-select-option *ngFor="let unidade of fProdutosProducaoAnimal.value[i].tipo.unidade"
+                        [value]="unidade">{{unidade}}
+                      </ion-select-option>
+                    </ion-select>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade</ion-label>
+                    <ion-input formControlName="quantidade" type="number"></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Preço</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Preço unitário (R$)</ion-label>
+                    <ion-input formControlName="unitario" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 2}" (ionChange)="setValorTotal(formArrayNames.PRODUCAO_VEGETAL, i)"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade vendida</ion-label>
+                    <ion-input formControlName="quantidadeVendida" type="number" (ionChange)="setValorTotal(formArrayNames.PRODUCAO_VEGETAL, i)"></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Vendas anuais</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada ao PAA, PNAE</ion-label>
+                    <ion-input formControlName="paaPnae" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada a mercados locais no mesmo estado</ion-label>
+                    <ion-input formControlName="mercadosEstado" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada a outros estados</ion-label>
+                    <ion-input formControlName="mercadosOutrosEstados" type="number"></ion-input>
+                  </ion-item>
+                  <br>
+                  <div class="subtitulo">Consumo</div>
+                  <br>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Quantidade da produção destinada ao consumo familiar</ion-label>
+                    <ion-input formControlName="familiar" type="number"></ion-input>
+                  </ion-item>
+                  <ion-item class="custom-input">
+                    <ion-label position="floating">Valor do consumo expresso em R$</ion-label>
+                    <ion-input formControlName="valor" type="text"
+                      [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 2}"></ion-input>
+                  </ion-item>
+                  <span>
+                    <ion-fab-button (click)="addElementFormArray(formArrayNames.PRODUTO_PRODUCAO_ANIMAL)"
+                      style="position: relative; left: 78%; width: 10vw; height: 10vw;">
+                      <ion-icon name="add-outline"></ion-icon>
+                    </ion-fab-button>
+                  </span>
+                </section>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>5/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 6">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Comercialização
+              </div>
+              <br>
+              <ion-item class="custom-input">
+                <ion-label position="floating">A produção atual é comercializada?</ion-label>
+                <ion-select formControlName="producaoComercializada" okText="Confirmar" cancelText="Cancelar">
+                  <ion-select-option value="SIM">Sim</ion-select-option>
+                  <ion-select-option value="NÃO">Não</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <div *ngIf="f.producaoComercializada.value === 'SIM'">
+                <div formArrayName="destinoComercializacao">
+                  <section [formGroupName]="i" *ngFor="let item of fDestinoComercializacao['controls']; let i = index">
+                    <div class="question">Qual o destino atual da comercialização? Informe em ordem de
+                      importância,
+                      sendo 1 o
+                      mais importante</div>
+                      <br>
+                    <ion-list>
+                      <ion-item class="custom-input">
+                        <ion-label>PAA/PNAE</ion-label>
+                        <ion-input formControlName="paaPnae" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                      <ion-item class="custom-input">
+                        <ion-label>Cooperativa/associação</ion-label>
+                        <ion-input formControlName="cooperativaAssociacao" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                      <ion-item class="custom-input">
+                        <ion-label >Eventos da agricultura familiar / feiras agroecológicas e orgânicas
+                        </ion-label>
+                        <ion-input formControlName="eventos" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                      <ion-item class="custom-input">
+                        <ion-label>Venda para atravessador</ion-label>
+                        <ion-input formControlName="atravessador" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                      <ion-item class="custom-input">
+                        <ion-label>Pequenos comércios locais (ex.: feiras livres)</ion-label>
+                        <ion-input formControlName="comerciosLocais" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                      <ion-item class="custom-input">
+                        <ion-label>Outros</ion-label>
+                        <ion-input formControlName="outros" type="number" style="text-align: center;"></ion-input>
+                      </ion-item>
+                    </ion-list>
+                  </section>
+                </div>
+                <div *ngIf="fDestinoComercializacao.value.outros > 0">
+                  <div formArrayName="destinoComercializacaoOutros">
+                    <section [formGroupName]="j"
+                      *ngFor="let outros of fDestinoComercializacaoOutros['controls']; let j = index">
+                      <ion-item class="custom-input">
+                        <ion-label position="floating">Qual?</ion-label>
+                        <ion-input formControlName="resposta" type="text"></ion-input>
+                      </ion-item>
+                      <span float-right ion-button icon-left clear color="light"
+                        *ngIf="fDestinoComercializacaoOutros['length'] > 1"
+                        (click)="removeElementFormArray(formArrayNames.COMERCIALIZACAO_OUTROS, j)">
+                        <div class="close-button">
+                          <ion-icon name="close"></ion-icon>
+                        </div>
+                      </span>
+                      <span>
+                        <ion-fab-button (click)="addElementFormArray(formArrayNames.COMERCIALIZACAO_OUTROS)"
+                          style="position: relative; left: 78%; width: 10vw; height: 10vw;">
+                          <ion-icon name="add-outline"></ion-icon>
+                        </ion-fab-button>
+                      </span><br>
+                    </section>
+                  </div>
+                </div>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>6/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <div *ngIf="pagina === 7">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <div class="title">
+                Acesso a serviços públicos
+              </div>
+              <br>
+              <div class="question">Possui DAP?</div><br>
+              <ion-item class="custom-input">
+                <!-- <ion-label position="floating">Possui DAP?</ion-label> -->
+                <ion-select formControlName="possuiDap" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                  <ion-select-option value="SIM">Sim</ion-select-option>
+                  <ion-select-option value="NÃO">Não</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <div *ngIf="f.possuiDap.value === 'SIM'">
+                <div class="question">Qual é o tipo de DAP que possuem:</div><br>
+                <ion-item class="custom-input">
+                  <!-- <ion-label position="floating">Qual é o tipo de DAP que possuem</ion-label> -->
+                  <ion-select formControlName="tipoDap" multiple="true" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                    <ion-select-option *ngFor="let id of suporte.tipoDap" value="{{id}}">{{id}}</ion-select-option>
+                  </ion-select>
+                </ion-item>
+              </div>
+
+
+              <div class="question">Selecione os benefícios a seguir que o(a) Sr(a) ou integrante de sua
+                família alguma vez já teve acesso:</div><br>
+              <ion-item class="custom-input">
+                <!-- <ion-label position="floating">Selecione os benefícios a seguir que o(a) Sr(a) ou integrante de sua
+                  família alguma
+                  vez já teve acesso:
+                </ion-label> -->
+                <ion-select formControlName="beneficios" multiple="true" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                  <ion-select-option *ngFor="let id of suporte.beneficios" value="{{id}}">{{id}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <div *ngIf="f.beneficios.value.includes('Outro programa/benefício')">
+                <div class="question">Qual?</div><br>
+                <ion-item class="custom-input">
+                  <!-- <ion-label position="floating">Qual?</ion-label> -->
+                  <ion-input formControlName="beneficiosOutro" type="text" placeholder="Selecione"></ion-input>
+                </ion-item>
+              </div>
+
+              <div class="question">A sua família se beneficia dos seguintes serviços públicos?</div><br>
+              <ion-item class="custom-input">
+                <!-- <ion-label position="floating">A sua família se beneficia dos seguintes serviços públicos?</ion-label> -->
+                <ion-select formControlName="servicosPublicos" multiple="true" okText="Confirmar" cancelText="Cancelar" placeholder="Selecione">
+                  <ion-select-option *ngFor="let id of suporte.servicosPublicos" value="{{id}}">{{id}}
+                  </ion-select-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-button type="submit" expand="block" [disabled]="!form.valid">Salvar</ion-button>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()">
+                <ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4" class="rodape">
+              <div>7/{{maxPage}}</div><br>
+            </ion-col>
+            <ion-col size="4">
+              <!-- <ion-button shape="round" color="secondary" class="btnNext" (click)="next()">
+                <ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon>
+              </ion-button> -->
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    <!-- </ion-slides> -->
+  </form>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Catálogo de espécies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background-image">
+  <div *ngFor="let especie of listaEspecies">
+    <ion-card class="custom-card">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="6" class="ion-align-self-center">
+                <span class="name">{{especie.nome}}</span>
+            </ion-col>
+            <ion-col size="3" class="ion-align-self-center" (click)="editar(especie)">
+              <ion-row>
+                <ion-icon name="create-outline" class="circle-icon-blue"></ion-icon>
+              </ion-row>
+              <ion-row>
+                <span class="label2">Editar</span>
+              </ion-row>
+            </ion-col>
+            <ion-col size="3" class="ion-align-self-center" (click)="deletar(especie)">
+              <ion-row>
+                <ion-icon name="trash-outline" class="circle-icon-red"></ion-icon>
+              </ion-row>
+              <ion-row>
+                <span class="label2">Excluir</span>
+              </ion-row>
+              
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <ion-fab-button (click)="novaEspecie()" color="success" style="position: absolute; top: 85%; left: 78%;">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-content>

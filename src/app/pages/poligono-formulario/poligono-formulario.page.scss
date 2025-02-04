@@ -1,0 +1,12 @@
+ion-content{
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+    --padding-bottom: 0%;
+    --background: var(--ion-color-light);
+    // --background: linear-gradient(to bottom, #71b280, #479a80, #24817b, #106770, #134e5e);
+}
+
+ion-content.background{
+    --background: url(../../../assets/imgs/bg-diagonal-lines.svg) 0 0/100% 100% no-repeat;
+}

@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Diagnóstico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div class="msg" *ngIf="entrevistasKeys.length > 0">
+    Escolha o polígono que deseja monitorar:
+  </div> -->
+  <div *ngIf="entrevistasKeys.length === 0">
+    <ion-card class="card-vazio">
+      <ion-card-content>
+        <img src="./assets/imgs/alert.svg">
+        <div class="msg-vazia">Você ainda não preencheu nenhum questionário socioprodutivo neste imóvel.</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="entrevistasKeys.length > 0">
+    <div *ngFor="let entrevista of entrevistaList">
+      <ion-card class="card-imovel">
+        <ion-card-content>
+          <img src="./assets/imgs/entrevista-novo.svg">
+          <div class="titulo"> {{entrevista.nomeCod}}</div>
+          <div class="subtitulo">{{entrevista.dataEntrevista | date: 'dd/MM/yyyy'}}</div>
+          <ion-grid no-padding no-margin>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="pergunta">O que deseja fazer?</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #0083EF" [routerLink]="['/socioprodutivo-formulario', idImovel, entrevista._id]">
+                    Editar
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" color="danger" (click)="deletar(entrevista._id)">DELETAR</ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" [routerLink]="['/socioprodutivo-formulario', idImovel]"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

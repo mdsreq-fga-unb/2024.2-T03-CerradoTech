@@ -1,0 +1,11 @@
+<ion-header >
+  <ion-toolbar class="title" color="primary">
+    <ion-title>{{titlePage}} <ion-icon name="close-sharp" style="position: absolute; right: 5%; top: 2%; font-size: 6vw;" (click)="closeModal(false)"></ion-icon></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div id="mapId"></div>
+
+  <ion-fab-button style="position: absolute; top: 85%; left: 78%; z-index: 1000;"><ion-icon name="checkmark-outline" (click)="closeModal(true)"></ion-icon></ion-fab-button>
+</ion-content>

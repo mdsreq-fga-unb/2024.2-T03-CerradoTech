@@ -1,0 +1,93 @@
+ion-content{
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+    --padding-bottom: 5%;
+    --background: linear-gradient(to bottom, #71b280, #479a80, #24817b, #106770, #134e5e);
+}
+
+.background-image{
+    // --background: url('../../../assets/database/bg-diagonal-lines.svg') 0 0/100% 100% no-repeat;
+    padding: 2%;
+}
+
+.custom-input{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-line !important;
+}
+
+.item-no-border{
+    border: none !important;
+    --background: transparent;  
+    word-wrap: break-word;
+}
+
+ion-item{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.0vw;
+    color: #1d1d2a;
+}
+
+.list-md{
+    background-color: transparent;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.0vw;
+    // color: #25282B;
+    text-align: center;
+    color: white;
+}
+
+.custom-button{
+    height: 12vw;
+}
+
+.errors {
+    // font-size: small;
+    color: var(--ion-color-light);
+    background: var(--ion-color-danger);
+    padding-left: 1.5vh;
+    padding-top: 0.2vh;
+    padding-bottom: 0.5vh;;
+    border-radius: 0 0 1.5vh 1.5vh;
+    margin-bottom: 5%;
+    font-size: 2.0vh;
+}
+
+.permissao-radio{
+    ion-label{
+        white-space: normal !important;
+    }
+}
+
+.text{
+    font-family: 'Itim';
+    font-style: normal;
+    padding: 3%;
+}
+
+.line{
+    border: 1px solid rgba(228, 228, 228, 0.6);
+}
+
+ion-button{
+    font-size: 2.0vh;
+    height: 5.0vh;
+}

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Polígono</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <app-df (salvouFormularioCorretamente)="updateSaveState($event)"></app-df>
+</ion-content>

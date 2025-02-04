@@ -1,0 +1,70 @@
+.background-image{
+    // --background: url(../../../assets/database/bg-diagonal-lines.svg) 0 0/100% 100% no-repeat;
+    padding: 2%;
+}
+
+.custom-input{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-line !important;
+}
+
+.item-no-border{
+    border: none !important;
+    --background: transparent;  
+    word-wrap: break-word;
+}
+
+ion-item{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.0vw;
+    line-height: 4.5vw;
+    color: #151522;
+}
+
+.list-md{
+    background-color: transparent;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.5vw;
+    // color: #25282B;
+    text-align: left;
+    margin-bottom: 10%;
+}
+
+.custom-button{
+    height: 12vw;
+}
+
+.input-group {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.errors {
+    font-size: small;
+    color: #fff;
+    background: var(--ion-color-danger);
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,147 @@
+ion-content{
+    --padding-top: 5%;
+    --padding-start: 5%;
+    --padding-end: 5%;
+    --padding-bottom: 0%;
+    --background: var(--ion-color-light);
+    // --background: linear-gradient(to bottom, #71b280, #479a80, #24817b, #106770, #134e5e);
+}
+
+ion-item{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.0vw;
+    // line-height: 18px;
+    color: var(--ion-color-dark);
+    word-break: break-word !important;
+    word-wrap: break-word !important;
+    white-space: normal;
+    max-width: 100%;
+
+    
+}
+
+.scrollVertically{
+    overflow: auto;
+    height: 100vh;
+  }
+
+ion-select::part(text){
+    white-space: pre-wrap !important;
+}
+
+.custom-select{
+    white-space: pre-wrap !important;
+}
+
+ion-slides {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+ion-item ion-label{
+    white-space: normal;
+}
+
+ion-select {
+    white-space: normal;  
+    justify-content: center;
+}
+
+ion-button{
+    font-size: 2.0vh;
+    height: 5.0vh;
+}
+  
+
+.list-md{
+    background-color: transparent;
+}
+
+.custom-input{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    word-wrap: break-word;
+    white-space: pre-line !important;
+    max-width: 100%;
+}
+
+.item-no-border{
+    border: none !important;
+    --background: transparent;  
+    word-wrap: break-word;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 4.5vw;
+    line-height: 4.8vw;
+    color: #25282B;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.subtitulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5vw;
+    line-height: 3.8vw;
+    color: #25282B;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.0vw;
+}
+
+.checkbox-question{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+}
+
+.question{
+    font-family: 'Itim';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.8vw;
+    line-height: 4.5vw;
+    text-align: left;
+    // width: 80%;
+    word-wrap: break-word;
+}
+
+.checkbox-question{
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.5vw;
+    line-height: 4.5vw;
+}

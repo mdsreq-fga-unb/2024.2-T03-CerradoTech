@@ -1,0 +1,156 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Detalhes do polígono</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="card-imovel">
+    <ion-card-content>
+      <img src="./assets/imgs/poligono-novo.svg">
+      <div class="titulo"> {{poligono?.nomeCod}}</div>
+      <div class="subtitulo">{{poligono?.dataEntrevista | date: 'dd/MM/yyyy'}}</div>
+      <ion-grid no-padding no-margin>
+        <ion-row class="linha"></ion-row>
+        <ion-row>
+          <ion-col size="6" class="lista-horizontal-align">
+            <ion-row class="lista-data">
+              <span *ngIf="ultimoAno !== -1">{{ultimoAno}}</span>
+              <span *ngIf="ultimoAno === -1">Não iniciado</span>
+            </ion-row>
+            <ion-row class="lista-label">Último ano em<br>Monitoramento</ion-row>
+          </ion-col>
+          <ion-col size="6" class="lista-horizontal-align">
+            <ion-row class="lista-data">{{poligono?.formacaoVegetal?.label}}</ion-row>
+            <ion-row class="lista-label">Formação vegetal</ion-row>
+          </ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+        <ion-row>
+          <ion-col class="titulo">Dados da vegetação</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Formação vegetal: {{poligono?.formacaoVegetal?.label}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Fitofisionomia original ou de referência: {{poligono?.fitofisionomia?.label || ""}}</ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+        <ion-row>
+          <ion-col class="titulo">Tipo do polígono</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Tipo da área a ser recomposta: {{poligono?.tipoArea?.label}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Classificação da área a ser recomposta: {{poligono?.classificacaoArea?.label}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">
+            Utilização anterior do polígono degradado: {{poligono?.utilizacaoAnterior?.label}}
+            <span *ngIf="poligono?.utilizacaoAnterior.label === 'Outro'">:
+              {{poligono?.utilizacaoAnteriorOutro}}</span>
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="poligono?.coberturaAtual?.label !== undefined">
+          <ion-col class="label">Cobertura atual do solo: {{poligono?.coberturaAtual?.label}}</ion-col>
+        </ion-row>
+        <ion-row *ngIf="poligono?.coberturaAtual?.id === 7">
+          <ion-col class="label">Outra cobertura: {{poligono?.coberturaAtualOutro}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">É possível suspensão imediata das atividades? {{poligono?.suspensaoImediata?.label}}
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">É necessário cercar? {{poligono?.necessarioCercar?.label}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">É possível cercar? {{poligono?.possivelCercar?.label}}</ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+        <ion-row>
+          <ion-col class="titulo">Plano de recomposição</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Qual o seu objetivo com a recomposição? {{poligono?.funcaoRecomposicao?.label}}
+          </ion-col>
+        </ion-row>
+        <ion-row *ngIf="poligono?.funcaoRecomposicao.id === 5">
+          <ion-col class="label">Outra função: {{poligono?.funcaoRecomposicaoOutro}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Quantas pessoas poderão participar das atividades de recomposição?
+            {{poligono?.quantidadeParticipantes}}</ion-col>
+        </ion-row>
+        <ion-row class="linha"></ion-row>
+        <ion-row>
+          <ion-col class="titulo">Localização do polígono</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Latitude: {{poligono?.latitude}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Longitude: {{poligono?.longitude}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Área do polígono: {{poligono?.areaValor}} ha</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="label">Número de parcelas: {{poligono?.quantidadeParcelas}}</ion-col>
+        </ion-row>
+        <div *ngIf="poligono?.areaValor === '0' || poligono?.areaValor === '0,0000' || poligono?.areaValor === ''">
+          <ion-row class="linha"></ion-row>
+          <div class="aviso-titulo">Atenção</div>
+          <img src="./assets/imgs/alert.svg">
+          <div class="aviso-msg">Não é permitido fazer o monitoramento sem antes
+            informar a área do polígono.</div>
+        </div>
+        <!-- <div *ngIf="gradePontos === 0">
+          <ion-row class="linha"></ion-row>
+          <div class="aviso-titulo">Atenção</div>
+          <img src="./assets/imgs/alert.svg">
+          <div class="aviso-msg">Não é recomendado monitorar suas parcelas sem antes desenhar as grades em seu polígono.
+          </div>
+        </div> -->
+
+        <span *ngIf="anos?.length > 0">
+          <ion-row class="linha"></ion-row>
+          <div class="titulo">Estatísticas do último monitoramento</div>
+          <app-indicadores-poligono [estatistica]="estatisticas" [vegetacao]="poligono?.formacaoVegetal"></app-indicadores-poligono>
+        </span>
+
+
+        <ion-row class="linha"></ion-row>
+        <div class="pergunta">O que deseja fazer?</div>
+        <div class="alinhamentoBotao">
+          <ion-button class="customButton" style="--background: #00904C" [routerLink]="['/parcela-monitoramento', idImovel, idPoligono]"
+            [disabled]="(poligono?.areaValor === '0' || poligono?.areaValor === '0,0000' || poligono?.areaValor === '')">
+            <ion-icon name="locate-outline"></ion-icon> MONITORAR
+          </ion-button>
+        </div>
+        <div class="alinhamentoBotao">
+          <ion-button class="customButton" style="--background: #007670" (click)="verNoMapa()"
+            [disabled]="poligono?.longitude === 0 && poligono?.latitude === 0">
+            <ion-icon name="location-outline"></ion-icon> VER NO MAPA
+          </ion-button>
+        </div>
+        <div class="alinhamentoBotao"><ion-button class="customButton" style="--background: #0083EF" [routerLink]="['/poligono-formulario', idImovel, idPoligono]">
+            <ion-icon name="create-outline"></ion-icon> EDITAR
+          </ion-button>
+        </div>
+        <div class="alinhamentoBotao"><ion-button class="customButton" color="danger" fill="clear" (click)="deletar()">
+            <ion-icon name="trash-outline"></ion-icon> DELETAR
+          </ion-button>
+        </div>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

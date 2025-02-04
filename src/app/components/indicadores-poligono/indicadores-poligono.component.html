@@ -1,0 +1,100 @@
+<!-- Estatística para Savânica -->
+<ion-grid *ngIf="vegetacao.id === 2">
+  <ion-row> 
+    <ion-col col-3><img src="./assets/imgs/cobertura_total.png"></ion-col>
+    <ion-col col-6> Cobertura total</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.coberturaTotal)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/lenhosa.png"></ion-col>
+    <ion-col col-6> Lenhosa nativa</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.lenhosaNativa)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/exotica.png"></ion-col>
+    <ion-col col-6> Exóticas perenes ou ciclo longo</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.exoticaPerene)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/nativa.png"></ion-col>
+    <ion-col col-6> Vegetação nativa</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.vegetacaoNativa)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/capim.png"></ion-col>
+    <ion-col col-6> Gramíneas exóticas</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.gramineasExoticas)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/capim.png"></ion-col>
+    <ion-col col-6> Gramíneas nativas</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.gramineasNativas)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <div class="linha"></div>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/regenerante.png"></ion-col>
+    <ion-col col-6> Densidade de regenerantes nativos</ion-col>
+    <ion-col col-3>{{(estatisticas.densidade.individuos.nativaReg).toFixed(2) | comma}} ind./ha</ion-col>
+  </ion-row>
+  <div class="linha"></div>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/nativa.png"></ion-col>
+    <ion-col col-6> Número de espécies nativas</ion-col>
+    <ion-col col-3>{{estatisticas.densidade.especies.total}}</ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- Estatística para Campestre -->
+<ion-grid *ngIf="vegetacao.id === 3">
+  <ion-row> 
+    <ion-col col-3><img src="./assets/imgs/cobertura_total.png"></ion-col>
+    <ion-col col-6> Cobertura total</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.coberturaTotal)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/lenhosa.png"></ion-col>
+    <ion-col col-6> Lenhosa</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.lenhosaTotal)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/exotica.png"></ion-col>
+    <ion-col col-6> Exóticas perenes ou ciclo longo</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.exoticaPerene)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/nativa.png"></ion-col>
+    <ion-col col-6> Vegetação nativa</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.vegetacaoNativa)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/capim.png"></ion-col>
+    <ion-col col-6> Gramíneas nativas</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.gramineasNativas)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+</ion-grid>
+
+<!-- Estatística para Florestal -->
+<ion-grid *ngIf="vegetacao.id === 1">
+  <ion-row> 
+    <ion-col col-3><img src="./assets/imgs/cobertura_total.png"></ion-col>
+    <ion-col col-6> Cobertura total</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.coberturaTotal)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/exotica.png"></ion-col>
+    <ion-col col-6> Exóticas total</ion-col>
+    <ion-col col-3>{{((estatisticas.cobertura.exoticaPerene)*100/26).toFixed(2) | comma}}%</ion-col>
+  </ion-row>
+  <div class="linha"></div>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/regenerante.png"></ion-col>
+    <ion-col col-6> Densidade de regenerantes nativos</ion-col>
+    <ion-col col-3>{{(estatisticas.densidade.individuos.nativaReg).toFixed(2) | comma}} ind./ha</ion-col>
+  </ion-row>
+  <div class="linha"></div>
+  <ion-row>
+    <ion-col col-3><img src="./assets/imgs/nativa.png"></ion-col>
+    <ion-col col-6> Número de espécies nativas</ion-col>
+    <ion-col col-3>{{estatisticas.densidade.especies.total | comma}}</ion-col>
+  </ion-row>
+</ion-grid>

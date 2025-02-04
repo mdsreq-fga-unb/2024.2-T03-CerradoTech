@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Meus Polígonos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <div class="msg" *ngIf="poligonosKeys.length > 0">
+    Escolha o polígono que deseja monitorar:
+  </div> -->
+  <div *ngIf="poligonosKeys.length === 0">
+    <ion-card class="card-vazio">
+      <ion-card-content>
+        <img src="./assets/imgs/alert.svg">
+        <div class="msg-vazia">Você ainda não cadastrou nenhum polígono neste imóvel.</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="poligonosKeys.length > 0">
+    <div *ngFor="let poligono of poligonoList">
+      <ion-card class="card-imovel">
+        <ion-card-content>
+          <img src="./assets/imgs/poligono-novo.svg">
+          <div class="titulo"> {{poligono.nomeCod}}</div>
+          <div class="subtitulo">Data: {{poligono.dataEntrevista | date: 'dd/MM/yyyy'}}</div>
+          <ion-grid no-padding no-margin>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row class="lista-data">
+                  <span *ngIf="ultimoAno[poligono._id] !== -1">{{ultimoAno[poligono._id]}}</span>
+                  <span *ngIf="ultimoAno[poligono._id] === -1">Não iniciado</span>
+                </ion-row>
+                <ion-row class="lista-label">Último ano em<br>Monitoramento</ion-row>
+              </ion-col>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row class="lista-data">{{poligono.formacaoVegetal.label}}</ion-row>
+                <ion-row class="lista-label">Formação vegetal</ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="pergunta">O que deseja fazer?</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #0083EF" [routerLink]="['/poligono-detalhe', idImovel, poligono._id]">
+                    VER DETALHES
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #007670" (click)="verNoMapa(poligono)" [disabled]="poligono.longitude === 0 && poligono.latitude === 0">VER NO MAPA
+                  </ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #00904C" [routerLink]="['/parcela-monitoramento', idImovel, poligono._id]" [disabled]="(poligono.areaValor === '0' || poligono.areaValor === '0,0000' || poligono.areaValor === '')">
+                    MONITORAR
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col size="6">
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" color="danger" (click)="deletar(poligono._id)">DELETAR</ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" [routerLink]="['/poligono-formulario', idImovel]"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

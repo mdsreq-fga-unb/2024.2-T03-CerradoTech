@@ -1,0 +1,181 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <h2 class="title">
+      <ion-icon name="compass-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Informações do
+      imóvel
+    </h2>
+    <ion-list class="alinhamento">
+      <ion-item class="custom-input">
+        <ion-label position="floating">{{imovelContent.label.tipoImovel}}<span style="color:red">*</span></ion-label>
+        <ion-select formControlName="tipoImovel" (ionChange)="resetImovel()" [compareWith]="compareId"
+          okText="Confirmar" cancelText="Cancelar">
+          <ion-select-option *ngFor="let tipo of imovelContent.tipoImovel" [value]="tipo">{{tipo.tipo}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{imovelContent.label.estado}}<span style="color:red">*</span></ion-label>
+        <ion-select formControlName="uf" okText="Confirmar" cancelText="Cancelar" class="ion-text-wrap"
+          (ionChange)="getCities()">
+          <ion-select-option *ngFor="let uf of geoData.uf" value="{{uf}}">{{uf}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{imovelContent.label.municipio}}<span style="color:red">*</span></ion-label>
+        <ionic-selectable formControlName="municipio" [items]="cities" itemValueField="codigo" itemTextField="nome"
+          headerColor="primary" searchFailText="Nenhum município encontrado" [canSearch]="true"
+          [hasInfiniteScroll]="true" (onSearch)="searchCities($event)" (onInfiniteScroll)="getMoreCities($event)"
+          (onChange)="setCity($event)">
+
+          <ng-template ionicSelectableCloseButtonTemplate>
+            <ion-icon name="close-circle"></ion-icon>
+          </ng-template>
+
+        </ionic-selectable>
+      </ion-item>
+
+      <ion-item *ngIf="f.municipio.value.nome === 'OUTRO'">
+        <ion-label position="floating">{{imovelContent.label.municipioOutro}}</ion-label>
+        <ion-input formControlName="municipioOutro" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.municipio.value.nome === 'OUTRO'">
+        <ion-label position="floating">Módulo Fiscal</ion-label>
+        <ion-input formControlName="moduloFiscal" type="number">
+        </ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.tipoImovel.value.id === 1">
+        <ion-label position="floating">{{imovelContent.label.assentamento}}</ion-label>
+        <ion-select formControlName="assentamento" okText="Confirmar" cancelText="Cancelar">
+          <ion-select-option *ngFor="let assentamento of settlementList" value="{{assentamento}}">{{assentamento}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item *ngIf="f.assentamento.value === 'OUTRO'">
+        <ion-label position="floating">{{imovelContent.label.assentamentoOutro}}</ion-label>
+        <ion-input formControlName="assentamentoOutro" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.tipoImovel.value.id === 1">
+        <ion-label position="floating">{{imovelContent.label.numeroLote}}</ion-label>
+        <ion-input formControlName="numeroLote" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.tipoImovel.value.id === 2">
+        <ion-label position="floating">{{imovelContent.label.nomeTerritorio}}</ion-label>
+        <ion-input formControlName="nomeTerritorio" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.tipoImovel.value.id === 3">
+        <ion-label position="floating">{{imovelContent.label.nomePropriedade}}</ion-label>
+        <ion-input formControlName="nomeTerritorio" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item *ngIf="f.tipoImovel.value.id === 4">
+        <ion-label position="floating">{{imovelContent.label.nomeUc}}</ion-label>
+        <ion-input formControlName="nomeTerritorio" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">{{imovelContent.label.area}}<span style="color:red">*</span></ion-label>
+        <ion-input formControlName="area" type="text"
+          [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 4}"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <h2 class="title">
+            <ion-icon name="map-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Localização do
+            imóvel
+          </h2>
+        </ion-col>
+      </ion-row>
+      <!-- ONLINE -->
+      <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 0">
+        <ion-col>
+          <ion-list lines="none">
+            <ion-radio-group formControlName="gpsOuMapa">
+              <ion-item class="item-no-border">
+                <ion-label>Coletar ponto (GPS)</ion-label>
+                <ion-radio slot="start" value="gps"></ion-radio>
+              </ion-item>
+
+              <ion-item class="item-no-border">
+                <ion-label>Localizar no mapa</ion-label>
+                <ion-radio slot="start" value="mapa"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+          </ion-list>
+          <div *ngIf="f.gpsOuMapa.value === 'gps'">
+            <ion-item>
+              <ion-label position="floating">Latitude</ion-label>
+              <ion-input type="string" formControlName="latitude"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Longitude</ion-label>
+              <ion-input type="string" formControlName="longitude"></ion-input>
+            </ion-item>
+
+            <ion-button (click)="getGeolocation()" class="custom-button" color="dark">Coletar localização</ion-button>
+
+          </div>
+          <span *ngIf="f.gpsOuMapa.value === 'mapa'">
+            <ion-item>
+              <ion-label position="floating">Latitude</ion-label>
+              <ion-input type="string" formControlName="latitude"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Longitude</ion-label>
+              <ion-input type="string" formControlName="longitude"></ion-input>
+            </ion-item>
+            <ion-button (click)="presentModal()" class="custom-button" color="dark">Abrir mapa</ion-button>
+          </span>
+
+          <br><br><br>
+        </ion-col>
+      </ion-row>
+      <!-- OFFLINE -->
+      <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 1">
+        <ion-col>
+          <span>
+            <ion-item>
+              <ion-label position="floating">Latitude</ion-label>
+              <ion-input type="string" formControlName="latitude"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="floating">Longitude</ion-label>
+              <ion-input type="string" formControlName="longitude"></ion-input>
+            </ion-item>
+            <ion-button (click)="presentModal('offline')" class="custom-button" color="dark">Abrir mapa</ion-button>
+          </span>
+
+          <br><br><br>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button type="submit" expand="block" [disabled]="!form.valid">Salvar</ion-button>
+    <!-- <ion-button expand="block" (click)="teste()">Salvar</ion-button> -->
+    <br><br><br>
+  </form>
+</ion-content>

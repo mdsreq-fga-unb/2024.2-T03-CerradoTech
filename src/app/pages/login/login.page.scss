@@ -1,0 +1,86 @@
+ion-content {
+    --padding-top: 10%;
+    --padding-start: 10%;
+    --padding-end: 10%;
+    --background: #fafafa;
+}
+
+ion-content.background{
+    --background: url(../../../assets/imgs/bg-diagonal-lines.svg) 0 0/100% 100% no-repeat;
+}
+ 
+.input-group {
+    background: red;
+    border-radius: 0 0 1.5vh 1.5vh;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+ 
+.errors {
+    // font-size: small;
+    color: var(--ion-color-light);
+    background: var(--ion-color-danger);
+    padding-left: 1.5vh;
+    padding-top: 0.2vh;
+    padding-bottom: 0.5vh;;
+    border-radius: 0 0 1.5vh 1.5vh;
+    margin-bottom: 5%;
+    font-size: 2.0vh;
+}
+
+.keepLogin{
+    border: none !important;
+    --background: transparent;  
+    word-wrap: break-word;
+    font-family: 'Itim' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5.0vw;
+    color: var(--ion-color-primary);
+}
+
+ion-item{
+    border: 1px solid rgba(228, 228, 228, 0.8);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-bottom: 5%;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 4.0vw;
+    line-height: 4.5vw;
+    color: #151522;
+}
+
+ion-button{
+    font-size: 2.0vh;
+    height: 4.0vh;
+}
+
+.list-md{
+    background-color: transparent;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 5.5vw;
+    // color: #25282B;
+    text-align: center;
+}
+
+.custom-button{
+    height: 12vw;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+}

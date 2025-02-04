@@ -1,0 +1,52 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    // "module": "es2020",
+    "lib": ["es2018", "dom"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ],
+      "@lib/*": [
+        "src/lib/*"
+      ],
+      "@environments/*": [
+        "src/environments/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
+      ],
+      "@pipes/*": [
+        "src/app/pipes/*"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  }
+}

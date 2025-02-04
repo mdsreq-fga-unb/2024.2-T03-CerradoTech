@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+      <ion-icon slot="icon-only" name="close" (click)="fechar()"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-left">Perguntas frequentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let item of listaPerguntas" class="card-faq">
+    <ion-card-title>
+      {{item.pergunta}}
+    </ion-card-title>
+    <ion-card-content>
+      {{item.resposta}}
+      <br>
+      <div *ngIf="item.img !== ''">
+        <img src={{item.img}}>
+        <br>
+      </div>
+      <div *ngIf="item.fonte !== ''" class="alinhamento">
+        <ion-button class="botao" color="secondary" 
+        href="{{item.fonte}}" target="_blank">
+          Quero saber mais
+        </ion-button>
+      </div>
+      <div *ngIf="item.img !== ''">
+        <img src={{item.img}}>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

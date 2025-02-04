@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="secondary" (click)="faq()">
+      <ion-icon slot="icon-only" name="help-circle-outline"></ion-icon>
+    </ion-buttons>
+    <ion-title class="ion-text-center">Ano {{anoMonitoramento}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div *ngIf="listaParcelas?.length === 0">
+    <ion-card class="card-vazio">
+      <ion-card-content>
+        <img src="./assets/imgs/alert.svg">
+        <div class="msg-vazia">Você não tem nenhuma parcela cadastrada no ano de monitoramento selecionado.</div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="listaParcelas?.length > 0">
+    <div class="msg" *ngIf="poligono?.tipo !== 3">
+      Escolha qual parcela que você deseja monitorar:
+    </div>
+
+    <div class="msg" *ngIf="poligono?.tipo === 3">
+      Escolha se deseja coletar as informações sobre a densidade de indivíduos e especies ou sobre uma das linhas de seu polígono:
+    </div>
+    <div *ngFor="let parcela of listaParcelas">
+      <ion-card class="card-imovel" *ngIf="!parcela?.especial">
+        <ion-card-content>
+          <img src="./assets/imgs/parcela-novo.svg">
+          <div class="titulo"> {{parcela?.numeroParcela}}</div>
+          <ion-grid no-padding no-margin>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row class="lista-data">{{parcela?.status.nome}}</ion-row>
+                <ion-row class="lista-label">Situação</ion-row>
+              </ion-col>
+              <ion-col size="6" class="lista-horizontal-align">
+                <ion-row [ngClass]="(!parcela?.parcelaPermanente) ? 'nao-enviado' : 'enviado'">
+                  <span *ngIf="parcela?.parcelaPermanente; else naoPermanente">SIM</span>
+                  <ng-template #naoPermanente>NÃO</ng-template>
+                </ion-row>
+                <ion-row class="lista-label">Permanente?</ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="pergunta">O que deseja fazer?</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #0083EF" [routerLink]="['/parcela-formulario', idImovel, idPoligono, parcela._id]">
+                    <span *ngIf="parcela?.status.id !== 2">PREENCHER</span>
+                    <span *ngIf="parcela?.status.id === 2">RETIFICAR</span>
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #007670" (click) ="verNoMapa(parcela.latitude, parcela.longitude)" [disabled]="parcela?.latitude === 0 && parcela?.longitude === 0">
+                    VER NO MAPA
+                  </ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+            <ion-row *ngIf="poligono?.tipo !== 3">
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #ffc900" [disabled]="parcela?.observacoes === ''" (click)="verObservacoes(parcela.observacoes)">
+                    VER ANOTAÇÕES
+                  </ion-button>
+                </div>
+              </ion-col>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" color="danger" (click)="deletarMsg(parcela._id)">EXCLUIR</ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+      <!-- PARCELA ESPECIAL -->
+      <ion-card class="card-imovel" *ngIf="parcela?.especial">
+        <ion-card-content>
+          <img src="./assets/imgs/parcela-novo.svg">
+          <div class="titulo"> {{parcela?.numeroParcela}}</div>
+          <ion-grid no-padding no-margin>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="lista-horizontal-align">
+                <ion-row class="lista-data">{{parcela?.status.nome}}</ion-row>
+                <ion-row class="lista-label">Situação</ion-row>
+              </ion-col>
+            </ion-row>
+            <ion-row class="linha"></ion-row>
+            <ion-row>
+              <ion-col class="pergunta">O que deseja fazer?</ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <div class="alinhamentoBotao"><ion-button class="mini-botao" style="--background: #0083EF"  [routerLink]="['/parcela-formulario', idImovel, idPoligono, parcela._id]">
+                    <span *ngIf="parcela?.status.id !== 2">PREENCHER</span>
+                    <span *ngIf="parcela?.status.id === 2">RETIFICAR</span>
+                  </ion-button>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="novaParcelaModal()"><ion-icon name="add-outline"></ion-icon></ion-fab-button>
+  </ion-fab>
+</ion-content>

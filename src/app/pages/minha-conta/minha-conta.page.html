@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="ion-text-left">Minha conta</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="changeUser()" [formGroup]="user" class="ion-padding">
+    <div class="input-group">
+      <div class="title">
+        <ion-icon name="create-outline" style="margin-right: 3%; font-size: 8.5vw;"></ion-icon>Alterar dados
+      </div>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="person-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="string" placeholder="Nome completo" formControlName="nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="today-outline"></ion-icon>
+        </ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Data de nascimento" formControlName="dataNascimento"
+          doneText="Confirmar" cancelText="Cancelar"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="phone-portrait-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="Telefone" formControlName="telefone" [brmasker]="{phone: true}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="location-outline"></ion-icon>
+        </ion-label>
+        <ion-select formControlName="uf" okText="Confirmar" cancelText="Cancelar" placholder="UF">
+          <ion-select-option *ngFor="let uf of ufList" [value]="uf">{{uf}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="briefcase-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="text" placeholder="Organização" formControlName="org">
+        </ion-input>
+      </ion-item>
+    </div>
+    <ion-button type="submit" expand="block" [disabled]="!user.valid" class="custom-button">Alterar dados</ion-button>
+  </form>
+
+  <form (ngSubmit)="changePassword()" [formGroup]="passwordForm" class="ion-padding">
+    <div class="input-group">
+      <div class="title">
+        <ion-icon name="shield-outline" style="margin-right: 3%; font-size: 8.5vw;"></ion-icon>Alterar senha
+      </div>
+      <ion-item>
+        <ion-label>
+          <ion-icon name="lock-open-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="password" placeholder="Senha atual" formControlName="senhaAtual"></ion-input>
+      </ion-item>
+      <div *ngIf="(senhaAtual?.dirty || senhaAtual?.touched) && senhaAtual?.errors" class="errors">
+        <span *ngIf="senhaAtual.errors?.required">A senha atual é obrigatória</span>
+      </div>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="password" placeholder="Nova senha" formControlName="novaSenha"></ion-input>
+      </ion-item>
+      <div *ngIf="(novaSenha?.dirty || novaSenha?.touched) && novaSenha?.errors" class="errors">
+        <span *ngIf="novaSenha.errors?.required">A nova senha é obrigatória</span>
+        <span *ngIf="novaSenha.errors?.minlength">A nova senha precisa ter pelo menos 6 caracteres.</span>
+      </div>
+
+      <ion-item>
+        <ion-label>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+        </ion-label>
+        <ion-input type="password" placeholder="Repita nova senha" formControlName="repitaNovaSenha"></ion-input>
+      </ion-item>
+      <div *ngIf="(repitaNovaSenha?.dirty || repitaNovaSenha?.touched) && repitaNovaSenha?.errors" class="errors">
+        <span *ngIf="repitaNovaSenha.errors?.required">A nova senha é obrigatória</span>
+        <span *ngIf="repitaNovaSenha.errors?.minlength">A nova senha precisa ter pelo menos 6 caracteres.</span>
+        <span *ngIf="repitaNovaSenha.errors?.mustMatch">As senhas não coincidem</span>
+      </div>
+    </div>
+    <ion-button type="submit" expand="block" [disabled]="!passwordForm.valid" class="custom-button">Alterar senha
+    </ion-button>
+  </form>
+</ion-content>

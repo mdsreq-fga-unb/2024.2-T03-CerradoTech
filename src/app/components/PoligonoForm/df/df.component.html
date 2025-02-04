@@ -1,0 +1,359 @@
+<form (ngSubmit)="submit()" [formGroup]="form">
+  <ion-slides [options]="slideOpts">
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="title">
+              <ion-icon name="create-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Dados gerais
+            </div>
+            <br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="input-group">
+            <ion-item class="custom-input">
+              <ion-label position="floating">Nome ou código do polígono<span style="color:red">*</span></ion-label>
+              <ion-input formControlName="nomeCod" type="text"></ion-input>
+            </ion-item>
+
+            <ion-item class="custom-input">
+              <ion-label position="floating">Data da coleta<span style="color:red">*</span></ion-label>
+              <ion-datetime formControlName="dataEntrevista" displayFormat="DD/MM/YYYY"
+                pickerFormat="DDDD MMMM YYYY" min="2020" cancelText="Cancelar"
+                doneText="Confirmar" [monthNames]="customMonthNames"></ion-datetime>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <!-- <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button> -->
+          </ion-col>
+          <ion-col size="4" class="rodape">
+            <div >1/{{maxPage}}</div><br>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnNext" (click)="next()"><ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="title">
+              <ion-icon name="impactos-ambientais" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Dados da
+              vegetação
+            </div>
+            <br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Formação vegetal<span style="color:red">*</span></ion-label>
+              <ion-select formControlName="formacaoVegetal" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.formacaoVegetal" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item
+              *ngIf="this.f.formacaoVegetal.value !== undefined && this.f.formacaoVegetal.value !== {}">
+              <ion-label position="stacked" class="ion-text-wrap">Fitofisionomia original ou de referência:<span style="color:red">*</span></ion-label>
+              <ion-select formControlName="fitofisionomia" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareChaveId">
+                <ion-select-option *ngFor="let item of suporte.fitofisionomia[this.f.formacaoVegetal.value.label]"
+                  [value]="item">{{item.label}}</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-button shape="round" color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="4" class="rodape">
+            <div >2/{{maxPage}}</div><br>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round" color="secondary" class="btnNext" (click)="next()"><ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="title">
+              <ion-icon name="extension-puzzle-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Tipo do polígono
+            </div>
+            <br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Tipo área a ser recomposta</ion-label>
+              <ion-select formControlName="tipoArea" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.tipoArea" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Classificação da área a ser recomposta</ion-label>
+              <ion-select formControlName="classificacaoArea" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.classificacaoArea" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Utilização anterior do polígono degradado</ion-label>
+              <ion-select formControlName="utilizacaoAnterior" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.utilizacaoAnterior" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <div *ngIf="f.utilizacaoAnterior.value.id === 5">
+              <ion-item class="item-text-wrap">
+                <ion-label stacked>Qual?</ion-label>
+                <ion-input formControlName="utilizacaoAnteriorOutro" type="text"></ion-input>
+              </ion-item>
+            </div>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Cobertura atual do solo:</ion-label>
+              <ion-select formControlName="coberturaAtual" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.coberturaAtual" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <div *ngIf="f.coberturaAtual.value.id === 7">
+              <ion-item class="item-text-wrap">
+                <ion-label position="floating">Qual?</ion-label>
+                <ion-input formControlName="coberturaAtualOutro" type="text"></ion-input>
+              </ion-item>
+            </div>
+
+            <ion-item >
+              <ion-label class="item-text-wrap">É possível suspensão imediata das atividades?</ion-label>
+              <ion-select formControlName="suspensaoImediata" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.simNao" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">É necessário cercar?</ion-label>
+              <ion-select formControlName="necessarioCercar" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.simNao" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">É possível cercar?</ion-label>
+              <ion-select formControlName="possivelCercar" okText="Confirmar" cancelText="Cancelar"
+                [compareWith]="compareId">
+                <ion-select-option *ngFor="let item of suporte.simNao" [value]="item">{{item.label}}
+                </ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="4" class="rodape">
+            <div >3/{{maxPage}}</div><br>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnNext" (click)="next()"><ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide >
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="title">
+              <ion-icon name="map-outline" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Dados geográficos
+            </div>
+            <br>
+          </ion-col>
+        </ion-row>
+        <!-- ONLINE -->
+        <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 0">
+          <ion-col>
+            <ion-list lines="none">
+              <ion-list-header class="checkbox-question">Informar a localização do polígono</ion-list-header>
+              <ion-radio-group formControlName="gpsOuMapa">
+                <ion-item class="item-no-border">
+                  <ion-label>Coletar ponto (GPS)</ion-label>
+                  <ion-radio slot="start" value="gps"></ion-radio>
+                </ion-item>
+
+                <ion-item class="item-no-border">
+                  <ion-label>Localizar no mapa</ion-label>
+                  <ion-radio slot="start" value="mapa"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+            <div *ngIf="f.gpsOuMapa.value === 'gps'">
+              <ion-item>
+                <ion-label position="floating">Latitude</ion-label>
+                <ion-input type="string" formControlName="latitude"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Longitude</ion-label>
+                <ion-input type="string" formControlName="longitude"></ion-input>
+              </ion-item>
+
+              <ion-button (click)="getGeolocation()" class="custom-button" color="dark">Coletar localização
+              </ion-button>
+
+            </div>
+            <span *ngIf="f.gpsOuMapa.value === 'mapa'">
+              <ion-item>
+                <ion-label position="floating">Latitude</ion-label>
+                <ion-input type="string" formControlName="latitude"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Longitude</ion-label>
+                <ion-input type="string" formControlName="longitude"></ion-input>
+              </ion-item>
+              <ion-button (click)="presentModal('', originMap.POLIGONO_LOC)" class="custom-button" color="dark">Abrir mapa</ion-button>
+            </span>
+
+            <br>
+          </ion-col>
+        </ion-row>
+        <!-- OFFLINE -->
+        <ion-row *ngIf="this.networkService.getCurrentNetworkStatus() === 1">
+          <ion-col>
+            <span>
+              <ion-list-header class="checkbox-question">Informar a localização do polígono</ion-list-header>
+              <ion-item>
+                <ion-label position="floating">Latitude</ion-label>
+                <ion-input type="string" formControlName="latitude"></ion-input>
+              </ion-item>
+
+              <ion-item>
+                <ion-label position="floating">Longitude</ion-label>
+                <ion-input type="string" formControlName="longitude"></ion-input>
+              </ion-item>
+              <ion-button (click)="presentModal('offline', originMap.POLIGONO_LOC)" class="custom-button" color="dark">Abrir mapa</ion-button>
+            </span>
+
+            <br><br><br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list lines="none">
+              <ion-list-header class="checkbox-question">Informar a área do polígono</ion-list-header>
+              <ion-radio-group formControlName="desenhoOuCar">
+                <ion-item class="item-no-border">
+                  <ion-label>Desenhar polígono no mapa</ion-label>
+                  <ion-radio slot="start" value="desenho"></ion-radio>
+                </ion-item>
+
+                <ion-item class="item-no-border">
+                  <ion-label>Informar área (ha)</ion-label>
+                  <ion-radio slot="start" value="area"></ion-radio>
+                </ion-item>
+              </ion-radio-group>
+            </ion-list>
+            <div *ngIf="f.desenhoOuCar.value === 'desenho'">
+              <ion-button color="dark" (click)="presentModal('', originMap.POLIGONO_DESENHO)">Abrir mapa</ion-button><br>
+            </div>
+            <span *ngIf="f.desenhoOuCar.value === 'area'">
+              <ion-item>
+                <ion-label position="floating">Digite o tamanho da área (ha) :</ion-label>
+                <ion-input formControlName="areaValor" type="text"
+                  [brmasker]="{money: true, thousand: '.',  decimalCaracter: ',', decimal: 4}"></ion-input>
+              </ion-item>
+            </span>
+
+            <br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="4" class="rodape">
+            <div >4/{{maxPage}}</div><br>
+          </ion-col>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnNext" (click)="next()"><ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon></ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br><br></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+    <ion-slide>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div class="title">
+              <ion-icon name="plano-recomposicao-poligono" style="margin-right: 3%; font-size: 6.5vw;"></ion-icon>Plano de
+              recomposição
+            </div>
+            <br>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-list>
+              <ion-list-header class="checkbox-question">Qual seu objetivo com a recomposição?</ion-list-header>
+              <ion-item *ngFor="let opt of funcaoRecomposicao" class="item-no-border">
+                <ion-checkbox color="primary" slot="start" value="{{opt.value}}" checked="{{opt.isChecked}}"
+                  (ionChange)="onCheckChange($event, 'funcaoRecomposicao')"></ion-checkbox>
+                <ion-label class="ion-text-wrap">{{opt.value}}</ion-label>
+              </ion-item>
+            </ion-list>
+
+            <ion-item class="item-text-wrap">
+              <ion-label position="floating">Quantas pessoas poderão participar das atividades de recomposição?
+              </ion-label>
+              <ion-input formControlName="quantidadeParticipantes" type="number"></ion-input>
+            </ion-item>
+            <br>
+            <ion-button type="submit" expand="block" [disabled]="!form.valid">Salvar</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size="4">
+            <ion-button shape="round"  color="secondary" class="btnPrev" (click)="prev()"><ion-icon slot="icon-only" name="arrow-back-outline"></ion-icon></ion-button>
+          </ion-col>
+          <ion-col size="4" class="rodape">
+            <div >5/{{maxPage}}</div><br>
+          </ion-col>
+          <ion-col size="4">
+            <!-- <ion-button shape="round"  color="secondary" class="btnNext" (click)="next()"><ion-icon slot="icon-only" name="arrow-forward-outline"></ion-icon></ion-button> -->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+  </ion-slides>
+</form>

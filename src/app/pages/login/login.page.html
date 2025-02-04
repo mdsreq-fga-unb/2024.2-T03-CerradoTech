@@ -1,0 +1,37 @@
+<ion-content class="background">
+  <div class="logo">
+      <img src="./assets/imgs/radisCerrado.svg">
+  </div>  
+  
+  <form (ngSubmit)="login()" [formGroup]="credentials">
+      <div class="">
+          <ion-item>
+              <ion-label>
+                  <ion-icon name="create-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="string" placeholder="Usuário" formControlName="usuario"></ion-input>
+          </ion-item>
+          <div *ngIf="(usuario.dirty || usuario.touched) && usuario.errors" class="errors">
+              <span *ngIf="usuario.errors?.required">O usuário é obrigatório</span>
+              <span *ngIf="usuario.errors?.usuario">O usuário é inválido</span>
+          </div>
+          <ion-item>
+              <ion-label>
+                  <ion-icon name="lock-closed-outline"></ion-icon>
+              </ion-label>
+              <ion-input type="password" placeholder="Senha" formControlName="password"></ion-input>
+          </ion-item>
+          <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+              <span *ngIf="password.errors?.required">A senha é obrigatória</span>
+              <span *ngIf="password.errors?.minlength">A senha deve ter pelo menos 6 caracteres</span>
+          </div>
+      </div>
+  </form>
+
+  <ion-button type="button" expand="block" [disabled]="!credentials.valid" (click)="login()">Entrar</ion-button><br>
+  <ion-button type="button" expand="block" color="warning" fill="clear" [routerLink]="['/cadastro']">Não tem uma conta?
+      <span style="color:var(--ion-color-primary); margin-left:2%;">Cadastre-se</span>
+  </ion-button>
+  <ion-button type="button" expand="block" color="primary" fill="clear" (click)="forgotPasswordModal()">Esqueci minha senha
+  </ion-button><br>
+</ion-content>

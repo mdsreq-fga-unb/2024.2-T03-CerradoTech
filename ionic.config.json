@@ -1,0 +1,7 @@
+{
+  "name": "Radis Cerrado",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
