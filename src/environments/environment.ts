@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3058'
+  apiUrl: 'https://deploycerradotech-production.up.railway.app'
 };
 
 /*
