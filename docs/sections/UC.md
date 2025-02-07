@@ -8,54 +8,58 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 ![Diagrama](../assets/Diagrama%20HopeBridge.svg)
 
 
-**Ator: REFUGIADO**
+### Ator: REFUGIADO
 
-| Requisitos                        | Casos de Uso                        | Resultado Observável                                                  |
-|------------------------------------|-------------------------------------|----------------------------------------------------------------------|
-| Criar perfil                      | Criar perfil                        | Perfil criado com sucesso                                             |
-| Buscar Serviços Básicos           | Buscar Serviços Básicos             | Lista de serviços disponíveis exibida                                |
-| Solicitar Serviços de Ajuda       | Solicitar Serviços de Ajuda         | Solicitação confirmada e registrada no sistema                       |
-| Solicitar vagas em abrigos        | Solicitar vagas em abrigos          | Vaga solicitada com sucesso e aguardando confirmação                 |
-| Agendar consultas médicas         | Agendar consultas médicas           | Consulta agendada e confirmada no sistema                             |
-| Solicitar vouchers                | Solicitar vouchers                  | Voucher solicitado e disponível para uso                             |
-| Acessar Oportunidades de Trabalho | Acessar Oportunidades de Trabalho   | Lista de oportunidades de trabalho sugeridas exibidas com sucesso    |
-| Candidatar ao trabalho            | Candidatar ao trabalho              | Candidatura registrada e enviada para análise                        |
-| Acessar as capacitações disponíveis| Acessar as capacitações disponíveis | Lista de capacitações oferecidas exibida com sucesso                 |
-| Realizar capacitação              | Realizar capacitação                | Capacitação concluída e certificação disponível                      |
-| Participar de Projetos Comunitários| Participar de Projetos Comunitários | Confirmação de participação no projeto                               |
-| Acessar trajetos                  | Acessar trajetos                    | Mapas dos trajetos disponíveis                                       |
-| Acessar opções de transporte      | Acessar opções de transporte        | Meios de transporte disponíveis e seus horários                      |
+| REQUISITOS                                           | CASOS DE USO                                | RESULTADOS OBSERVÁVEIS                                                         |
+| ---------------------------------------------- | ----------------------------------- | ----------------------------------------------------------------- |
+| Visualizar Serviços Básicos                    | Visualizar Serviços Básicos         | Lista de serviços disponíveis exibida                             |
+| Reservar vagas em abrigos << extend >>         | Reservar vagas em abrigos           | Vagas reservadas em abrigos                                       |
+| Agendar Consultas médicas << extend >>         | Agendar Consultas médicas           | Consulta médica marcada                                           |
+| Solicitar Vouchers de alimentação << extend >> | Solicitar Vouchers de alimentação   | Vouchers de alimentação solicitados                               |
+| Participar de Projetos Comunitários            | Participar de Projetos Comunitários | Confirmação de participação no projeto                            |
+| Criar Perfil de Refugiado                      | Criar Perfil de Refugiado           | Perfil de refugiado criado com sucesso                            |
+| Acessar trajetos                               | Acessar trajetos                    | Mapas dos trajetos disponíveis                                    |
+| Acessar opções de transporte                   | Acessar opções de transporte        | Meios de transportes disponíveis e seus horários                  |
+| Acessar Oportunidades de Trabalho              | Acessar Oportunidades de Trabalho   | Lista de oportunidades de trabalho sugeridas exibidas com sucesso |
+| Acessar as capacitações disponíveis            | Acessar as capacitações disponíveis | Lista de capacitações oferecidas exibida com sucesso              |
 
 
 
-**Ator: AGÊNCIA HUMANITÁRIA**
 
-| Requisitos                        | Casos de Uso                        | Resultado Observável                                                  |
-|------------------------------------|-------------------------------------|----------------------------------------------------------------------|
-| Criar perfil                      | Criar perfil                        | Perfil criado com sucesso                                             |
-| Monitorar Demandas de Recursos    | Monitorar Demandas de Recursos      | Visualização das demandas dos serviços solicitados                   |
-| Distribuir Recursos               | Distribuir Recursos                 | Alocação e distribuição de recursos                                   |
-| Organizar eventos                 | Organizar eventos                   | Eventos como campanhas de saúde, educação e outros serviços essenciais criados com sucesso |
-| Planejar intervenções             | Planejar intervenções               | Intervenção definida com sucesso                                      |
+### Ator: AGÊNCIA HUMANITÁRIA
 
-
-**Ator: EMPREGADOR PARCEIRO**
-
-| Requisitos            | Casos de Uso            | Resultado Observável                                                      |
-|---------------------------|---------------------------|------------------------------------------------------------------------|
-| Criar perfil              | Criar perfil              | Perfil criado com sucesso                       |
-| Anunciar vagas            | Anunciar vagas            | Vagas anunciadas com sucesso                                          |
-| Gerenciar candidaturas    | Gerenciar candidaturas    | Candidaturas recebidas e organizadas no sistema com feedback dos entrevistados |
+| REQUISITOS                                    | CASOS DE USO                                    | RESULTADOS OBSERVÁVEIS                                                      |
+|-----------------------------------------|-----------------------------------------|---------------------------------------------------------------|
+| Monitorar Demandas de Recursos          | Monitorar Demandas de Recursos          | Visualização das demandas dos serviços solicitados             |
+| Distribuir Recursos                     | Distribuir Recursos                     | Alocação e distribuição de recursos                             |
+| Criar perfil de Agência Humanitária    | Criar perfil de Agência Humanitária    | Perfil de Agência Humanitária criado com sucesso               |
+| Gerenciar Vagas de abrigo              | Gerenciar Vagas de abrigo              | Vagas atualizadas e disponibilizadas para os refugiados        |
+| Gerenciar vouchers                     | Gerenciar vouchers                     | Vouchers emitidos e distribuídos conforme a demanda            |
+| Gerenciar consultas médicas            | Gerenciar consultas médicas            | Consultas agendadas e organizadas para os refugiados           |
+| Organizar eventos                      | Organizar eventos                      | Eventos como campanhas de saúde, educação e outros serviços essenciais criados com sucesso |
+| Planejar intervenções                   | Planejar intervenções                   | Intervenção definida com sucesso                               |
 
 
-**Ator: ADMINISTRADOR DO SISTEMA**
+### Ator: EMPREGADOR PARCEIRO
 
-| Requisitos            | Casos de Uso            | Resultado Observável                                                      |
-|-----------------------------------------|-----------------------------------------|----------------------------------------------------------------|
-| Criar perfil                            | Criar perfil                            | Perfil criado com sucesso                                     |
+| REQUISITOS                                    | CASOS DE USO                                    | RESULTADOS OBSERVÁVEIS                                                      |
+|-----------------------------------------|-----------------------------------------|---------------------------------------------------------------|
+| Criar perfil de empregador parceiro    | Criar perfil de empregador parceiro    | Perfil de empregador parceiro criado com sucesso e visível no sistema |
+| Anunciar vagas de emprego              | Anunciar vagas de emprego              | Vagas anunciadas com sucesso                                   |
+| Gerenciar candidaturas de emprego      | Gerenciar candidaturas de emprego      | Candidaturas recebidas e organizadas no sistema para revisão com feedback dos entrevistados |
+| Oferecer capacitações                  | Oferecer capacitações                  | Capacitações disponibilizadas                                  |
+| Gerenciar capacitações                 | Gerenciar capacitações                 | Capacitações monitoradas e organizadas conforme o progresso dos participantes |
+
+
+### Ator: ADMINISTRADOR DO SISTEMA
+
+| REQUISITOS                                    | CASOS DE USO                                    | RESULTADOS OBSERVÁVEIS                                                      |
+|-----------------------------------------|-----------------------------------------|---------------------------------------------------------------|
+| Criar perfil de administrador do sistema | Criar perfil de administrador do sistema | Perfil de administrador criado com sucesso                     |
 | Monitorar indicadores de desempenho da plataforma | Monitorar indicadores de desempenho da plataforma | Plataforma sempre disponível e com bom desempenho             |
-| Ajustar Funcionalidades                 | Ajustar Funcionalidades                 | Plataforma atualizada e otimizada                             |
-| Gerenciar permissões de usuários        | Gerenciar permissões de usuários        | Controle de acesso e verificação da integridade de perfis    |
+| Ajustar Funcionalidades                 | Ajustar Funcionalidades                 | Plataforma atualizada e otimizada                              |
+| Gerenciar permissões de usuários       | Gerenciar permissões de usuários       | Controle de acesso e verificação da integridade de perfis      |
+
 
 ## Especificações
 
@@ -235,5 +239,6 @@ A HopeBridge é um sistema que conecta os refugiados palestinos a serviços esse
 |--------------|------------|-----------------------------------------------------|------------------------------|-----------------------------|
 | 03/02/2025   | 1.0        | Adição dos atores e seus casos de uso        | Camila Careli              | Todos os Membros            |
 | 03/02/2025   | 1.1        | Corrigindo erro da imagem do diagrama       | Brenno da Silva             | Todos os Membros            |
-| 03/02/2025   | 2.0        | Adição das 5 especificações       | Camila Careli             | Todos os Membros            |
-| 03/02/2025   | 2.1        | Adição do novo diagrama       | Camila Careli             | Todos os Membros            |
+| 07/02/2025   | 2.0        | Adição das 5 especificações       | Camila Careli             | Todos os Membros            |
+| 07/02/2025   | 2.1        | Adição do novo diagrama       | Camila Careli             | Todos os Membros            |
+| 07/02/2025   | 2.2        | Correção das tabelas dos casos de uso       | Camila Careli             | Todos os Membros            |
