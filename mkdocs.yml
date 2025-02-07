@@ -48,6 +48,7 @@ nav:
       - Requisitos de Software: sections/requisitos.md
       - Backlog do Produto: sections/backlog.md
       - DoR e DoD: sections/dor-dod.md
+  - Prototipação: sections/Prototipacao.md
   - Estudos de Caso:
     - PBB e BDD: sections/PBB.md
     - USM: sections/USM.md
