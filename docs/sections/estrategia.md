@@ -49,22 +49,21 @@ O **Open UP** é um processo ágil baseado no Rational Unified Process (RUP), co
 - **Objetivo:** Planejar as iterações e validar a arquitetura do sistema.
 - **Atividades:**
   1. Refinar os requisitos e priorizá-los.
-  2. Validar protótipos das principais funcionalidades (ex.: mapeamento e notificações).
-  3. Planejar as primeiras iterações e definir entregas incrementais.
+  2. Validar protótipos das principais funcionalidades.
+  3. Planejar as primeiras iterações e definir entregas.
 
 ## 3. Construção
 - **Objetivo:** Desenvolver os incrementos planejados com foco em funcionalidades prioritárias.
 - **Atividades:**
-  1. Implementar funcionalidades essenciais, como mapeamento offline e notificações.
-  2. Realizar testes contínuos (unitários, integração e aceitação).
-  3. Incorporar feedback de usuários em campo.
+  1. Implementação de funcionalidades essenciais.
+  2. Realização de testes.
+  3. Incorporar feedbacks.
 
 ## 4. Transição
-- **Objetivo:** Preparar o sistema para implantação e validação com usuários reais.
+- **Objetivo:** Preparar o sistema para implantação e validação.
 - **Atividades:**
-  1. Implantação gradual em campo.
-  2. Capacitação de usuários e suporte inicial.
-  3. Monitoramento do uso e coleta de feedback.
+  1. Implantação do aplicativo.
+  2. Coleta de feedbacks.
 
 ---
 
@@ -92,9 +91,9 @@ O **Open UP** foi escolhido para o RADIS Cerrado por sua abordagem leve e ágil,
 
 ### Atividades Selecionadas no Open UP
 
-1. **Criação do Backlog:** Identificar e priorizar funcionalidades essenciais, como mapeamento de propriedades e notificações.
+1. **Criação do Backlog:** Identificar e priorizar funcionalidades essenciais.
 2. **Desenvolvimento Incremental:** Iterações curtas focadas em funcionalidades de maior impacto.
-3. **Testes e Validação:** Feedback constante com base em uso real pelos usuários.
+3. **Testes e Validação:** Feedbacks constantes.
 4. **Documentação Ágil:** Garantir o registro mínimo necessário para comunicação e continuidade.
 
 ---
@@ -110,6 +109,8 @@ O **Open UP** foi escolhido para o RADIS Cerrado por sua abordagem leve e ágil,
 | 18/11/2024 | 1.2        | Ajustes das Issues e informações adicionais | Patrick Anderson Carvalho | Todos os Membros |
 | 16/12/2024 | 2.0        | Nova organização e ajustes finais para U2   | Camila Careli             | Todos os Membros |
 | 07/01/2025 | 2.1        | Ajustes dos Processos para implementação de Nova Estratégia | Patrick Anderson Carvalho | Todos os Membros |
+| 07/02/2025 | 2.2        | Alguns ajustes na escrita dos textos  | Brenno da Silva | Todos os Membros |
+
 ---
 
 ## Referências
