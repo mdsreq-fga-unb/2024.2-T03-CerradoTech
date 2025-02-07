@@ -16,13 +16,23 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 
 ## Ferramentas de Comunicação
 
-- **_Google Meet_**: Será utilizado para reuniões semanais de planejamento, além de chamadas rápidas quando necessário. O Meet também será usado para atualizações pontuais e discussões mais detalhadas, que exijam compartilhamento de tela ou colaboração em tempo real.
+- **_Google Meet_**: Inicialmente utilizado para reuniões de planejamento, além de chamadas rápidas quando necessário. O Meet também foi usado para atualizações pontuais e discussões mais detalhadas, que exijam compartilhamento de tela ou colaboração em tempo real.
+
+- **_Discord_**: Utilizado para realização de reuniões, organizações, planejamentos e realização de atividades em grupo ou pares. Começou a ser utilizado ao decorrer do projeto em substituição do google meet.
+
+- **_Google Documentos_**: Utilizado para desenvolvimento de documentos de texto e organização de atividades desenvolvidas.
+
+- **_Miro_**: Utilizado para o desenvolvimento de diagramas utilizados na realização das atividades relacionadas aos estudos de casos desenvolvidos.
+
+- **_Mural_**: Utilizado para a realização da atividade de elaboração de um Canvas PBB - Product Backlog Building em relação a um estudo de caso. 
 
 - **_GitHub_**: Repositório central para armazenar o código e documentações do projeto, com integração para gerenciar issues, relatórios de progresso e discussões técnicas. O GitHub servirá como principal referência de status do projeto, permitindo ao cliente acompanhar as entregas.
 
 - **_Whatsapp_**: Utilizado para comunicação rápida entre os membros da equipe para tomada de decisões e alinhamento de ideias e tirar duvidas com o cliente de forma mais direta e rápida.
 
 - **_Google Drive_**: Plataforma para centralizar documentos, relatórios e outros materiais relevantes. Essa será a referência para o cliente acessar documentos de projeto e relatórios de reuniões.
+
+- **_Trello_**: Utilizado para gerenciar, organizar e acompanhar o progresso das atividades e entregas do trabalho.
 
 
 ## Frequência das Reuniões e Interações
@@ -33,20 +43,19 @@ Para garantir a efetividade do projeto RADIS Cerrado e manter todos os stakehold
 
 - **_Reunião de Resultados_**: Apresentação dos resultados das atividades da semana para o cliente, com demonstração das funcionalidades entregues e coleta de feedbacks para ajuste de prioridades futuras.
 
-- **_Feedbacks Informais_**: A equipe está aberta a feedbacks contínuos do cliente por meio do Google Meet ou GitHub, permitindo ajustes rápidos e melhor adaptação às necessidades do cliente.
+- **_Feedbacks Informais_**: A equipe está aberta a feedbacks contínuos do cliente por meio do Google Meet, e-mail ou Whatsapp, permitindo ajustes rápidos e melhor adaptação às necessidades do cliente.
 
 
 ## Processo de Validação
 
-1. **_Validação por Atividade:_** Cada semana culminará em uma atividade, onde o cliente terá a oportunidade de revisar e testar as funcionalidades entregues durante o ciclo. O feedback do cliente será coletado e documentado para ajustes e melhorias nas próximas iterações, garantindo que o desenvolvimento esteja sempre alinhado com as expectativas.
+1. **_Validação por Atividade:_** Cada semana culminará em uma atividade, onde o cliente terá a oportunidade de revisar e verificar as funcionalidades entregues durante o ciclo. O feedback do cliente será coletado para ajustes e melhorias nas próximas iterações, garantindo que o desenvolvimento esteja sempre alinhado com as expectativas.
+    - **_1.1 Testes de Aceitação:_** Cada funcionalidade será acompanhada de critérios de aceitação definidos. O cliente poderá validar esses critérios durante a revisão, confirmando que a entrega atende aos requisitos estabelecidos.
+    - **_1.2 Testes de Compatibilidade:_** Para garantir o funcionamento offline e a adequação às condições de uso em áreas remotas, serão realizados testes de compatibilidade com diferentes dispositivos Android e em cenários sem conexão, validando o armazenamento temporário de dados.
 
-   - **_Testes de Aceitação:_** Cada funcionalidade será acompanhada de critérios de aceitação definidos no início do Sprint. O cliente poderá validar esses critérios durante a revisão, confirmando que a entrega atende aos requisitos estabelecidos.
-   - **_Testes de Compatibilidade:_** Para garantir o funcionamento offline e a adequação às condições de uso em áreas remotas, serão realizados testes de compatibilidade com diferentes dispositivos Android e em cenários sem conexão, validando o armazenamento temporário de dados.
-
-2. **_Validação Final:_** Ao final do projeto, será realizada uma **Validação Final**, onde todas as funcionalidades do RADIS Cerrado serão apresentadas ao cliente em sua totalidade. Esta fase incluirá:
-   - **_Testes de Integração:_** Verificação de que todos os módulos e funcionalidades do sistema estão integrados corretamente e funcionam como um sistema completo.
-   - **_Testes de Usabilidade:_** Será realizada uma revisão da experiência do usuário, considerando o público-alvo (pequenos agricultores e técnicos) para garantir que a interface seja intuitiva e prática.
-   - **_Feedback Conclusivo:_** O cliente poderá testar a versão final e fornecer feedback sobre o desempenho, completude e conformidade com os requisitos iniciais. Ajustes finais poderão ser realizados para garantir que o produto esteja pronto para o uso prático no campo.
+2. **_Validação Final:_** Ao final do projeto, será realizada uma Validação Final, onde todas as funcionalidades do RADIS Cerrado serão apresentadas ao cliente em sua totalidade. Esta fase incluirá:
+    - **_2.1 Testes de Integração:_** Verificação de que todos os módulos e funcionalidades do sistema estão integrados corretamente e funcionam como um sistema completo.
+    - **_2.2 Testes de Usabilidade:_** Será realizada uma revisão da experiência do usuário, considerando o público-alvo (pequenos agricultores e técnicos) para garantir que a interface seja intuitiva e prática.
+    - **_2.3 Feedback Conclusivo:_** O cliente poderá testar a versão final e fornecer feedback sobre o desempenho, completude e conformidade com os requisitos iniciais. Ajustes finais poderão ser realizados para garantir que o produto esteja pronto para o uso prático no campo.
 
 
 Esse processo de validação contínua e final visa garantir que o RADIS Cerrado atenda às expectativas do cliente e cumpra plenamente seus objetivos de monitoramento ambiental e suporte ao usuário, promovendo uma entrega de alta qualidade e alinhada com as necessidades reais.
@@ -59,5 +68,6 @@ Esse processo de validação contínua e final visa garantir que o RADIS Cerrado
 | 04/11/2024     | 1.0        | Primeiras Implementações e especificações.   | Vinicius Castelo             | Todos os Membros            |
 | 11/11/2024     | 1.1        | Correções de parâmetros para apresentação.   | Vinicius Castelo             | Todos os Membros            |
 | 18/11/2024     | 1.2        | Ajustes das Issues e informações adicionais  | Patrick Anderson Carvalho    | Todos os Membros            |
-| 16/12/2024   | 2.0        | Nova organização e ajustes finais para U2      | Camila Careli                       | Todos os Membros            |
-| 16/12/2024   | 2.1        | Atualização das ferramentas de comunicação    | Brenno da Silva                       | Todos os Membros            |
+| 16/12/2024   | 2.0        | Nova organização e ajustes finais para U2      | Camila Careli                | Todos os Membros            |
+| 16/12/2024   | 2.1        | Atualização das ferramentas de comunicação    | Brenno da Silva               | Todos os Membros            |
+| 07/02/2025   | 2.2       | Atualização das ferramentas de comunicação e alguns ajustes nos textos    | Brenno da Silva     | Todos os Membros            |
