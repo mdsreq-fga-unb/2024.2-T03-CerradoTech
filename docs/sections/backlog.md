@@ -112,7 +112,7 @@ Com essa categorização, o backlog é organizado de forma clara e objetiva, gar
 
 
 
-| **Requisito Funcional** | **Valor (V)** | **Complexidade (C)** | **Dependências (D)** | **Cálculo IP = (V+D)/C** | **IP**        | **Prioridade** |
+| **Requisitos** | **Valor (V)** | **Complexidade (C)** | **Dependências (D)** | **Cálculo IP = (V+D)/C** | **IP**        | **Prioridade** |
 |-------------------------|---------------|----------------------|----------------------|-------------------------|---------------|----------------|
 | US1                     | Alta (3)      | Média (2)            | Sim (1)              | (3+1)/2 = 2.0           | 2             | Média          |
 | US2                     | Alta (3)      | Alta (3)             | Sim (1)              | (3+1)/3 = 1.33          | 1.333333      | Baixa          |
@@ -130,6 +130,8 @@ Com essa categorização, o backlog é organizado de forma clara e objetiva, gar
 | USNF2                   | Alta (3)      | Alta (3)             | Sim (1)              | (3+1)/3 = 1.33          | 1.333333      | Baixa          |
 | USNF3                   | Média (2)     | Média (2)            | Não (0)              | (2+0)/2 = 1.0           | 1             | Baixa          |
 | USNF4                   | Alta (3)      | Média (2)            | Não (0)              | (3+0)/2 = 1.5           | 1.5           | Média          |
+| USNF5                   | Alta (3)     | Média (2)            | Não (0)              | (3+0)/2 = 1.5           | 1.5             | Média          |
+| USNF6                   | Alta (3)      | Média (2)            | Não (0)              | (3+0)/2 = 1.5           | 1.5           | Média          |
 
 ## Mínimo Produto Viável (MVP)
 
@@ -148,8 +150,12 @@ Mais detalhes dos requisitos funcionais podem ser vistos [aqui](backlog.md#requi
 | **EP4 - Gestão de Informações** | **US10** | - Notificações push/e-mail. <br> - Configuração de preferências.                                                                                                                      | Alta           |
 |                                 | **US11** | - Seleção de parâmetros do relatório. <br> - Exportação em PDF.                                                                                                                      | Média          |
 |                                 | **US12** | - Notificação push/e-mail. <br> - Calendário.                                                                                                                                         | Média          |
-| **EP5 - Manutenção (FM'S)**     | **FM1** | Manutenção                                                                                                                                                                            | Média          |
-|                                 | **FM5** | Manutenção                                                                                                                                                                            | Alta           |
+| **EP5 - Manutenção (FM'S)**     | **FM1** | Realização da manutenção                                                                                                                                                                            | -          |
+|                                 | **FM2** | Realização da manutenção                                                                                                                                                                            | -           |
+|                                 | **FM3** | Realização da manutenção                                                                                                                                                                           | -           |
+|                                 | **FM4** | Realização da manutenção                                                                                                                                                                            | -           |
+|                                 | **FM5** | Realização da manutenção                                                                                                                                                                            | -           |
+|                                 | **FM6** | Realização da manutenção                                                                                                                                                                            | -           |
 
 
 
@@ -174,3 +180,4 @@ Mais detalhes dos requisitos não funcionais podem ser vistos [aqui](backlog.md#
 | 16/12/2024   | 1.0        | Criação da página e organizações gerais      | Camila Careli                       | Todos os Membros            |
 | 20/12/2024   | 2.0        | Corrigindo declaração dos FMs dentro do Backlog      | Brenno da Silva             | Todos os Membros            |
 | 07/01/2025   | 2.1        | Corrigindo declaração de prioridade, e suas caracteristicas      | Patrick Anderson| Todos os Membros            |
+| 07/02/2025   | 2.2        | Alguns ajustes e atualizações     | Brenno da Silva             | Todos os Membros            |
