@@ -14,7 +14,7 @@
 
 ## Lições Aprendidas
 
-
+Durante a fase de desenvolvimento do projeto, a equipe encontrou dificuldades com a integração entre os diferentes módulos do sistema, pois as bibliotecas utilizadas não estavam totalmente compatíveis. Isso resultou em erros e bugs que demoraram mais tempo para serem corrigidos do que o esperado. Houve também dificuldades em testar certas funcionalidades devido à falta de dados adequados no ambiente de desenvolvimento. Além disso, a equipe enfrentou desafios com a compilação para a plataforma mobile, já que o processo de build gerava erros frequentemente relacionados à configuração do ambiente, o que aumentou o tempo de execução. Também houve dificuldades na compreensão de partes do código já existente.
 
 ## Histórico de Versão
 
