@@ -18,7 +18,8 @@ As lições aprendidas durante o desenvolvimento do projeto incluem a importânc
 
 **Ações de Melhoria:**
 - Estabelecer uma configuração de ambiente padronizada, com versões definidas de ferramentas e dependências, para evitar falhas frequentes no processo de build e desenvolvimento.
-- Manter um bom gerenciamneto de tempo para o desenvolvimento.
+
+- Manter um bom gerenciamento de tempo para o desenvolvimento.
 
 ## Histórico de Versão
 
