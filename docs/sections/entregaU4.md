@@ -14,7 +14,11 @@
 
 ## Lições Aprendidas
 
-Durante a fase de desenvolvimento do projeto, a equipe encontrou dificuldades com a integração entre os diferentes módulos do sistema, pois as bibliotecas utilizadas não estavam totalmente compatíveis. Isso resultou em erros e bugs que demoraram mais tempo para serem corrigidos do que o esperado. Houve também dificuldades em testar certas funcionalidades devido à falta de dados adequados no ambiente de desenvolvimento. Além disso, a equipe enfrentou desafios com a compilação para a plataforma mobile, já que o processo de build gerava erros frequentemente relacionados à configuração do ambiente, o que aumentou o tempo de execução. Também houve dificuldades na compreensão de partes do código já existente.
+As lições aprendidas durante o desenvolvimento do projeto incluem a importância de garantir a compatibilidade das bibliotecas antes de iniciar a integração dos módulos, o que poderia ter evitado erros. Também ficou evidente a necessidade de ter informações adequadas sobre o ambiente de desenvolvimento. A equipe aprendeu que uma configuração correta e consistente do ambiente de desenvolvimento é essencial para evitar falhas frequentes no processo de build. Além disso, a importância de manter um bom gerenciamento de tempo durante o desenvolvimento, priorizando tarefas e respeitando prazos, garantindo a eficiência e evitando sobrecarga no time.
+
+**Ações de Melhoria:**
+- Estabelecer uma configuração de ambiente padronizada, com versões definidas de ferramentas e dependências, para evitar falhas frequentes no processo de build e desenvolvimento.
+- Manter um bom gerenciamneto de tempo para o desenvolvimento.
 
 ## Histórico de Versão
 
