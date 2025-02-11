@@ -1,19 +1,16 @@
 # Unidade 4
 
-## MVP do Produto
+## [Deploy do Projeto](https://radis-cerrado.vercel.app/)
 
-<< colocar aqui o LINK DO PRODUTO  >>
-<< colocar aqui o LINK DO FIGMA  >>
-<< colocar aqui o entregas parciais da U3  >>
-<< colocar aqui sobre o kanban >>
+## [Figma do Projeto](https://www.figma.com/design/wvjTdIIHYbomfCMfKE3F27/CerraTech-(REQ)?node-id=1103-205&p=f&t=Jn7mMCTPhK127dri-0)
 
 ## Video de Entrega da Unidade
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=28XOH8fI_Yc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/28XOH8fI_Yc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Feedback do Cliente Sobre o MVP
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=HTEfVRJi98w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HTEfVRJi98w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Lições Aprendidas
 
