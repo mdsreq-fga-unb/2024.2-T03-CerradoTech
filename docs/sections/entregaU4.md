@@ -17,6 +17,7 @@
 As lições aprendidas durante o desenvolvimento do projeto incluem a importância de garantir a compatibilidade das bibliotecas antes de iniciar a integração dos módulos, o que poderia ter evitado erros. Também ficou evidente a necessidade de ter informações adequadas sobre o ambiente de desenvolvimento. A equipe aprendeu que uma configuração correta e consistente do ambiente de desenvolvimento é essencial para evitar falhas frequentes no processo de build. Além disso, a importância de manter um bom gerenciamento de tempo durante o desenvolvimento, priorizando tarefas e respeitando prazos, garantindo a eficiência e evitando sobrecarga no time.
 
 **Ações de Melhoria:**
+
 - Estabelecer uma configuração de ambiente padronizada, com versões definidas de ferramentas e dependências, para evitar falhas frequentes no processo de build e desenvolvimento.
 
 - Manter um bom gerenciamento de tempo para o desenvolvimento.
