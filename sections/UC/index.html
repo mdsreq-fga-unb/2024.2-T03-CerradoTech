@@ -1,0 +1,1938 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../USM/">
+      
+      
+        <link rel="next" href="../entregaU1/">
+      
+      
+      <link rel="icon" href="../../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Casos de Uso - CerradoTech</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estudo-de-caso" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="CerradoTech" class="md-header__button md-logo" aria-label="CerradoTech" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CerradoTech
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Casos de Uso
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Trocar para tema claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Trocar para tema claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Trocar para tema escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Trocar para tema escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-CerradoTech" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CerradoTech" class="md-nav__button md-logo" aria-label="CerradoTech" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CerradoTech
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/mdsreq-fga-unb/2024.2-T03-CerradoTech" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Visão do Produto e Projeto
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Visão do Produto e Projeto
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cenarioAtual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cenário Atual do Cliente e Negócio
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../solucaoProposta/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Solução Proposta
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estrategia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Estratégias de Engenharia de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../engenharia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Engenharia de Requisitos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cronograma/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cronograma e Entregas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../equipe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interação entre Equipe e Cliente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliografia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Referências Bibliográficas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Backlog
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Backlog
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../requisitos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Requisitos de Software
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backlog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backlog do Produto
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dor-dod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DoR e DoD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Prototipacao/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prototipação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Estudos de Caso
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Estudos de Caso
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PBB/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PBB e BDD
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../USM/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    USM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Casos de Uso
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estudo-de-caso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estudo de Caso
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagrama" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagrama
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Diagrama">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ator-refugiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator: REFUGIADO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ator-agencia-humanitaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator: AGÊNCIA HUMANITÁRIA
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ator-empregador-parceiro" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator: EMPREGADOR PARCEIRO
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ator-administrador-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ator: ADMINISTRADOR DO SISTEMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#especificacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificações
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Especificações">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#especificacao-1-organizar-eventos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação 1: Organizar Eventos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificacao-2-gerenciar-permissoes-de-usuarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação 2: Gerenciar Permissões de Usuários
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificacao-3-anunciar-vagas-de-emprego" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação 3: Anunciar Vagas de Emprego
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificacao-4-criar-perfil-de-refugiado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação 4: Criar Perfil de Refugiado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#especificacao-5-participar-de-projetos-comunitarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Especificação 5: Participar de Projetos Comunitários
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#historico-de-versao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Histórico de Versão
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Entregas e Lições Aprendidas
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Entregas e Lições Aprendidas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregaU1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregaU2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregaU3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../entregaU4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Unidade 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>Casos de Uso</h1>
+
+<p>Casos de Uso são uma técnica da na engenharia de requisitos na qual descrevem as interações entre os atores e o software que será construído, com o objetivo de alcançar metas específicas. </p>
+<h2 id="estudo-de-caso">Estudo de Caso</h2>
+<p>A HopeBridge é um sistema que conecta os refugiados palestinos a serviços essenciais, oportunidades de  trabalho e redes de apoio, promovendo a reconstrução de vidas e comunidades de forma  integrada e sustentável. </p>
+<h2 id="diagrama">Diagrama</h2>
+<p><img alt="Diagrama" src="../../assets/Diagrama%20HopeBridge.svg" /></p>
+<h3 id="ator-refugiado">Ator: REFUGIADO</h3>
+<table>
+<thead>
+<tr>
+<th>REQUISITOS</th>
+<th>CASOS DE USO</th>
+<th>RESULTADOS OBSERVÁVEIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Visualizar Serviços Básicos</td>
+<td>Visualizar Serviços Básicos</td>
+<td>Lista de serviços disponíveis exibida</td>
+</tr>
+<tr>
+<td>Reservar vagas em abrigos &lt;&lt; extend &gt;&gt;</td>
+<td>Reservar vagas em abrigos</td>
+<td>Vagas reservadas em abrigos</td>
+</tr>
+<tr>
+<td>Agendar Consultas médicas &lt;&lt; extend &gt;&gt;</td>
+<td>Agendar Consultas médicas</td>
+<td>Consulta médica marcada</td>
+</tr>
+<tr>
+<td>Solicitar Vouchers de alimentação &lt;&lt; extend &gt;&gt;</td>
+<td>Solicitar Vouchers de alimentação</td>
+<td>Vouchers de alimentação solicitados</td>
+</tr>
+<tr>
+<td>Participar de Projetos Comunitários</td>
+<td>Participar de Projetos Comunitários</td>
+<td>Confirmação de participação no projeto</td>
+</tr>
+<tr>
+<td>Criar Perfil de Refugiado</td>
+<td>Criar Perfil de Refugiado</td>
+<td>Perfil de refugiado criado com sucesso</td>
+</tr>
+<tr>
+<td>Acessar trajetos</td>
+<td>Acessar trajetos</td>
+<td>Mapas dos trajetos disponíveis</td>
+</tr>
+<tr>
+<td>Acessar opções de transporte</td>
+<td>Acessar opções de transporte</td>
+<td>Meios de transportes disponíveis e seus horários</td>
+</tr>
+<tr>
+<td>Acessar Oportunidades de Trabalho</td>
+<td>Acessar Oportunidades de Trabalho</td>
+<td>Lista de oportunidades de trabalho sugeridas exibidas com sucesso</td>
+</tr>
+<tr>
+<td>Acessar as capacitações disponíveis</td>
+<td>Acessar as capacitações disponíveis</td>
+<td>Lista de capacitações oferecidas exibida com sucesso</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ator-agencia-humanitaria">Ator: AGÊNCIA HUMANITÁRIA</h3>
+<table>
+<thead>
+<tr>
+<th>REQUISITOS</th>
+<th>CASOS DE USO</th>
+<th>RESULTADOS OBSERVÁVEIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitorar Demandas de Recursos</td>
+<td>Monitorar Demandas de Recursos</td>
+<td>Visualização das demandas dos serviços solicitados</td>
+</tr>
+<tr>
+<td>Distribuir Recursos</td>
+<td>Distribuir Recursos</td>
+<td>Alocação e distribuição de recursos</td>
+</tr>
+<tr>
+<td>Criar perfil de Agência Humanitária</td>
+<td>Criar perfil de Agência Humanitária</td>
+<td>Perfil de Agência Humanitária criado com sucesso</td>
+</tr>
+<tr>
+<td>Gerenciar Vagas de abrigo</td>
+<td>Gerenciar Vagas de abrigo</td>
+<td>Vagas atualizadas e disponibilizadas para os refugiados</td>
+</tr>
+<tr>
+<td>Gerenciar vouchers</td>
+<td>Gerenciar vouchers</td>
+<td>Vouchers emitidos e distribuídos conforme a demanda</td>
+</tr>
+<tr>
+<td>Gerenciar consultas médicas</td>
+<td>Gerenciar consultas médicas</td>
+<td>Consultas agendadas e organizadas para os refugiados</td>
+</tr>
+<tr>
+<td>Organizar eventos</td>
+<td>Organizar eventos</td>
+<td>Eventos como campanhas de saúde, educação e outros serviços essenciais criados com sucesso</td>
+</tr>
+<tr>
+<td>Planejar intervenções</td>
+<td>Planejar intervenções</td>
+<td>Intervenção definida com sucesso</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ator-empregador-parceiro">Ator: EMPREGADOR PARCEIRO</h3>
+<table>
+<thead>
+<tr>
+<th>REQUISITOS</th>
+<th>CASOS DE USO</th>
+<th>RESULTADOS OBSERVÁVEIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar perfil de empregador parceiro</td>
+<td>Criar perfil de empregador parceiro</td>
+<td>Perfil de empregador parceiro criado com sucesso e visível no sistema</td>
+</tr>
+<tr>
+<td>Anunciar vagas de emprego</td>
+<td>Anunciar vagas de emprego</td>
+<td>Vagas anunciadas com sucesso</td>
+</tr>
+<tr>
+<td>Gerenciar candidaturas de emprego</td>
+<td>Gerenciar candidaturas de emprego</td>
+<td>Candidaturas recebidas e organizadas no sistema para revisão com feedback dos entrevistados</td>
+</tr>
+<tr>
+<td>Oferecer capacitações</td>
+<td>Oferecer capacitações</td>
+<td>Capacitações disponibilizadas</td>
+</tr>
+<tr>
+<td>Gerenciar capacitações</td>
+<td>Gerenciar capacitações</td>
+<td>Capacitações monitoradas e organizadas conforme o progresso dos participantes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ator-administrador-do-sistema">Ator: ADMINISTRADOR DO SISTEMA</h3>
+<table>
+<thead>
+<tr>
+<th>REQUISITOS</th>
+<th>CASOS DE USO</th>
+<th>RESULTADOS OBSERVÁVEIS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar perfil de administrador do sistema</td>
+<td>Criar perfil de administrador do sistema</td>
+<td>Perfil de administrador criado com sucesso</td>
+</tr>
+<tr>
+<td>Monitorar indicadores de desempenho da plataforma</td>
+<td>Monitorar indicadores de desempenho da plataforma</td>
+<td>Plataforma sempre disponível e com bom desempenho</td>
+</tr>
+<tr>
+<td>Ajustar Funcionalidades</td>
+<td>Ajustar Funcionalidades</td>
+<td>Plataforma atualizada e otimizada</td>
+</tr>
+<tr>
+<td>Gerenciar permissões de usuários</td>
+<td>Gerenciar permissões de usuários</td>
+<td>Controle de acesso e verificação da integridade de perfis</td>
+</tr>
+</tbody>
+</table>
+<h2 id="especificacoes">Especificações</h2>
+<h3 id="especificacao-1-organizar-eventos">Especificação 1: Organizar Eventos</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breve Descrição</strong></td>
+<td>Permite que agências humanitárias organizem eventos comunitários e culturais, palestras ou atividades de reconstrução de infraestrutura, para promover a integração social e econômica e o engajamento aos refugiados.</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+<td>Agências Humanitárias.</td>
+</tr>
+<tr>
+<td><strong>Condições Prévias</strong></td>
+<td>O ator deve estar logado na plataforma.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Básico (FB)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FB1</td>
+<td>O ator acessa a seção de "Organizar Eventos" na plataforma.</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>O sistema exibe um formulário para inserir as informações do evento, incluindo: Nome do evento, Data e horário (RN01), Local, Tipo do evento, Descrição e objetivos do evento.</td>
+</tr>
+<tr>
+<td>FB3</td>
+<td>O ator preenche os detalhes do evento.</td>
+</tr>
+<tr>
+<td>FB4</td>
+<td>O sistema exibe uma lista de parceiros disponíveis (ONGs, voluntários, empresas) para o tipo de evento (FE2).</td>
+</tr>
+<tr>
+<td>FB5</td>
+<td>O organizador seleciona os parceiros que irão apoiar o evento (FE2).</td>
+</tr>
+<tr>
+<td>FB6</td>
+<td>O sistema valida os dados (FE1) (FE3).</td>
+</tr>
+<tr>
+<td>FB7</td>
+<td>O evento é salvo e registrado no calendário da plataforma.</td>
+</tr>
+<tr>
+<td>FB8</td>
+<td>O sistema notifica os refugiados e parceiros sobre o novo evento.</td>
+</tr>
+<tr>
+<td>FB9</td>
+<td>O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Alternativo (FA)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FA1 - Cancelar Evento</td>
+<td></td>
+</tr>
+<tr>
+<td>FA1.1</td>
+<td>O ator acessa a seção "Organizar Eventos" e seleciona um evento já criado.</td>
+</tr>
+<tr>
+<td>FA1.2</td>
+<td>O ator seleciona a opção "Cancelar Evento".</td>
+</tr>
+<tr>
+<td>FA1.3</td>
+<td>O sistema solicita confirmação do cancelamento.</td>
+</tr>
+<tr>
+<td>FA1.4</td>
+<td>O ator confirma o cancelamento.</td>
+</tr>
+<tr>
+<td>FA1.5</td>
+<td>O sistema remove o evento do calendário.</td>
+</tr>
+<tr>
+<td>FA1.6</td>
+<td>O sistema notifica os refugiados e parceiros sobre o cancelamento.</td>
+</tr>
+<tr>
+<td>FA1.7</td>
+<td>O fluxo é encerrado.</td>
+</tr>
+<tr>
+<td>FA2 - Editar Evento</td>
+<td></td>
+</tr>
+<tr>
+<td>FA2.1</td>
+<td>O ator acessa a seção "Organizar Eventos" e seleciona um evento já criado.</td>
+</tr>
+<tr>
+<td>FA2.2</td>
+<td>O ator edita as informações do evento.</td>
+</tr>
+<tr>
+<td>FA2.3</td>
+<td>O sistema valida as alterações (FE1).</td>
+</tr>
+<tr>
+<td>FA2.4</td>
+<td>O sistema salva as alterações e notifica os refugiados e parceiros sobre as atualizações.</td>
+</tr>
+<tr>
+<td>FA2.5</td>
+<td>O fluxo é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo de Exceção (FE)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FE1 - Dados inválidos</td>
+<td>No passo FB6 do fluxo básico ou FA2.3 do fluxo alternativo, caso os dados do evento estejam incompletos ou incorretos (ex.: data no passado, campos obrigatórios não preenchidos), o sistema exibe a mensagem: "Dados inválidos. Verifique as informações e tente novamente." O caso de uso retorna ao passo FB2 do fluxo básico.</td>
+</tr>
+<tr>
+<td>FE2 - Parceiros indisponíveis</td>
+<td>No passo FB4 e FB5 do fluxo básico, caso não haja parceiros disponíveis para o tipo de evento selecionado, o sistema exibe a mensagem: "Nenhum parceiro disponível para este tipo de evento." O ator pode prosseguir sem selecionar parceiros ou cancelar a criação do evento.</td>
+</tr>
+<tr>
+<td>FE3 - Conflito de Data/Horário</td>
+<td>No passo FB6 do fluxo básico, caso a data e horário do evento conflitem com outro evento já registrado, o sistema exibe a mensagem: "Conflito de agenda. Escolha outra data ou horário." O caso de uso retorna ao passo FB2 do fluxo básico.</td>
+</tr>
+<tr>
+<td><strong>Regra de Negócio (RN)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>RN1 - Antecedência Mínima</td>
+<td>No passo FB2 do fluxo básico, eventos devem ser agendados com pelo menos 7 dias de antecedência. Caso contrário, o sistema exibe a mensagem: "O evento deve ser agendado com pelo menos 7 dias de antecedência."</td>
+</tr>
+<tr>
+<td><strong>Pós-condições</strong></td>
+<td>O evento estará registrado no calendário da plataforma. Os refugiados e parceiros receberão notificações sobre o evento.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="especificacao-2-gerenciar-permissoes-de-usuarios">Especificação 2: Gerenciar Permissões de Usuários</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breve Descrição</strong></td>
+<td>Este caso de uso permite que um administrador do sistema gerencie as permissões de acesso dos usuários (refugiados, agências humanitárias e empregadores) na plataforma.</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+<td>Administrador do sistema.</td>
+</tr>
+<tr>
+<td><strong>Condições Prévias</strong></td>
+<td>O ator deve ter uma conta de administrador do sistema. O ator deve estar logado na plataforma.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Básico (FB)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FB1</td>
+<td>O ator acessa a seção "Gerenciar Permissões" na plataforma.</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>O sistema exibe uma lista de usuários cadastrados. [RN 7.4]</td>
+</tr>
+<tr>
+<td>FB3</td>
+<td>O ator seleciona o usuário cujas permissões deseja gerenciar. [RN 7.1]</td>
+</tr>
+<tr>
+<td>FB4</td>
+<td>O sistema exibe as permissões atuais do usuário. [RN 7.1.1] [RN 7.1.2] [RN 7.1.3]</td>
+</tr>
+<tr>
+<td>FB5</td>
+<td>O ator clica em editar as permissões (adiciona, remove ou modifica). [FE 6.1.2] [RN 7.2]</td>
+</tr>
+<tr>
+<td>FB6</td>
+<td>O ator confirma as alterações.</td>
+</tr>
+<tr>
+<td>FB7</td>
+<td>O sistema valida as alterações. [FE 6.1] [RN 7.2] [RN 7.3]</td>
+</tr>
+<tr>
+<td>FB8</td>
+<td>O sistema atualiza as permissões do usuário. [RN 7.1]</td>
+</tr>
+<tr>
+<td>FB9</td>
+<td>O sistema exibe uma mensagem de confirmação de que as permissões foram atualizadas com sucesso. [RN 7.5]</td>
+</tr>
+<tr>
+<td>FB10</td>
+<td>O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Alternativo (FA)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FA1 - Não há fluxo alternativo</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Fluxo de Exceção (FE)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FE1 - Validação Falha</td>
+<td>No passo FB7 do fluxo básico, se o sistema não validar as alterações nas permissões:</td>
+</tr>
+<tr>
+<td>FE1.1</td>
+<td>O sistema exibe uma mensagem de erro informando o motivo da falha na validação (ex.: permissões conflitantes, permissões inválidas, etc.).</td>
+</tr>
+<tr>
+<td>FE1.2</td>
+<td>O sistema retorna ao passo FB5 do fluxo básico, permitindo que o administrador revise e corrija as permissões.</td>
+</tr>
+<tr>
+<td>FE1.3</td>
+<td>O administrador pode tentar novamente ou cancelar a operação.</td>
+</tr>
+<tr>
+<td><strong>Regra de Negócio (RN)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>RN1 - Permissões Padrão</td>
+<td>Cada tipo de usuário tem um conjunto de permissões padrão que são atribuídas automaticamente no momento do cadastro:</td>
+</tr>
+<tr>
+<td>RN1.1</td>
+<td>Refugiados: Buscar, pesquisar, solicitar vagas/recursos e atualizar perfil.</td>
+</tr>
+<tr>
+<td>RN1.2</td>
+<td>Agências Humanitárias: Planejar, executar, agendar ações e informar projetos.</td>
+</tr>
+<tr>
+<td>RN1.3</td>
+<td>Empregadores parceiros: Anunciar vagas, planejar e executar processos de recrutamento.</td>
+</tr>
+<tr>
+<td>RN2 - Conflito de Permissões</td>
+<td>Permissões conflitantes (ex.: um refugiado não pode ter permissões de administrador) não são permitidas.</td>
+</tr>
+<tr>
+<td>RN3 - Permissões Inválidas</td>
+<td>Permissões inválidas ou fora do escopo do usuário não podem ser salvas.</td>
+</tr>
+<tr>
+<td>RN4 - Usuário Não Cadastrado</td>
+<td>Se um usuário não estiver cadastrado, o sistema exibirá uma mensagem informando que tal usuário pesquisado não existe.</td>
+</tr>
+<tr>
+<td>RN5 - Mensagens de Erro</td>
+<td>O sistema deve fornecer mensagens em casos de falha na validação ou operação, indicando o motivo do erro e como corrigi-lo.</td>
+</tr>
+<tr>
+<td><strong>Pós-condições</strong></td>
+<td>As permissões do usuário são atualizadas no sistema.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="especificacao-3-anunciar-vagas-de-emprego">Especificação 3: Anunciar Vagas de Emprego</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breve Descrição</strong></td>
+<td>Permite que empregadores parceiros anunciem vagas de emprego na plataforma, conectando refugiados a oportunidades de trabalho.</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+<td>Empregadores parceiros.</td>
+</tr>
+<tr>
+<td><strong>Condições Prévias</strong></td>
+<td>O empregador deve estar logado na plataforma.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Básico (FB)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FB1</td>
+<td>O empregador seleciona a opção “Anunciar vagas de emprego”.</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>O sistema exibe um formulário para inserir as informações da vaga, incluindo: Título, Descrição, Requisitos, Benefícios, Prazo para receber candidaturas (RN02).</td>
+</tr>
+<tr>
+<td>FB3</td>
+<td>O empregador preenche as informações da vaga (RN01).</td>
+</tr>
+<tr>
+<td>FB4</td>
+<td>O empregador seleciona a opção de “Publicar vaga”.</td>
+</tr>
+<tr>
+<td>FB5</td>
+<td>O sistema valida os dados preenchidos (FE01).</td>
+</tr>
+<tr>
+<td>FB6</td>
+<td>O sistema publica a vaga na plataforma.</td>
+</tr>
+<tr>
+<td>FB7</td>
+<td>O sistema emite uma mensagem de confirmação.</td>
+</tr>
+<tr>
+<td>FB8</td>
+<td>O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Alternativo (FA)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FA1 - Editar vaga de emprego</td>
+<td></td>
+</tr>
+<tr>
+<td>FA1.1</td>
+<td>O empregador seleciona uma vaga já criada.</td>
+</tr>
+<tr>
+<td>FA1.2</td>
+<td>O empregador edita as informações da vaga.</td>
+</tr>
+<tr>
+<td>FA1.3</td>
+<td>O empregador salva as alterações (FE01).</td>
+</tr>
+<tr>
+<td>FA2 - Remover vaga de emprego</td>
+<td></td>
+</tr>
+<tr>
+<td>FA2.1</td>
+<td>O empregador seleciona uma vaga já criada.</td>
+</tr>
+<tr>
+<td>FA2.2</td>
+<td>O empregador remove a vaga.</td>
+</tr>
+<tr>
+<td>FA2.3</td>
+<td>O sistema notifica os refugiados sobre a remoção.</td>
+</tr>
+<tr>
+<td><strong>Fluxo de Exceção (FE)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FE1 - Dados incompletos</td>
+<td>No passo FB5 do fluxo básico, caso o empregador não preencha todos os campos obrigatórios, o sistema exibe a mensagem: “Preencha todos os campos obrigatórios para publicar a vaga”. O caso de uso retorna ao passo FB3 do FB.</td>
+</tr>
+<tr>
+<td><strong>Regra de Negócio (RN)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>RN1 - Campos obrigatórios</td>
+<td>No passo FB3 do fluxo básico, os campos título, descrição, requisitos, benefícios e prazo para receber candidaturas são obrigatórios estarem preenchidos para que a vaga possa ser publicada.</td>
+</tr>
+<tr>
+<td>RN2 - Prazo das candidaturas</td>
+<td>No passo FB4 do fluxo básico, o prazo para candidaturas não pode ser inferior a um dia ou superior a um mês.</td>
+</tr>
+<tr>
+<td><strong>Pós-condições</strong></td>
+<td>A vaga é publicada no sistema. A vaga fica disponível para visualização e candidatura na plataforma.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="especificacao-4-criar-perfil-de-refugiado">Especificação 4: Criar Perfil de Refugiado</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breve Descrição</strong></td>
+<td>O caso de uso permite que um refugiado crie um perfil na plataforma, fornecendo informações pessoais, necessidades específicas e detalhes sobre sua situação atual. O perfil é utilizado para conectar o refugiado a serviços essenciais, oportunidades de trabalho e redes de apoio.</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+<td>Refugiado.</td>
+</tr>
+<tr>
+<td><strong>Condições Prévias</strong></td>
+<td>O refugiado deve ter acesso à plataforma. O refugiado deve concordar com os termos de uso e política de privacidade da plataforma.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Básico (FB)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FB1</td>
+<td>O ator acessa a plataforma.</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>O ator seleciona a opção “Criar perfil de refugiado”.</td>
+</tr>
+<tr>
+<td>FB3</td>
+<td>O refugiado preenche o formulário com os seguintes dados: Nome completo, Idade e gênero, Localização atual, Tamanho da família, Necessidades específicas: abrigo, alimentos, assistência médica e educação.</td>
+</tr>
+<tr>
+<td>FB4</td>
+<td>O refugiado confirma o envio do formulário. [RN7.2]</td>
+</tr>
+<tr>
+<td>FB5</td>
+<td>O sistema valida as informações fornecidas.</td>
+</tr>
+<tr>
+<td>FB6</td>
+<td>O sistema cria o perfil do refugiado e atribui permissões padrão conforme o tipo de usuário. [RN7.1.1]</td>
+</tr>
+<tr>
+<td>FB7</td>
+<td>O sistema exibe uma mensagem de confirmação de que o perfil foi criado com sucesso.</td>
+</tr>
+<tr>
+<td>FB8</td>
+<td>O sistema sugere serviços e recursos disponíveis com base nas informações fornecidas. [RN7.3]</td>
+</tr>
+<tr>
+<td>FB9</td>
+<td>O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Alternativo (FA)</strong></td>
+<td>Não há fluxo alternativo.</td>
+</tr>
+<tr>
+<td><strong>Fluxo de Exceção (FE)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FE1 - Campos faltantes</td>
+<td>No passo FB4, se o refugiado não preencher todos os campos obrigatórios: O sistema exibe uma mensagem indicando os campos faltantes. O refugiado retorna ao passo FB3 para completar o formulário.</td>
+</tr>
+<tr>
+<td><strong>Regra de Negócio (RN)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>RN1 - Permissões padrão</td>
+<td>Cada tipo de usuário tem um conjunto de permissões padrão que são atribuídas automaticamente no momento do cadastro: Refugiados: Buscar, pesquisar, solicitar vagas/recursos e atualizar perfil.</td>
+</tr>
+<tr>
+<td>RN2 - Mensagens de erro</td>
+<td>O sistema deve fornecer mensagens claras em casos de falha na validação ou operação, indicando o motivo do erro e como corrigi-lo.</td>
+</tr>
+<tr>
+<td>RN3 - Sugestão de serviços</td>
+<td>O sistema deve sugerir serviços e recursos com base nas necessidades informadas pelo refugiado.</td>
+</tr>
+<tr>
+<td><strong>Pós-condições</strong></td>
+<td>O perfil do refugiado é criado e armazenado no sistema. O refugiado recebe uma mensagem de confirmação de que o perfil foi criado com sucesso.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="especificacao-5-participar-de-projetos-comunitarios">Especificação 5: Participar de Projetos Comunitários</h3>
+<table>
+<thead>
+<tr>
+<th><strong>Campo</strong></th>
+<th><strong>Descrição</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Breve Descrição</strong></td>
+<td>Permite que refugiados participem de projetos comunitários ao se inscreverem em iniciativas disponíveis na plataforma.</td>
+</tr>
+<tr>
+<td><strong>Atores</strong></td>
+<td>Refugiados.</td>
+</tr>
+<tr>
+<td><strong>Condições Prévias</strong></td>
+<td>O refugiado deve ter um perfil na plataforma. O refugiado deve estar logado no seu perfil.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Básico (FB)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FB1</td>
+<td>O refugiado acessa a seção "Projetos Comunitários".</td>
+</tr>
+<tr>
+<td>FB2</td>
+<td>O refugiado visualiza uma lista de projetos disponíveis (FE01).</td>
+</tr>
+<tr>
+<td>FB3</td>
+<td>O refugiado seleciona um projeto de interesse.</td>
+</tr>
+<tr>
+<td>FB4</td>
+<td>O refugiado visualiza as informações referentes ao projeto selecionado.</td>
+</tr>
+<tr>
+<td>FB5</td>
+<td>O refugiado clica na opção “Participar do projeto”.</td>
+</tr>
+<tr>
+<td>FB6</td>
+<td>O sistema valida a inscrição (FE02) (RN01).</td>
+</tr>
+<tr>
+<td>FB7</td>
+<td>O sistema registra a inscrição e emite uma mensagem de sucesso.</td>
+</tr>
+<tr>
+<td>FB8</td>
+<td>O sistema notifica o organizador do projeto.</td>
+</tr>
+<tr>
+<td>FB9</td>
+<td>O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Fluxo Alternativo (FA)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FA1 - Cancelar Inscrição</td>
+<td></td>
+</tr>
+<tr>
+<td>FA1.1</td>
+<td>O refugiado seleciona um projeto no qual está inscrito.</td>
+</tr>
+<tr>
+<td>FA1.2</td>
+<td>O refugiado seleciona a opção de cancelar a inscrição.</td>
+</tr>
+<tr>
+<td>FA1.3</td>
+<td>O sistema cancela a inscrição do refugiado (RN02).</td>
+</tr>
+<tr>
+<td>FA1.4</td>
+<td>O sistema notifica o organizador sobre o cancelamento.</td>
+</tr>
+<tr>
+<td><strong>Fluxo de Exceção (FE)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>FE1 - Lista de projetos indisponível</td>
+<td>No passo FB2, caso não tenha projetos comunitários cadastrados ou disponíveis, o sistema emitirá uma mensagem dizendo: "Não há projetos disponíveis no momento". O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td>FE2 - Refugiado já inscrito</td>
+<td>No passo FB6, caso o refugiado já esteja inscrito no projeto selecionado, o sistema exibe a mensagem: "Você já está inscrito neste projeto." O caso de uso é encerrado.</td>
+</tr>
+<tr>
+<td><strong>Regra de Negócio (RN)</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>RN1 - Limite de inscrições por refugiado</td>
+<td>No passo FB6, o refugiado só pode se inscrever em um número limitado de 3 projetos simultaneamente. Caso o limite seja atingido, o sistema exibe a mensagem: "Você atingiu o limite de inscrições em projetos comunitários."</td>
+</tr>
+<tr>
+<td>RN2 - Cancelamento de inscrição</td>
+<td>No passo FA1.3, o sistema deve permitir o cancelamento da inscrição até uma data limite definida pelo organizador do projeto. Após a data limite, o sistema exibe a mensagem: "O prazo para cancelar a inscrição neste projeto já expirou."</td>
+</tr>
+<tr>
+<td><strong>Pós-condições</strong></td>
+<td>O refugiado está inscrito no projeto comunitário. O refugiado poderá receber informações adicionais sobre o projeto por meio da plataforma.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="historico-de-versao">Histórico de Versão</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Data</strong></th>
+<th><strong>Versão</strong></th>
+<th><strong>Descrição</strong></th>
+<th><strong>Autor</strong></th>
+<th><strong>Revisores</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>03/02/2025</td>
+<td>1.0</td>
+<td>Adição dos atores e seus casos de uso</td>
+<td>Camila Careli</td>
+<td>Todos os Membros</td>
+</tr>
+<tr>
+<td>03/02/2025</td>
+<td>1.1</td>
+<td>Corrigindo erro da imagem do diagrama</td>
+<td>Brenno da Silva</td>
+<td>Todos os Membros</td>
+</tr>
+<tr>
+<td>07/02/2025</td>
+<td>2.0</td>
+<td>Adição das 5 especificações</td>
+<td>Camila Careli</td>
+<td>Todos os Membros</td>
+</tr>
+<tr>
+<td>07/02/2025</td>
+<td>2.1</td>
+<td>Adição do novo diagrama</td>
+<td>Camila Careli</td>
+<td>Todos os Membros</td>
+</tr>
+<tr>
+<td>07/02/2025</td>
+<td>2.2</td>
+<td>Correção das tabelas dos casos de uso</td>
+<td>Camila Careli</td>
+<td>Todos os Membros</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.instant", "navigation.top", "navigation.tracking", "toc.integrate"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+    
+  </body>
+</html>
